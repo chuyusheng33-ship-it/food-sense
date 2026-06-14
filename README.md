@@ -1,0 +1,36 @@
+# Food Sense
+
+Food Sense is a working codename for a food sensitivity and intolerance companion.
+
+The product helps people:
+
+- Check whether a food, menu, package, or ingredient list may contain foods they need to avoid or observe.
+- Record what they ate in real life, including complex meals.
+- Record symptoms and review what appeared before them.
+- Build a personal food reaction history over time.
+
+This repository starts as the product workspace. It contains product docs, design notes, and eventually the app code.
+
+## Current Stage
+
+Stage: Exploration to V1 planning.
+
+The first version is planned as a mobile web app / PWA for small private testing with 5-20 users.
+
+## Structure
+
+```text
+docs/
+  PRD.md
+  user-journey.md
+  privacy-notes.md
+  decisions.md
+design/
+  wireframes/
+  ui-references/
+app/
+```
+
+## Product Boundary
+
+Food Sense is not a diagnostic medical product. It should not claim that a user is allergic to a food. It should help users record, review, and notice patterns that may be worth observing or discussing with a clinician.
