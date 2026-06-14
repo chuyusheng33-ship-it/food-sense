@@ -91,3 +91,38 @@ Rejected or uncertain labels:
 Need:
 
 - A warmer but clear name for the area that contains known foods to avoid, foods to observe, and report-extracted items.
+
+## 2026-06-14: Use `食物档案` as the temporary V1 navigation label
+
+Decision:
+
+- Use `食物档案` as the temporary V1 label for the personal food profile area.
+
+Reason:
+
+- It is clearer than `清单` or `关注`.
+- It is less aggressive than `避雷`.
+- It is less restrictive and medical-feeling than `忌口`.
+- It can contain avoid items, observe items, uncertain items, report extraction results, manual entries, aliases, and hidden ingredients.
+
+Tradeoff:
+
+- It may feel slightly formal.
+- It should be tested with private users before being treated as final naming.
+
+## 2026-06-14: Move V1 into low-fidelity page structure
+
+Decision:
+
+- Start V1 design with text-based low-fidelity wireframes before implementing app code.
+
+Reason:
+
+- The product has sensitive health-adjacent flows and needs careful language before UI polish.
+- The three core actions need to be fast and understandable.
+- Privacy and AI upload moments need to be built into the structure early.
+
+Output:
+
+- `docs/v1-page-structure.md`
+- `design/wireframes/v1-low-fi.md`

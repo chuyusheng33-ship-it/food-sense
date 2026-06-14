@@ -22,6 +22,7 @@ The first version is planned as a mobile web app / PWA for small private testing
 ```text
 docs/
   PRD.md
+  v1-page-structure.md
   user-journey.md
   privacy-notes.md
   decisions.md
@@ -30,6 +31,27 @@ design/
   ui-references/
 app/
 ```
+
+## Current Design Notes
+
+V1 is currently in low-fidelity page structure planning.
+
+Working bottom navigation:
+
+```text
+首页 / 记录 / + / 食物档案 / 发现
+```
+
+The center `+` opens:
+
+- `能吃吗`
+- `记吃了什么`
+- `记录不舒服`
+
+Current low-fidelity materials:
+
+- `docs/v1-page-structure.md`
+- `design/wireframes/v1-low-fi.md`
 
 ## Product Boundary
 
