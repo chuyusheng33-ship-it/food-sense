@@ -13,6 +13,7 @@ build/
 
 # System files
 .DS_Store
+.Rhistory
 
 # Logs
 *.log
