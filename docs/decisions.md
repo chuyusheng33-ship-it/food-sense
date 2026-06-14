@@ -126,3 +126,21 @@ Output:
 
 - `docs/v1-page-structure.md`
 - `design/wireframes/v1-low-fi.md`
+
+## 2026-06-14: Keep Obsidian view updated with project docs
+
+Decision:
+
+- The Food Sense project folder is also available in Obsidian.
+- Future updates to product docs, design notes, decisions, and planning materials should be reflected in the Obsidian-visible Markdown files.
+
+Reason:
+
+- Obsidian is useful for reviewing and connecting product thinking.
+- The repository Markdown files should remain the source of truth, so GitHub and Obsidian do not drift apart.
+
+Working rule:
+
+- Update the repo Markdown files first.
+- Commit and push changes to GitHub.
+- If a separate Obsidian-only summary note is created later, update that note alongside the repo docs.

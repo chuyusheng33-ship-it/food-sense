@@ -53,6 +53,12 @@ Current low-fidelity materials:
 - `docs/v1-page-structure.md`
 - `design/wireframes/v1-low-fi.md`
 
+## Obsidian Sync Note
+
+This project is also available in Obsidian.
+
+When project docs, design notes, decisions, or planning materials are updated, keep the Markdown files in this repository as the source of truth so the Obsidian view stays current too.
+
 ## Product Boundary
 
 Food Sense is not a diagnostic medical product. It should not claim that a user is allergic to a food. It should help users record, review, and notice patterns that may be worth observing or discussing with a clinician.
