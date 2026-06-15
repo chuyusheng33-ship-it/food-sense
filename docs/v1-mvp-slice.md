@@ -86,11 +86,12 @@ These should be designed into the UI, but can use simple local logic or mock beh
 
 1. `查食物`
    - User can choose take/upload photo, choose from album, or text.
-   - Text input should work first.
-   - App matches pasted text against food profile names and aliases.
+   - Text input should work first as the fallback path.
+   - Photo and album input should use AI recognition in the V1 private test target experience.
+   - App matches recognized or pasted content against food profile names and aliases.
    - App warns when the profile is empty because there is nothing to match against.
    - App can save check content as a record when the profile is empty, so the user can review it later.
-   - Photo entry can exist as a placeholder or local attachment decision, but AI image recognition can be disabled or marked as coming later.
+   - During early implementation, photo entry can use mock recognition while the local loop is being built, but it should not be removed from the V1 target scope.
 
 2. Check result:
    - Show matched profile items.
@@ -99,9 +100,9 @@ These should be designed into the UI, but can use simple local logic or mock beh
    - Show `信息不足` for empty or very short input.
 
 3. Report import:
-   - First build can use a manual confirmation table.
-   - User can add extracted-looking rows manually.
-   - Real OCR/AI extraction can come after the core loop is proven.
+   - First build can use a manual confirmation table while the UI is being shaped.
+   - V1 target experience should support AI-assisted extraction from report images.
+   - User must confirm, edit, or delete extracted rows before they enter the profile.
 
 4. Profile observations:
    - First build can show simple local summaries:
@@ -123,8 +124,8 @@ Do not build these in the first implementation slice:
 - Barcode database.
 - Large public food database.
 - Full nutrition analysis.
-- Automated meal recognition from photos.
-- Real hospital report OCR unless the product owner explicitly pulls it forward.
+- Fully reliable automated meal recognition from photos with no user correction.
+- Medical interpretation of hospital report results.
 - Claims that a food definitely caused symptoms.
 
 ## 4. Page Priority
@@ -264,8 +265,8 @@ The product owner should decide:
 2. Should the bottom `+` be removed, with primary actions living on the home screen?
 3. Should `发现` be merged into `档案` as profile observations?
 4. Should input options be `拍照上传`, `从相册选择`, and `输入文字` for both `查食物` and `记饮食`?
-5. Should `查食物` first build use text matching first, with photo/AI marked as coming later?
-6. Should report import be postponed until after the manual profile flow feels good?
+5. What AI recognition provider should power `查食物` and `记饮食` image input?
+6. What exact consent copy should appear before uploading images or text to AI?
 7. Which visual direction should V1 use:
    - calm and clinical
    - warm and everyday
@@ -279,8 +280,8 @@ Recommended for the first build:
 2. Remove the bottom `+`; place `查食物`, `记饮食`, and `记不适` directly on the home screen.
 3. Merge `发现` into `档案` as `可能相关` / observation content.
 4. Use `拍照上传`, `从相册选择`, and `输入文字` as the three input options for both `查食物` and `记饮食`.
-5. Make `查食物` text-first using local matching, while photo recognition waits.
-6. Postpone real report OCR/AI extraction until the manual flow is useful.
+5. Build text and local matching first as a development step, then connect AI image recognition for the V1 private test target.
+6. Keep report extraction in V1, but require user confirmation before anything enters the profile.
 7. Use `clean utility with soft warmth` as the visual direction.
 
 Reason:

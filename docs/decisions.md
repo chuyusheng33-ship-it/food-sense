@@ -260,18 +260,20 @@ Working agreement:
 
 - See `docs/collaboration-agreement.md`.
 
-## 2026-06-15: Build local-first core loop before heavy AI
+## 2026-06-15: Build local-first core loop while keeping AI recognition in V1
 
 Decision:
 
 - The first implementation slice should prioritize a real local-first product loop.
-- AI image recognition and real report OCR should be added after the manual and text-based flows are useful.
+- V1 private test target experience should include AI recognition for `查食物` and `记饮食` image input.
+- Development can still start with text input, local matching, and mock recognition while the app shell and data loop are being built.
+- Report extraction stays in V1 as an AI-assisted flow, but extracted items must be confirmed by the user before entering the profile.
 
 Reason:
 
-- The main product value can be tested with manual food profile items, food logs, symptom logs, review windows, and text-based ingredient matching.
-- This reduces privacy, reliability, and backend complexity during the first build.
-- It lets early users validate whether the product is useful before investing in heavier AI infrastructure.
+- The intended user journey depends on taking or uploading a photo and letting the product identify visible food, ingredients, menus, or order content.
+- The product still needs a manual/text fallback for speed, privacy, and error correction.
+- AI recognition must be introduced with upload consent and cautious wording.
 
 Output:
 
@@ -304,14 +306,14 @@ Decision:
   - MVP core functions
   - V1 feature blacklist
   - first build acceptance criteria
-- The first build should not depend on real AI image recognition or report OCR.
-- `查食物` should work first through text matching against local profile names and aliases.
-- Report import can start as a manual confirmation or placeholder flow.
+- V1 MVP should include AI recognition for `查食物` and `记饮食` image input.
+- `查食物` should also support text matching against local profile names and aliases as a fallback.
+- Report import should be AI-assisted but always require user confirmation.
 
 Reason:
 
-- The product needs a real usable loop before heavier automation.
-- AI/OCR quality, privacy, backend cost, and consent flows can slow down the first version.
+- The product needs a real usable loop, and the intended loop includes photo-based recognition.
+- AI/OCR quality, privacy, backend cost, and consent flows still need careful handling.
 - Clear acceptance criteria will make UI and development decisions easier to evaluate.
 
 Output:

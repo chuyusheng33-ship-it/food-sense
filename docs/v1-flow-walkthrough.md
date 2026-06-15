@@ -352,7 +352,8 @@ Avoid:
 
 Recommended:
 
-- Postpone real OCR and AI extraction.
+- Keep AI-assisted report extraction in the V1 target experience.
+- During early implementation, manual report entry can be used while the report extraction UI and consent flow are being shaped.
 - Keep source=`report` in manual add/edit so report-based items are still supported.
 
 ## 6. MVP Page Reduction
