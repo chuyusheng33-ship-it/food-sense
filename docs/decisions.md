@@ -295,3 +295,25 @@ Reason:
 Output:
 
 - `docs/v1-flow-walkthrough.md`
+
+## 2026-06-15: Tighten MVP scope, blacklist, and acceptance criteria
+
+Decision:
+
+- PRD should explicitly separate:
+  - MVP core functions
+  - V1 feature blacklist
+  - first build acceptance criteria
+- The first build should not depend on real AI image recognition or report OCR.
+- `查食物` should work first through text matching against local profile names and aliases.
+- Report import can start as a manual confirmation or placeholder flow.
+
+Reason:
+
+- The product needs a real usable loop before heavier automation.
+- AI/OCR quality, privacy, backend cost, and consent flows can slow down the first version.
+- Clear acceptance criteria will make UI and development decisions easier to evaluate.
+
+Output:
+
+- `docs/PRD.md`
