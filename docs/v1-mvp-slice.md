@@ -59,8 +59,8 @@ These should work with real local data:
 4. Food logging:
    - Record time.
    - Add short text description.
-   - Select scene.
-   - Add simple tags like `锅底`, `蘸料`, `饮料`, `甜品`, `加工食品`.
+   - Suggest time, scene, and tags after input.
+   - Mark suggested time, scene, and tags as editable.
    - Save locally.
 
 5. Symptom logging:
@@ -85,9 +85,11 @@ These should work with real local data:
 These should be designed into the UI, but can use simple local logic or mock behavior first:
 
 1. `查食物`
-   - User can choose photo or text.
+   - User can choose take/upload photo, choose from album, or text.
    - Text input should work first.
    - App matches pasted text against food profile names and aliases.
+   - App warns when the profile is empty because there is nothing to match against.
+   - App can suggest context from input and mark it as editable.
    - Photo entry can exist as a placeholder or local attachment decision, but AI image recognition can be disabled or marked as coming later.
 
 2. Check result:
@@ -217,9 +219,10 @@ updatedAt
 id
 type: check
 time
-inputMode: text | image
+inputMode: camera | album | text
 inputText?
 context: package | menu | delivery | restaurant | homemade | other
+contextIsSuggested
 resultState: matched | no_obvious_match | insufficient_info | failed
 matchedProfileItemIds[]
 matchedTexts[]
@@ -237,9 +240,10 @@ The first implementation slice is acceptable when:
 3. A user can record discomfort in under 30 seconds.
 4. After saving discomfort, the app shows prior food records in 2, 4, 8, and 24 hour windows.
 5. A user can paste ingredient text and see whether it matches profile names or aliases.
-6. A user can review all records in a timeline.
-7. A user can delete all local data.
-8. The UI never uses diagnostic certainty language.
+6. A user sees that auto-filled scene, time, and tags are suggestions and can edit them.
+7. A user can review all records in a timeline.
+8. A user can delete all local data.
+9. The UI never uses diagnostic certainty language.
 
 ## 7. Complexity Estimate
 
@@ -259,7 +263,7 @@ The product owner should decide:
 1. Keep `档案` as the V1 navigation name?
 2. Should the bottom `+` be removed, with primary actions living on the home screen?
 3. Should `发现` be merged into `档案` as profile observations?
-4. Should photo entry be a visible first-class option in `查食物` and `记饮食`, even if recognition is not active yet?
+4. Should input options be `拍照上传`, `从相册选择`, and `输入文字` for both `查食物` and `记饮食`?
 5. Should `查食物` first build use text matching first, with photo/AI marked as coming later?
 6. Should report import be postponed until after the manual profile flow feels good?
 7. Which visual direction should V1 use:
@@ -274,7 +278,7 @@ Recommended for the first build:
 1. Keep `档案` for now.
 2. Remove the bottom `+`; place `查食物`, `记饮食`, and `记不适` directly on the home screen.
 3. Merge `发现` into `档案` as `可能相关` / observation content.
-4. Show photo and text as the two entry options for both `查食物` and `记饮食`.
+4. Use `拍照上传`, `从相册选择`, and `输入文字` as the three input options for both `查食物` and `记饮食`.
 5. Make `查食物` text-first using local matching, while photo recognition waits.
 6. Postpone real report OCR/AI extraction until the manual flow is useful.
 7. Use `clean utility with soft warmth` as the visual direction.

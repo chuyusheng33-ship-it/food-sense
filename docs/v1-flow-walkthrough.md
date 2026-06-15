@@ -46,10 +46,14 @@ Required for first build:
 First build:
 
 - Input choice:
-  - photo
+  - take and upload photo
+  - choose from album
   - text
 - Ingredient/menu text input should work first.
-- Context:
+- Profile prerequisite notice:
+  - If profile is empty, explain that matching cannot work yet.
+  - Offer adding a profile item or continuing.
+- Suggested context, marked editable:
   - package
   - menu
   - delivery
@@ -82,6 +86,8 @@ Result states:
 
 Use:
 
+- `需要先有档案项，才能检查是否命中需要注意的食物或成分`
+- `当前档案为空，可以继续保存检查内容，但不会有命中结果`
 - `基于目前可见信息`
 - `发现需要注意的项目`
 - `暂未发现明显命中`
@@ -109,7 +115,7 @@ Avoid:
 Recommended:
 
 - Build this as text-first.
-- Show both photo and text as entry choices, but keep AI recognition clearly marked as later until it works.
+- Show `拍照上传`, `从相册选择`, and `输入文字` as entry choices, but keep AI recognition clearly marked as later until it works.
 
 ## 3. Path 2: Hot Pot / Complex Meal
 
@@ -134,10 +140,13 @@ Must have:
 
 - Time, auto-filled but editable.
 - Input choice:
-  - photo
+  - take and upload photo
+  - choose from album
   - text
-- Text description.
-- Scene:
+- Food content.
+- Suggested details, marked editable:
+  - time
+  - scene
   - home
   - restaurant
   - delivery
@@ -169,9 +178,10 @@ The app should not pressure the user to be complete.
 
 Use:
 
-- `简单写一下就可以`
+- `饮食内容`
 - `复杂餐可以先记一条`
-- `容易漏记`
+- `建议补充`
+- `建议标签`
 
 Avoid:
 

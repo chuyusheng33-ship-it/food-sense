@@ -74,18 +74,24 @@ Language boundary:
 Purpose:
 
 - Check visible food information against the user's food profile.
+- Remind the user that checks only work meaningfully when the profile has items.
 
 Input methods:
 
-- Take photo.
+- Take and upload photo.
+- Choose from album.
 - Paste text.
 
 Primary fields:
 
-- Input choice: photo or text.
+- Profile prerequisite notice:
+  - If the profile is empty, explain that the app cannot match anything yet.
+  - Offer `去添加` and `继续检查`.
+- Input choice: take photo, choose from album, or text.
 - Photo placeholder or future AI flow.
-- Text input for ingredients, menu, or product description.
-- Optional context: package, menu, delivery, restaurant, homemade, other.
+- `检查内容`: ingredients, menu, delivery description, or product description.
+- Suggested context: package, menu, delivery, restaurant, homemade, other.
+- Context should be auto-suggested from input when possible and clearly marked as editable.
 - Consent notice before any AI upload:
   - What will be uploaded.
   - Why it is needed.
@@ -139,21 +145,23 @@ Purpose:
 
 Input methods:
 
-- Take photo.
+- Take and upload photo.
+- Choose from album.
 - Text note.
 
 Primary fields:
 
-- Description.
-- Time.
-- Scene: home, restaurant, delivery, supermarket, other.
-- Optional tags: sauce, seasoning, drink, dessert, processed food.
+- `饮食内容`: photo-derived or text-entered meal description.
+- Suggested details, marked editable:
+  - Time.
+  - Scene: home, restaurant, delivery, supermarket, other.
+  - Tags: sauce, seasoning, drink, dessert, processed food.
 - Extracted food tags, if AI or manual parsing is available.
 
 Complex meal support:
 
 - Allow one photo plus one sentence.
-- Prompt for commonly forgotten parts:
+- Suggest optional tags based on input:
   - `锅底`
   - `蘸料`
   - `饮料`

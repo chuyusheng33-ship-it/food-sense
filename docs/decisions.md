@@ -159,6 +159,31 @@ Language boundary:
 - Use `可能相关`, `观察中`, and `建议继续观察`.
 - Do not say `可能过敏` or imply diagnosis.
 
+## 2026-06-15: Warn before checking with an empty profile
+
+Decision:
+
+- When the user enters `查食物`, show a reminder if `档案` has no items.
+- Explain that Food Sense can save the check content, but cannot match "things to watch" until the profile has report/manual/observed items.
+
+Reason:
+
+- `查食物` only has value when there is something in the user's profile to match against.
+- This prevents users from interpreting "no match" as "safe".
+
+## 2026-06-15: Treat auto-filled fields as suggestions
+
+Decision:
+
+- For `查食物`, scene should be auto-suggested from input when possible and marked editable.
+- For `记饮食`, time, scene, and tags should be auto-suggested from input when possible and marked editable.
+- Use labels like `建议补充`, `建议标签`, and `建议，可修改`.
+
+Reason:
+
+- Suggestions reduce friction without pretending the app is certain.
+- The user should always understand that auto-filled values can be wrong and can be edited.
+
 ## 2026-06-14: Move V1 into low-fidelity page structure
 
 Decision:
