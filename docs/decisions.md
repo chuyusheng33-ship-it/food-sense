@@ -175,14 +175,38 @@ Reason:
 
 Decision:
 
-- For `查食物`, scene should be auto-suggested from input when possible and marked editable.
-- For `记饮食`, time, scene, and tags should be auto-suggested from input when possible and marked editable.
-- Use labels like `建议补充`, `建议标签`, and `建议，可修改`.
+- For `记饮食`, time should be auto-suggested from input when possible and marked editable.
+- Do not include scene or tag suggestions in the first `记饮食` form.
+- Use labels like `时间 · 建议，可修改`.
 
 Reason:
 
 - Suggestions reduce friction without pretending the app is certain.
 - The user should always understand that auto-filled values can be wrong and can be edited.
+
+## 2026-06-15: Remove scene from first `查食物` flow
+
+Decision:
+
+- Do not ask for scene in the first `查食物` flow.
+- The input itself should be enough: ingredients, menu, delivery description, or product description.
+- Show AI upload/privacy copy only when image recognition or external AI upload is actually triggered.
+
+Reason:
+
+- Scene adds work without improving the first text-matching version much.
+- The page should stay focused on checking content against the user's profile.
+
+## 2026-06-15: Use three severity levels for discomfort
+
+Decision:
+
+- Use three severity levels in `记不适`: `轻微`, `中等`, `严重`.
+
+Reason:
+
+- A 1-10 scale is too detailed for quick symptom logging.
+- Three levels are easier to choose while the user is uncomfortable.
 
 ## 2026-06-14: Move V1 into low-fidelity page structure
 

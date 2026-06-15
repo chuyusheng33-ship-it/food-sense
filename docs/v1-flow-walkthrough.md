@@ -52,14 +52,7 @@ First build:
 - Ingredient/menu text input should work first.
 - Profile prerequisite notice:
   - If profile is empty, explain that matching cannot work yet.
-  - Offer adding a profile item or continuing.
-- Suggested context, marked editable:
-  - package
-  - menu
-  - delivery
-  - restaurant
-  - homemade
-  - other
+  - Offer adding a profile item or saving the check content as a record.
 - Time, auto-filled.
 
 Later:
@@ -87,7 +80,7 @@ Result states:
 Use:
 
 - `需要先有档案项，才能检查是否命中需要注意的食物或成分`
-- `当前档案为空，可以继续保存检查内容，但不会有命中结果`
+- `当前档案为空，可以保存检查内容，之后补充档案后再回看`
 - `基于目前可见信息`
 - `发现需要注意的项目`
 - `暂未发现明显命中`
@@ -144,20 +137,7 @@ Must have:
   - choose from album
   - text
 - Food content.
-- Suggested details, marked editable:
-  - time
-  - scene
-  - home
-  - restaurant
-  - delivery
-  - supermarket
-  - other
-- Tags:
-  - `锅底`
-  - `蘸料`
-  - `饮料`
-  - `甜品`
-  - `加工食品`
+- Suggested time, marked editable.
 
 Nice later:
 
@@ -180,8 +160,7 @@ Use:
 
 - `饮食内容`
 - `复杂餐可以先记一条`
-- `建议补充`
-- `建议标签`
+- `时间 · 建议，可修改`
 
 Avoid:
 
@@ -201,7 +180,7 @@ Avoid:
 Recommended:
 
 - Fully build this path in the first implementation slice.
-- Start with text-first records and tags.
+- Start with text-first records and suggested time only.
 - Do not require photos.
 
 ## 4. Path 3: Discomfort After Eating

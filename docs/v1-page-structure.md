@@ -86,16 +86,11 @@ Primary fields:
 
 - Profile prerequisite notice:
   - If the profile is empty, explain that the app cannot match anything yet.
-  - Offer `去添加` and `继续检查`.
+  - Offer `去添加` and `保存检查内容`.
 - Input choice: take photo, choose from album, or text.
 - Photo placeholder or future AI flow.
 - `检查内容`: ingredients, menu, delivery description, or product description.
-- Suggested context: package, menu, delivery, restaurant, homemade, other.
-- Context should be auto-suggested from input when possible and clearly marked as editable.
-- Consent notice before any AI upload:
-  - What will be uploaded.
-  - Why it is needed.
-  - What will be saved locally.
+- AI/privacy notice only when image recognition or external AI upload is actually triggered.
 
 Primary action:
 
@@ -103,7 +98,7 @@ Primary action:
 
 Secondary actions:
 
-- Save as food record after check.
+- Save check content as a record, especially when the profile is empty.
 - Cancel.
 
 ### 3.3 检查结果
@@ -152,21 +147,12 @@ Input methods:
 Primary fields:
 
 - `饮食内容`: photo-derived or text-entered meal description.
-- Suggested details, marked editable:
-  - Time.
-  - Scene: home, restaurant, delivery, supermarket, other.
-  - Tags: sauce, seasoning, drink, dessert, processed food.
+- Time, suggested from input when possible and marked editable.
 - Extracted food tags, if AI or manual parsing is available.
 
 Complex meal support:
 
 - Allow one photo plus one sentence.
-- Suggest optional tags based on input:
-  - `锅底`
-  - `蘸料`
-  - `饮料`
-  - `甜品`
-  - `加工食品`
 
 Primary action:
 
@@ -188,7 +174,7 @@ Primary fields:
   - nausea
   - skin reaction
   - other
-- Severity.
+- Severity: mild, moderate, severe.
 - Duration.
 - Notes.
 

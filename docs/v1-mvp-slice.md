@@ -59,8 +59,8 @@ These should work with real local data:
 4. Food logging:
    - Record time.
    - Add short text description.
-   - Suggest time, scene, and tags after input.
-   - Mark suggested time, scene, and tags as editable.
+   - Suggest time after input.
+   - Mark suggested time as editable.
    - Save locally.
 
 5. Symptom logging:
@@ -89,7 +89,7 @@ These should be designed into the UI, but can use simple local logic or mock beh
    - Text input should work first.
    - App matches pasted text against food profile names and aliases.
    - App warns when the profile is empty because there is nothing to match against.
-   - App can suggest context from input and mark it as editable.
+   - App can save check content as a record when the profile is empty, so the user can review it later.
    - Photo entry can exist as a placeholder or local attachment decision, but AI image recognition can be disabled or marked as coming later.
 
 2. Check result:
@@ -240,7 +240,7 @@ The first implementation slice is acceptable when:
 3. A user can record discomfort in under 30 seconds.
 4. After saving discomfort, the app shows prior food records in 2, 4, 8, and 24 hour windows.
 5. A user can paste ingredient text and see whether it matches profile names or aliases.
-6. A user sees that auto-filled scene, time, and tags are suggestions and can edit them.
+6. A user sees that auto-filled time is a suggestion and can edit it.
 7. A user can review all records in a timeline.
 8. A user can delete all local data.
 9. The UI never uses diagnostic certainty language.
