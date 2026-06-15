@@ -42,14 +42,14 @@ V1 is currently in low-fidelity page structure planning.
 Working bottom navigation:
 
 ```text
-首页 / 记录 / + / 食物档案 / 发现
+首页 / 记录 / + / 档案 / 发现
 ```
 
 The center `+` opens:
 
-- `能吃吗`
-- `记吃了什么`
-- `记录不舒服`
+- `查食物`
+- `记饮食`
+- `记不适`
 
 Current low-fidelity materials:
 

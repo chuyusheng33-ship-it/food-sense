@@ -66,9 +66,9 @@ Decision:
 
 Current working labels:
 
-- `能吃吗`
-- `记吃了什么`
-- `记录不舒服`
+- `查食物`
+- `记饮食`
+- `记不适`
 
 Reason:
 
@@ -92,11 +92,11 @@ Need:
 
 - A warmer but clear name for the area that contains known foods to avoid, foods to observe, and report-extracted items.
 
-## 2026-06-14: Use `食物档案` as the temporary V1 navigation label
+## 2026-06-14: Use `档案` as the temporary V1 navigation label
 
 Decision:
 
-- Use `食物档案` as the temporary V1 label for the personal food profile area.
+- Use `档案` as the temporary V1 label for the personal food profile area.
 
 Reason:
 
@@ -109,6 +109,23 @@ Tradeoff:
 
 - It may feel slightly formal.
 - It should be tested with private users before being treated as final naming.
+
+Update on 2026-06-15:
+
+- `食物档案` was shortened to `档案` to keep bottom navigation labels concise and consistent.
+- The full meaning remains personal food/ingredient profile.
+
+## 2026-06-15: Use equal-length action labels
+
+Decision:
+
+- Use `查食物`, `记饮食`, and `记不适` for the three center `+` actions.
+
+Reason:
+
+- The previous labels had uneven length and rhythm.
+- The new labels are short, action-oriented, and consistent.
+- They still map to the user's real tasks: checking food, logging intake, and recording discomfort.
 
 ## 2026-06-14: Move V1 into low-fidelity page structure
 

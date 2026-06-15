@@ -12,18 +12,18 @@ The goal is not visual design yet. The goal is to decide what each screen needs 
 V1 uses a mobile-first bottom navigation:
 
 ```text
-首页 / 记录 / + / 食物档案 / 发现
+首页 / 记录 / + / 档案 / 发现
 ```
 
 The center `+` opens the three primary actions:
 
 ```text
-能吃吗
-记吃了什么
-记录不舒服
+查食物
+记饮食
+记不适
 ```
 
-`食物档案` is a temporary working name. It contains foods and ingredients the user needs to avoid, is observing, or has imported from reports.
+`档案` is a temporary working name. It contains foods and ingredients the user needs to avoid, is observing, or has imported from reports.
 
 ## 2. Screen List
 
@@ -31,14 +31,14 @@ V1 low-fidelity screens:
 
 1. 首页
 2. + 快捷动作面板
-3. 能吃吗
-4. 能吃吗结果
-5. 记吃了什么
-6. 记录不舒服
+3. 查食物
+4. 检查结果
+5. 记饮食
+6. 记不适
 7. 症状后回看
-8. 记录时间线
-9. 食物档案
-10. 食物档案详情 / 添加项目
+8. 记录
+9. 档案
+10. 档案详情 / 添加项目
 11. 报告提取确认
 12. 发现
 13. 隐私与数据
@@ -55,19 +55,16 @@ Purpose:
 
 Primary content:
 
-- Today summary: meals recorded, checks done, symptoms recorded.
-- Main prompt: `今天想先做什么？`
-- Three action shortcuts: `能吃吗`, `记吃了什么`, `记录不舒服`.
-- Recent activity preview.
-- Gentle reminder if food profile is empty.
-- Link to privacy and local data settings.
+- Main prompt: `今天要做什么？`
+- Three action shortcuts: `查食物`, `记饮食`, `记不适`.
+- One recent activity preview.
+- Local storage / privacy link.
 
 Empty state:
 
-- If the user has no profile and no records, show a simple setup path:
-  - Add food manually.
-  - Import report.
-  - Skip and start recording.
+- If the user has no profile and no records, show one simple setup prompt:
+  - Add first profile item.
+  - Or skip and start recording.
 
 Language boundary:
 
@@ -83,9 +80,9 @@ Purpose:
 Primary content:
 
 - Action sheet with:
-  - `能吃吗`: scan food, menu, package, or ingredients.
-  - `记吃了什么`: save a meal, snack, drink, sauce, or complex meal.
-  - `记录不舒服`: save symptoms and review prior food.
+  - `查食物`: scan or enter food, menu, package, or ingredients.
+  - `记饮食`: save a meal, snack, drink, sauce, or complex meal.
+  - `记不适`: save symptoms and review prior food.
 - Close control.
 
 Behavior:
@@ -93,7 +90,7 @@ Behavior:
 - Opens as a bottom sheet over the current tab.
 - Choosing an action opens the relevant flow.
 
-### 3.3 能吃吗
+### 3.3 查食物
 
 Purpose:
 
@@ -102,12 +99,13 @@ Purpose:
 Input methods:
 
 - Take photo.
-- Upload image.
 - Paste text.
 
 Primary fields:
 
-- Image or text input.
+- Input choice: photo or text.
+- Photo placeholder or future AI flow.
+- Text input for ingredients, menu, or product description.
 - Optional context: package, menu, delivery, restaurant, homemade, other.
 - Consent notice before any AI upload:
   - What will be uploaded.
@@ -123,7 +121,7 @@ Secondary actions:
 - Save as food record after check.
 - Cancel.
 
-### 3.4 能吃吗结果
+### 3.4 检查结果
 
 Purpose:
 
@@ -154,7 +152,7 @@ Language boundary:
 - Do not say `安全`, `一定没问题`, `一定导致症状`, or `过敏`.
 - Prefer `目前可见信息中`, `可能相关`, `建议继续观察`.
 
-### 3.5 记吃了什么
+### 3.5 记饮食
 
 Purpose:
 
@@ -163,7 +161,6 @@ Purpose:
 Input methods:
 
 - Take photo.
-- Upload image.
 - Text note.
 
 Primary fields:
@@ -188,7 +185,7 @@ Primary action:
 
 - `保存记录`
 
-### 3.6 记录不舒服
+### 3.6 记不适
 
 Purpose:
 
@@ -232,7 +229,7 @@ Language boundary:
 - Say `可能值得继续观察`.
 - Do not say `这些导致了不舒服`.
 
-### 3.8 记录时间线
+### 3.8 记录
 
 Purpose:
 
@@ -251,14 +248,14 @@ Primary content:
   - food
   - symptoms
   - checks
-- Entry detail view.
+- Tap item to view or edit details.
 
 Primary actions:
 
 - Add new record through `+`.
 - Edit or delete an entry.
 
-### 3.9 食物档案
+### 3.9 档案
 
 Purpose:
 
@@ -273,19 +270,16 @@ Primary content:
 - Search.
 - Food cards with:
   - name
-  - aliases / hidden ingredients
-  - source
-  - latest note
+  - status
+  - key aliases
 - Empty state for:
   - Add manually.
-  - Import report.
 
 Primary actions:
 
 - Add food or ingredient.
-- Import report.
 
-### 3.10 食物档案详情 / 添加项目
+### 3.10 档案详情 / 添加项目
 
 Purpose:
 
@@ -296,8 +290,6 @@ Fields:
 - Food or ingredient name.
 - Aliases / hidden names.
 - Status: avoid, observe, uncertain.
-- Severity or report level, if known.
-- Test value, if known.
 - Source.
 - Notes.
 
@@ -382,7 +374,7 @@ Primary content:
 
 ```text
 首页 or +
--> 能吃吗
+-> 查食物
 -> photo / image / text
 -> consent if AI upload is needed
 -> result
@@ -393,18 +385,18 @@ Primary content:
 
 ```text
 首页 or +
--> 记吃了什么
+-> 记饮食
 -> photo plus short note
 -> optional tags for sauce / drink / dessert / processed food
 -> save
--> 记录时间线
+-> 记录
 ```
 
 ### 4.3 Record Symptom and Review
 
 ```text
 首页 or +
--> 记录不舒服
+-> 记不适
 -> save symptom
 -> 症状后回看
 -> choose 2h / 4h / 8h / 24h
@@ -414,7 +406,7 @@ Primary content:
 ### 4.4 Build Food Profile
 
 ```text
-食物档案
+档案
 -> add manually or import report
 -> confirm items
 -> future checks and logs use profile
@@ -422,8 +414,8 @@ Primary content:
 
 ## 5. Open UX Questions
 
-1. Should onboarding force a first food profile item, or allow immediate use without setup?
-2. Should `能吃吗` results be saved by default or only when the user chooses?
+1. Should onboarding force a first profile item, or allow immediate use without setup?
+2. Should `查食物` results be saved by default or only when the user chooses?
 3. Should symptom review be a separate screen or embedded immediately after saving?
-4. Is `食物档案` understandable enough for private testers, or should it become warmer before the first clickable prototype?
+4. Is `档案` understandable enough for private testers, or should it become warmer before the first clickable prototype?
 5. How much original image data should be retained for food records, compared with report images?

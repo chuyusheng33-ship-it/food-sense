@@ -14,7 +14,7 @@ User sees or eats food
 
 1. User picks up a packaged food in a supermarket.
 2. User wonders: `这个我能吃吗？`
-3. User taps `+` and chooses `能吃吗`.
+3. User taps `+` and chooses `查食物`.
 4. User takes a photo of the ingredient list.
 5. Food Sense extracts text and compares it with the user's personal food profile.
 6. Food Sense shows matched ingredients and explains the reason.
@@ -32,7 +32,7 @@ User sees or eats food
 
 1. User is eating hot pot with friends.
 2. User does not want to record every dish separately.
-3. User chooses `记吃了什么`.
+3. User chooses `记饮食`.
 4. User takes one photo of the table, menu, or order list.
 5. User adds a short note such as `牛肉、虾滑、豆腐、青菜、蘸料`.
 6. Food Sense suggests tags like `锅底`, `蘸料`, `饮料`, `甜品`, `加工食品`.
@@ -41,7 +41,7 @@ User sees or eats food
 ## Scenario 4: Symptom Review
 
 1. User feels abdominal pain a few hours after eating.
-2. User chooses `记录不舒服`.
+2. User chooses `记不适`.
 3. User records time, symptom type, severity, duration, and notes.
 4. Food Sense immediately shows foods recorded in the last 2, 4, 8, and 24 hours.
 5. Food Sense highlights known profile matches and repeated foods.

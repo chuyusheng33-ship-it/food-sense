@@ -42,13 +42,13 @@ These should work with real local data:
    - `首页`
    - `记录`
    - center `+`
-   - `食物档案`
+   - `档案`
    - `发现`
 
 2. `+` action sheet:
-   - `能吃吗`
-   - `记吃了什么`
-   - `记录不舒服`
+   - `查食物`
+   - `记饮食`
+   - `记不适`
 
 3. Food profile:
    - Add food or ingredient manually.
@@ -84,10 +84,11 @@ These should work with real local data:
 
 These should be designed into the UI, but can use simple local logic or mock behavior first:
 
-1. `能吃吗`
-   - User can paste ingredient/menu text.
+1. `查食物`
+   - User can choose photo or text.
+   - Text input should work first.
    - App matches pasted text against food profile names and aliases.
-   - Photo/upload UI can exist, but AI image recognition can be disabled or marked as coming later.
+   - Photo entry can exist as a placeholder or local attachment decision, but AI image recognition can be disabled or marked as coming later.
 
 2. Check result:
    - Show matched profile items.
@@ -144,7 +145,7 @@ Build first:
 
 Build after the core loop works:
 
-1. `能吃吗` text input.
+1. `查食物` text input.
 2. Local matching against profile names and aliases.
 3. Check result screen.
 4. Save check result into timeline.
@@ -256,9 +257,9 @@ Why:
 
 The product owner should decide:
 
-1. Keep `食物档案` as the V1 navigation name?
-2. First build should support photo attachment storage, or text-only plus photo UI placeholder?
-3. Should `能吃吗` first build be text-only matching, with photo/AI marked as coming later?
+1. Keep `档案` as the V1 navigation name?
+2. Should photo entry be a visible first-class option in `查食物` and `记饮食`, even if recognition is not active yet?
+3. Should `查食物` first build use text matching first, with photo/AI marked as coming later?
 4. Should report import be postponed until after the manual profile flow feels good?
 5. Which visual direction should V1 use:
    - calm and clinical
@@ -269,9 +270,9 @@ The product owner should decide:
 
 Recommended for the first build:
 
-1. Keep `食物档案` for now.
-2. Start with text-first food logs, with optional photo UI placeholder.
-3. Make `能吃吗` text-first using local matching.
+1. Keep `档案` for now.
+2. Show photo and text as the two entry options for both `查食物` and `记饮食`.
+3. Make `查食物` text-first using local matching, while photo recognition waits.
 4. Postpone real report OCR/AI extraction until the manual flow is useful.
 5. Use `clean utility with soft warmth` as the visual direction.
 

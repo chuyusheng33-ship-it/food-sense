@@ -17,7 +17,7 @@ It answers:
 
 The four paths still matter. They serve different purposes:
 
-1. Supermarket / packaged food: validates `能吃吗`.
+1. Supermarket / packaged food: validates `查食物`.
 2. Hot pot / complex meal: validates fast, realistic food logging.
 3. Discomfort after eating: validates symptom logging and review.
 4. Hospital report: validates food profile setup, but can be partly postponed.
@@ -37,15 +37,18 @@ I am holding a packaged food and want to know whether the visible ingredients co
 Required for first build:
 
 1. `+` action sheet
-2. `能吃吗`
-3. `能吃吗结果`
+2. `查食物`
+3. `检查结果`
 4. optional save into `记录`
 
 ### 2.2 Required Fields
 
 First build:
 
-- Ingredient/menu text input.
+- Input choice:
+  - photo
+  - text
+- Ingredient/menu text input should work first.
 - Context:
   - package
   - menu
@@ -57,8 +60,6 @@ First build:
 
 Later:
 
-- Photo upload.
-- Camera capture.
 - AI/OCR extraction.
 
 ### 2.3 First Build Behavior
@@ -96,11 +97,11 @@ Avoid:
 ### 2.5 Button Map
 
 ```text
-+ -> 能吃吗
-能吃吗 / 开始检查 -> 能吃吗结果
-能吃吗结果 / 保存为记录 -> 记录
-能吃吗结果 / 添加到观察 -> 食物档案详情
-能吃吗结果 / 再检查一次 -> 能吃吗
++ -> 查食物
+查食物 / 开始检查 -> 检查结果
+检查结果 / 保存为记录 -> 记录
+检查结果 / 添加到观察 -> 档案详情
+检查结果 / 再检查一次 -> 查食物
 ```
 
 ### 2.6 First Build Decision
@@ -108,7 +109,7 @@ Avoid:
 Recommended:
 
 - Build this as text-first.
-- Show photo/upload controls only if they are clearly marked as coming later, or hide them until AI is ready.
+- Show both photo and text as entry choices, but keep AI recognition clearly marked as later until it works.
 
 ## 3. Path 2: Hot Pot / Complex Meal
 
@@ -123,7 +124,7 @@ I am eating a complex meal and do not want to record every single dish.
 Required for first build:
 
 1. `+` action sheet
-2. `记吃了什么`
+2. `记饮食`
 3. `记录`
 4. `首页` recent activity preview
 
@@ -132,6 +133,9 @@ Required for first build:
 Must have:
 
 - Time, auto-filled but editable.
+- Input choice:
+  - photo
+  - text
 - Text description.
 - Scene:
   - home
@@ -148,7 +152,6 @@ Must have:
 
 Nice later:
 
-- Photo attachment.
 - AI food tag extraction.
 - Meal templates.
 
@@ -177,8 +180,8 @@ Avoid:
 ### 3.5 Button Map
 
 ```text
-+ -> 记吃了什么
-记吃了什么 / 保存记录 -> 记录
++ -> 记饮食
+记饮食 / 保存记录 -> 记录
 记录 item -> 记录详情 or edit form
 首页 recent item -> 记录详情 or 记录
 ```
@@ -204,10 +207,10 @@ I feel uncomfortable after eating and want to quickly save what happened and see
 Required for first build:
 
 1. `+` action sheet
-2. `记录不舒服`
+2. `记不适`
 3. `症状后回看`
 4. `记录`
-5. optional `食物档案详情` when marking a food as observing
+5. optional `档案详情` when marking a food as observing
 
 ### 4.2 Required Fields
 
@@ -262,10 +265,10 @@ Avoid:
 ### 4.5 Button Map
 
 ```text
-+ -> 记录不舒服
-记录不舒服 / 保存并回看 -> 症状后回看
++ -> 记不适
+记不适 / 保存并回看 -> 症状后回看
 症状后回看 / 2h 4h 8h 24h -> update visible records
-症状后回看 / 标记为继续观察 -> 食物档案详情
+症状后回看 / 标记为继续观察 -> 档案详情
 症状后回看 / 查看完整记录 -> 记录
 ```
 
@@ -288,8 +291,8 @@ I have a hospital or lab report and want to turn its food items into my food pro
 
 First build:
 
-1. `食物档案`
-2. `食物档案详情 / 添加项目`
+1. `档案`
+2. `档案详情 / 添加项目`
 
 Optional after core loop:
 
@@ -350,10 +353,10 @@ Avoid:
 ### 5.5 Button Map
 
 ```text
-食物档案 / 添加 -> 食物档案详情
-食物档案详情 / 保存 -> 食物档案
-食物档案 / 导入报告 -> later or manual report entry explanation
-报告提取确认 / 确认加入食物档案 -> 食物档案
+档案 / 添加 -> 档案详情
+档案详情 / 保存 -> 档案
+档案 / 导入报告 -> later or manual report entry explanation
+报告提取确认 / 确认加入档案 -> 档案
 ```
 
 ### 5.6 First Build Decision
@@ -371,15 +374,15 @@ The 13 low-fidelity views reduce into this first build set:
 
 1. 首页
 2. + 快捷动作面板
-3. 记录时间线
-4. 食物档案
-5. 食物档案详情 / 添加项目
-6. 记吃了什么
-7. 记录不舒服
+3. 记录
+4. 档案
+5. 档案详情 / 添加项目
+6. 记饮食
+7. 记不适
 8. 症状后回看
 9. 隐私与数据
-10. 能吃吗 text-first
-11. 能吃吗结果
+10. 查食物 text-first
+11. 检查结果
 
 ### Build Lightly
 
@@ -415,7 +418,7 @@ Recommended stack:
 The product owner should confirm:
 
 1. Are paths 2 and 3 the first fully polished flows?
-2. Should path 1 be text-first for now?
+2. Should path 1 show photo/text choices, with text working first?
 3. Should path 4 be manual-first for now?
 4. Should UI direction move forward as `clean utility with soft warmth`?
 
