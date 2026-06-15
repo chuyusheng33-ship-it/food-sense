@@ -22,13 +22,11 @@ The first version is planned as a mobile web app / PWA for small private testing
 ```text
 docs/
   PRD.md
-  collaboration-agreement.md
-  v1-flow-walkthrough.md
-  v1-mvp-slice.md
+  v1-build-plan.md
   v1-page-structure.md
-  user-journey.md
-  privacy-notes.md
+  privacy.md
   decisions.md
+  archive/
 design/
   wireframes/
   ui-references/
@@ -53,14 +51,13 @@ The home screen shows the three primary actions:
 
 Current low-fidelity materials:
 
-- `docs/v1-flow-walkthrough.md`
-- `docs/v1-mvp-slice.md`
+- `docs/v1-build-plan.md`
 - `docs/v1-page-structure.md`
 - `design/wireframes/v1-low-fi.md`
 
-Working agreement:
+Archived planning notes:
 
-- `docs/collaboration-agreement.md`
+- `docs/archive/`
 
 ## Obsidian Sync Note
 

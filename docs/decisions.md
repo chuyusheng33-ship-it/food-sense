@@ -258,7 +258,7 @@ Reason:
 
 Working agreement:
 
-- See `docs/collaboration-agreement.md`.
+- See `docs/archive/collaboration-agreement.md`.
 
 ## 2026-06-15: Build local-first core loop while keeping AI recognition in V1
 
@@ -277,7 +277,7 @@ Reason:
 
 Output:
 
-- `docs/v1-mvp-slice.md`
+- `docs/v1-build-plan.md`
 
 ## 2026-06-15: Use four real paths to validate V1 before app scaffolding
 
@@ -296,7 +296,7 @@ Reason:
 
 Output:
 
-- `docs/v1-flow-walkthrough.md`
+- `docs/v1-build-plan.md`
 
 ## 2026-06-15: Tighten MVP scope, blacklist, and acceptance criteria
 
@@ -319,3 +319,24 @@ Reason:
 Output:
 
 - `docs/PRD.md`
+
+## 2026-06-15: Consolidate docs for V1 planning
+
+Decision:
+
+- Keep the active docs folder focused on current product and build materials.
+- Merge the old MVP slice and flow walkthrough into `docs/v1-build-plan.md`.
+- Rename `docs/privacy-notes.md` to `docs/privacy.md`.
+- Move early process notes to `docs/archive/`.
+
+Reason:
+
+- The GitHub and Obsidian views should be easy to scan.
+- PRD should remain the product source of truth.
+- The build plan should hold implementation order, user paths, and acceptance criteria without duplicating multiple process documents.
+
+Output:
+
+- `docs/v1-build-plan.md`
+- `docs/privacy.md`
+- `docs/archive/`
