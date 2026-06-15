@@ -161,3 +161,20 @@ Reason:
 Working agreement:
 
 - See `docs/collaboration-agreement.md`.
+
+## 2026-06-15: Build local-first core loop before heavy AI
+
+Decision:
+
+- The first implementation slice should prioritize a real local-first product loop.
+- AI image recognition and real report OCR should be added after the manual and text-based flows are useful.
+
+Reason:
+
+- The main product value can be tested with manual food profile items, food logs, symptom logs, review windows, and text-based ingredient matching.
+- This reduces privacy, reliability, and backend complexity during the first build.
+- It lets early users validate whether the product is useful before investing in heavier AI infrastructure.
+
+Output:
+
+- `docs/v1-mvp-slice.md`

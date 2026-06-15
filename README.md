@@ -23,6 +23,7 @@ The first version is planned as a mobile web app / PWA for small private testing
 docs/
   PRD.md
   collaboration-agreement.md
+  v1-mvp-slice.md
   v1-page-structure.md
   user-journey.md
   privacy-notes.md
@@ -51,6 +52,7 @@ The center `+` opens:
 
 Current low-fidelity materials:
 
+- `docs/v1-mvp-slice.md`
 - `docs/v1-page-structure.md`
 - `design/wireframes/v1-low-fi.md`
 
