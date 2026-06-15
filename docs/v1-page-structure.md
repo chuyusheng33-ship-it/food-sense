@@ -12,7 +12,7 @@ The goal is not visual design yet. The goal is to decide what each screen needs 
 V1 uses a mobile-first bottom navigation:
 
 ```text
-首页 / 记录 / 档案 / 发现
+首页 / 记录 / 档案
 ```
 
 The home screen shows the three primary actions:
@@ -23,7 +23,7 @@ The home screen shows the three primary actions:
 记不适
 ```
 
-`档案` is a temporary working name. It contains foods and ingredients the user needs to avoid, is observing, or has imported from reports.
+`档案` is the user's personal food reaction profile. It contains report-confirmed items, manually added items, and possible patterns discovered from food and symptom records.
 
 ## 2. Screen List
 
@@ -39,8 +39,7 @@ V1 low-fidelity screens:
 8. 档案
 9. 档案详情 / 添加项目
 10. 报告提取确认
-11. 发现
-12. 隐私与数据
+11. 隐私与数据
 
 ## 3. Screen Details
 
@@ -238,25 +237,29 @@ Primary actions:
 
 Purpose:
 
-- Store the user's personal foods and ingredients to avoid, observe, or keep uncertain.
+- Store and grow the user's personal food reaction profile.
+- Combine known report/manual items with non-diagnostic observation patterns.
 
 Primary content:
 
-- Status tabs:
-  - `需要避开`
-  - `正在观察`
-  - `不确定`
-- Food cards with:
+- `已知需注意`: items from medical reports or manual entries.
+- `观察中`: items the user is watching.
+- `可能相关`: foods or tags that repeatedly appear before discomfort.
+- Food cards show:
   - name
   - status
   - key aliases
-- Source shown only when helpful, such as `医院报告`.
+  - source or evidence summary
 - Empty state for:
   - Add manually.
+  - Upload report.
+  - Start recording without setup.
 
 Primary actions:
 
 - Add food or ingredient.
+- Upload medical report.
+- Review related records for possible patterns.
 
 ### 3.9 档案详情 / 添加项目
 
@@ -301,33 +304,7 @@ Primary content:
 - Proposed status.
 - Include checkbox.
 
-### 3.11 发现
-
-Purpose:
-
-- Show non-diagnostic patterns that may help the user observe over time.
-
-Primary content:
-
-- Empty state until there are enough records.
-- `可能相关`: foods or tags that appear before discomfort more than once.
-- `最近常见`: profile items recently matched in checks or records.
-- `值得回看`: meals near symptom records.
-
-Required caveats:
-
-- Findings are based on local records.
-- Findings are not medical diagnosis.
-- Suggested wording:
-  - `可能相关`
-  - `建议继续观察`
-  - `可在复诊时与医生讨论`
-
-Empty state:
-
-- Explain that findings need several food and symptom records.
-
-### 3.12 隐私与数据
+### 3.11 隐私与数据
 
 Purpose:
 
@@ -387,9 +364,20 @@ Primary content:
 
 ```text
 档案
--> add manually or import report
--> confirm items
+-> add manually or upload report
+-> confirm known items
+-> app adds possible related foods after enough records
 -> future checks and logs use profile
+```
+
+### 4.5 Observe in Profile
+
+```text
+档案
+-> record foods and symptoms over time
+-> app notices foods that appear before discomfort
+-> app labels them `可能相关`
+-> user opens related records and decides what to watch
 ```
 
 ## 5. Open UX Questions
@@ -397,5 +385,5 @@ Primary content:
 1. Should onboarding force a first profile item, or allow immediate use without setup?
 2. Should `查食物` results be saved by default or only when the user chooses?
 3. Should symptom review be a separate screen or embedded immediately after saving?
-4. Is `档案` understandable enough for private testers, or should it become warmer before the first clickable prototype?
+4. Is `档案` understandable as a personal food reaction profile, or should it become warmer before the first clickable prototype?
 5. How much original image data should be retained for food records, compared with report images?

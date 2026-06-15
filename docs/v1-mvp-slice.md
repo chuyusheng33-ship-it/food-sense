@@ -42,7 +42,6 @@ These should work with real local data:
    - `首页`
    - `记录`
    - `档案`
-   - `发现`
 
 2. Home primary actions:
    - `查食物`
@@ -53,6 +52,8 @@ These should work with real local data:
    - Add food or ingredient manually.
    - Edit name, aliases, status, source, and notes.
    - Delete a profile item.
+   - Upload or manually enter medical report items.
+   - Show possible related items from usage patterns when enough records exist.
    - Store locally.
 
 4. Food logging:
@@ -100,7 +101,7 @@ These should be designed into the UI, but can use simple local logic or mock beh
    - User can add extracted-looking rows manually.
    - Real OCR/AI extraction can come after the core loop is proven.
 
-4. Discovery:
+4. Profile observations:
    - First build can show simple local summaries:
      - Foods/tags that appear before symptoms.
      - Profile items recently matched.
@@ -148,11 +149,11 @@ Build after the core loop works:
 3. Check result screen.
 4. Save check result into timeline.
 
-### Priority 3: Early Insight
+### Priority 3: Profile Observations
 
 Build after records exist:
 
-1. Discovery empty state.
+1. Profile observation empty state.
 2. Simple pattern cards.
 3. Links back to related records.
 
@@ -257,10 +258,11 @@ The product owner should decide:
 
 1. Keep `档案` as the V1 navigation name?
 2. Should the bottom `+` be removed, with primary actions living on the home screen?
-3. Should photo entry be a visible first-class option in `查食物` and `记饮食`, even if recognition is not active yet?
-4. Should `查食物` first build use text matching first, with photo/AI marked as coming later?
-5. Should report import be postponed until after the manual profile flow feels good?
-6. Which visual direction should V1 use:
+3. Should `发现` be merged into `档案` as profile observations?
+4. Should photo entry be a visible first-class option in `查食物` and `记饮食`, even if recognition is not active yet?
+5. Should `查食物` first build use text matching first, with photo/AI marked as coming later?
+6. Should report import be postponed until after the manual profile flow feels good?
+7. Which visual direction should V1 use:
    - calm and clinical
    - warm and everyday
    - clean utility with soft warmth
@@ -271,10 +273,11 @@ Recommended for the first build:
 
 1. Keep `档案` for now.
 2. Remove the bottom `+`; place `查食物`, `记饮食`, and `记不适` directly on the home screen.
-3. Show photo and text as the two entry options for both `查食物` and `记饮食`.
-4. Make `查食物` text-first using local matching, while photo recognition waits.
-5. Postpone real report OCR/AI extraction until the manual flow is useful.
-6. Use `clean utility with soft warmth` as the visual direction.
+3. Merge `发现` into `档案` as `可能相关` / observation content.
+4. Show photo and text as the two entry options for both `查食物` and `记饮食`.
+5. Make `查食物` text-first using local matching, while photo recognition waits.
+6. Postpone real report OCR/AI extraction until the manual flow is useful.
+7. Use `clean utility with soft warmth` as the visual direction.
 
 Reason:
 

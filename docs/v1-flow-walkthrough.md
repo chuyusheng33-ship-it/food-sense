@@ -22,7 +22,7 @@ The four paths still matter. They serve different purposes:
 3. Discomfort after eating: validates symptom logging and review.
 4. Hospital report: validates food profile setup, but can be partly postponed.
 
-The first build should fully support paths 2 and 3, support path 1 with text-first matching, and only provide a lightweight/manual version of path 4.
+The first build should fully support paths 2 and 3, support path 1 with text-first matching, and make path 4 part of the unified profile area.
 
 ## 2. Path 1: Supermarket / Packaged Food
 
@@ -385,7 +385,7 @@ The 13 low-fidelity views reduce into this first build set:
 
 ### Build Lightly
 
-1. 发现
+1. 档案里的观察区域
    - Empty state plus simple local summaries.
 
 2. 报告提取确认

@@ -131,7 +131,7 @@ Reason:
 
 Decision:
 
-- V1 bottom navigation should be `首页 / 记录 / 档案 / 发现`.
+- V1 bottom navigation should be `首页 / 记录 / 档案`.
 - The three primary actions should live directly on the home screen instead of behind a center `+`.
 
 Reason:
@@ -139,6 +139,25 @@ Reason:
 - The first version has only three core actions.
 - Showing them on the home screen makes the product easier to understand.
 - A hidden `+` adds navigation complexity before the product needs it.
+
+## 2026-06-15: Merge `发现` into `档案`
+
+Decision:
+
+- Remove `发现` as a separate V1 bottom navigation item.
+- Treat `档案` as the user's personal food reaction profile.
+- `档案` should include known report/manual items and non-diagnostic possible related items discovered through ongoing use.
+
+Reason:
+
+- The user thinks of these as one personal profile, not two separate areas.
+- Medical report imports and long-term observation both contribute to the same personal food profile.
+- This reduces navigation and makes the product easier to explain.
+
+Language boundary:
+
+- Use `可能相关`, `观察中`, and `建议继续观察`.
+- Do not say `可能过敏` or imply diagnosis.
 
 ## 2026-06-14: Move V1 into low-fidelity page structure
 
