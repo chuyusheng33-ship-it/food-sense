@@ -22,6 +22,7 @@ The first version is planned as a mobile web app / PWA for small private testing
 ```text
 docs/
   PRD.md
+  collaboration-agreement.md
   v1-page-structure.md
   user-journey.md
   privacy-notes.md
@@ -52,6 +53,10 @@ Current low-fidelity materials:
 
 - `docs/v1-page-structure.md`
 - `design/wireframes/v1-low-fi.md`
+
+Working agreement:
+
+- `docs/collaboration-agreement.md`
 
 ## Obsidian Sync Note
 

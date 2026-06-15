@@ -144,3 +144,20 @@ Working rule:
 - Update the repo Markdown files first.
 - Commit and push changes to GitHub.
 - If a separate Obsidian-only summary note is created later, update that note alongside the repo docs.
+
+## 2026-06-15: Adopt a technical co-founder collaboration model
+
+Decision:
+
+- The user is the product owner with final decision power.
+- Codex acts as technical co-founder and builder.
+- Food Sense should be treated as a real product, not a throwaway prototype.
+
+Reason:
+
+- The project needs product judgment, implementation speed, clear documentation, and careful handling of health-adjacent risks.
+- The product owner should stay informed and in control without having to manage every technical detail.
+
+Working agreement:
+
+- See `docs/collaboration-agreement.md`.
