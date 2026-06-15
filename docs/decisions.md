@@ -284,6 +284,28 @@ Output:
 
 - `docs/v1-ui-direction.md`
 
+## 2026-06-15: Add calendar-based record review to V1
+
+Decision:
+
+- The `记录` page should include a calendar entry or month view.
+- Users should be able to switch dates and see that day's food, discomfort, and check records.
+- The page should default to today, but should not be limited to today's records.
+
+Reason:
+
+- Food Sense depends on reviewing food and discomfort over time.
+- A today-only record page would make longer-term observation too hard.
+- A lightweight calendar supports real use without turning V1 into a statistics dashboard.
+
+Output:
+
+- `docs/PRD.md`
+- `docs/v1-page-structure.md`
+- `docs/v1-build-plan.md`
+- `docs/v1-ui-direction.md`
+- `design/wireframes/v1-low-fi.md`
+
 ## 2026-06-15: Build local-first core loop while keeping AI recognition in V1
 
 Decision:

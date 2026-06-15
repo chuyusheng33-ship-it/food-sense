@@ -192,7 +192,13 @@ Other result states:
 ┌─────────────────────────┐
 │ 记录                    │
 ├─────────────────────────┤
-│ 今天 6月14日            │
+│ 2026年6月               │
+│ <        14 今天      > │
+│ 一 二 三 四 五 六 日    │
+│ 8  9  10 11 12 13 14   │
+│          ·     ·  ●     │
+├─────────────────────────┤
+│ 6月14日                 │
 │ [全部] [饮食] [不适]    │
 │ [检查]                  │
 ├─────────────────────────┤
@@ -208,6 +214,13 @@ Other result states:
 │ 首页 记录 档案          │
 └─────────────────────────┘
 ```
+
+Calendar behavior:
+
+- Open `记录` defaults to today.
+- Tap another date to show that day's timeline.
+- Dots or simple marks indicate dates with records.
+- V1 should not add statistics charts here.
 
 ## 8. 档案
 

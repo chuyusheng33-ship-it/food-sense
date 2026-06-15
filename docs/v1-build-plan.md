@@ -53,7 +53,10 @@ The product must stay cautious: it can say `可能相关`, `建议继续观察`,
    - After saving, show food records from the last 2, 4, 8, and 24 hours.
 
 6. Timeline:
-   - Show food records, discomfort records, and check records in time order.
+   - Provide a calendar entry or month view.
+   - Let users switch dates instead of only viewing today.
+   - Show food records, discomfort records, and check records for the selected day in time order.
+   - Mark days that contain records.
    - Support simple filtering by type.
 
 7. Privacy controls:
@@ -252,7 +255,7 @@ The V1 private-test build is acceptable when:
 6. A user can use photo or album input in `查食物` and see recognized content.
 7. A user can use photo or album input in `记饮食` and get editable food content.
 8. A report item can be added manually or confirmed from extraction before entering the profile.
-9. A user can review all records in a timeline.
+9. A user can use the record calendar to switch dates and review that day's timeline.
 10. A user can delete all local data.
 11. The UI never uses diagnostic certainty language.
 

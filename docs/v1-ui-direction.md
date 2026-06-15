@@ -224,6 +224,14 @@ They should not look like medical diagnosis cards. The card language should stay
 
 The record timeline should be easy to scan.
 
+The record page should include a lightweight calendar entry or month view so users can move beyond today and review a specific date.
+
+The calendar should:
+
+- Default to today.
+- Mark days that have records.
+- Avoid heavy analytics or health-score styling in V1.
+
 Each record item should show:
 
 - Time.

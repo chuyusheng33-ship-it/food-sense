@@ -209,12 +209,14 @@ Language boundary:
 
 Purpose:
 
-- Provide a chronological view of food checks, food logs, and symptoms.
+- Let users choose a date and review that day's food checks, food logs, and symptoms.
+- Support longer-term review instead of only showing today's records.
 
 Primary content:
 
-- Date selector.
-- Timeline grouped by day.
+- Calendar entry or month view.
+- Selected date.
+- Timeline for the selected day.
 - Item types:
   - food check
   - food record
@@ -228,7 +230,15 @@ Primary content:
 
 Primary actions:
 
+- Change date from the calendar.
 - Edit or delete an entry.
+
+Calendar behavior:
+
+- Default to today.
+- Mark days that have records.
+- Tapping a day updates the timeline below.
+- Keep the calendar lightweight; V1 does not need charts or trend analytics inside the record page.
 
 ### 3.8 档案
 
