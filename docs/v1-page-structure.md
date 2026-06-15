@@ -12,10 +12,10 @@ The goal is not visual design yet. The goal is to decide what each screen needs 
 V1 uses a mobile-first bottom navigation:
 
 ```text
-首页 / 记录 / + / 档案 / 发现
+首页 / 记录 / 档案 / 发现
 ```
 
-The center `+` opens the three primary actions:
+The home screen shows the three primary actions:
 
 ```text
 查食物
@@ -30,18 +30,17 @@ The center `+` opens the three primary actions:
 V1 low-fidelity screens:
 
 1. 首页
-2. + 快捷动作面板
-3. 查食物
-4. 检查结果
-5. 记饮食
-6. 记不适
-7. 症状后回看
-8. 记录
-9. 档案
-10. 档案详情 / 添加项目
-11. 报告提取确认
-12. 发现
-13. 隐私与数据
+2. 查食物
+3. 检查结果
+4. 记饮食
+5. 记不适
+6. 症状后回看
+7. 记录
+8. 档案
+9. 档案详情 / 添加项目
+10. 报告提取确认
+11. 发现
+12. 隐私与数据
 
 ## 3. Screen Details
 
@@ -71,26 +70,7 @@ Language boundary:
 - Avoid medical certainty.
 - Use `记录`, `观察`, `可能相关`.
 
-### 3.2 + 快捷动作面板
-
-Purpose:
-
-- Make the three core actions reachable from anywhere.
-
-Primary content:
-
-- Action sheet with:
-  - `查食物`: scan or enter food, menu, package, or ingredients.
-  - `记饮食`: save a meal, snack, drink, sauce, or complex meal.
-  - `记不适`: save symptoms and review prior food.
-- Close control.
-
-Behavior:
-
-- Opens as a bottom sheet over the current tab.
-- Choosing an action opens the relevant flow.
-
-### 3.3 查食物
+### 3.2 查食物
 
 Purpose:
 
@@ -121,7 +101,7 @@ Secondary actions:
 - Save as food record after check.
 - Cancel.
 
-### 3.4 检查结果
+### 3.3 检查结果
 
 Purpose:
 
@@ -152,7 +132,7 @@ Language boundary:
 - Do not say `安全`, `一定没问题`, `一定导致症状`, or `过敏`.
 - Prefer `目前可见信息中`, `可能相关`, `建议继续观察`.
 
-### 3.5 记饮食
+### 3.4 记饮食
 
 Purpose:
 
@@ -165,8 +145,8 @@ Input methods:
 
 Primary fields:
 
-- Time.
 - Description.
+- Time.
 - Scene: home, restaurant, delivery, supermarket, other.
 - Optional tags: sauce, seasoning, drink, dessert, processed food.
 - Extracted food tags, if AI or manual parsing is available.
@@ -185,7 +165,7 @@ Primary action:
 
 - `保存记录`
 
-### 3.6 记不适
+### 3.5 记不适
 
 Purpose:
 
@@ -209,7 +189,7 @@ Primary action:
 
 - `保存并回看`
 
-### 3.7 症状后回看
+### 3.6 症状后回看
 
 Purpose:
 
@@ -229,7 +209,7 @@ Language boundary:
 - Say `可能值得继续观察`.
 - Do not say `这些导致了不舒服`.
 
-### 3.8 记录
+### 3.7 记录
 
 Purpose:
 
@@ -252,10 +232,9 @@ Primary content:
 
 Primary actions:
 
-- Add new record through `+`.
 - Edit or delete an entry.
 
-### 3.9 档案
+### 3.8 档案
 
 Purpose:
 
@@ -267,11 +246,11 @@ Primary content:
   - `需要避开`
   - `正在观察`
   - `不确定`
-- Search.
 - Food cards with:
   - name
   - status
   - key aliases
+- Source shown only when helpful, such as `医院报告`.
 - Empty state for:
   - Add manually.
 
@@ -279,7 +258,7 @@ Primary actions:
 
 - Add food or ingredient.
 
-### 3.10 档案详情 / 添加项目
+### 3.9 档案详情 / 添加项目
 
 Purpose:
 
@@ -298,7 +277,7 @@ Primary actions:
 - Save.
 - Delete.
 
-### 3.11 报告提取确认
+### 3.10 报告提取确认
 
 Purpose:
 
@@ -322,7 +301,7 @@ Primary content:
 - Proposed status.
 - Include checkbox.
 
-### 3.12 发现
+### 3.11 发现
 
 Purpose:
 
@@ -330,10 +309,10 @@ Purpose:
 
 Primary content:
 
-- Possible recurring foods before symptoms.
-- Profile items recently detected in checks or logs.
-- Meals worth reviewing.
-- Foods newly worth observing.
+- Empty state until there are enough records.
+- `可能相关`: foods or tags that appear before discomfort more than once.
+- `最近常见`: profile items recently matched in checks or records.
+- `值得回看`: meals near symptom records.
 
 Required caveats:
 
@@ -348,7 +327,7 @@ Empty state:
 
 - Explain that findings need several food and symptom records.
 
-### 3.13 隐私与数据
+### 3.12 隐私与数据
 
 Purpose:
 
@@ -373,7 +352,7 @@ Primary content:
 ### 4.1 Check Before Eating
 
 ```text
-首页 or +
+首页
 -> 查食物
 -> photo / image / text
 -> consent if AI upload is needed
@@ -384,10 +363,11 @@ Primary content:
 ### 4.2 Log Complex Meal
 
 ```text
-首页 or +
+首页
 -> 记饮食
--> photo plus short note
--> optional tags for sauce / drink / dessert / processed food
+-> photo or text
+-> short note
+-> time / scene / optional tags
 -> save
 -> 记录
 ```
@@ -395,7 +375,7 @@ Primary content:
 ### 4.3 Record Symptom and Review
 
 ```text
-首页 or +
+首页
 -> 记不适
 -> save symptom
 -> 症状后回看

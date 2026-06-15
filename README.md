@@ -42,10 +42,10 @@ V1 is currently in low-fidelity page structure planning.
 Working bottom navigation:
 
 ```text
-首页 / 记录 / + / 档案 / 发现
+首页 / 记录 / 档案 / 发现
 ```
 
-The center `+` opens:
+The home screen shows the three primary actions:
 
 - `查食物`
 - `记饮食`

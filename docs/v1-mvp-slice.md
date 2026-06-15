@@ -41,11 +41,10 @@ These should work with real local data:
 1. Bottom navigation:
    - `首页`
    - `记录`
-   - center `+`
    - `档案`
    - `发现`
 
-2. `+` action sheet:
+2. Home primary actions:
    - `查食物`
    - `记饮食`
    - `记不适`
@@ -132,14 +131,13 @@ Do not build these in the first implementation slice:
 Build first:
 
 1. App shell and bottom navigation.
-2. Home.
-3. `+` action sheet.
-4. Food profile list and add/edit screen.
-5. Food log form.
-6. Symptom form.
-7. Symptom review screen.
-8. Timeline.
-9. Local data store.
+2. Home with the three primary actions.
+3. Food profile list and add/edit screen.
+4. Food log form.
+5. Symptom form.
+6. Symptom review screen.
+7. Timeline.
+8. Local data store.
 
 ### Priority 2: Useful Check
 
@@ -258,10 +256,11 @@ Why:
 The product owner should decide:
 
 1. Keep `档案` as the V1 navigation name?
-2. Should photo entry be a visible first-class option in `查食物` and `记饮食`, even if recognition is not active yet?
-3. Should `查食物` first build use text matching first, with photo/AI marked as coming later?
-4. Should report import be postponed until after the manual profile flow feels good?
-5. Which visual direction should V1 use:
+2. Should the bottom `+` be removed, with primary actions living on the home screen?
+3. Should photo entry be a visible first-class option in `查食物` and `记饮食`, even if recognition is not active yet?
+4. Should `查食物` first build use text matching first, with photo/AI marked as coming later?
+5. Should report import be postponed until after the manual profile flow feels good?
+6. Which visual direction should V1 use:
    - calm and clinical
    - warm and everyday
    - clean utility with soft warmth
@@ -271,10 +270,11 @@ The product owner should decide:
 Recommended for the first build:
 
 1. Keep `档案` for now.
-2. Show photo and text as the two entry options for both `查食物` and `记饮食`.
-3. Make `查食物` text-first using local matching, while photo recognition waits.
-4. Postpone real report OCR/AI extraction until the manual flow is useful.
-5. Use `clean utility with soft warmth` as the visual direction.
+2. Remove the bottom `+`; place `查食物`, `记饮食`, and `记不适` directly on the home screen.
+3. Show photo and text as the two entry options for both `查食物` and `记饮食`.
+4. Make `查食物` text-first using local matching, while photo recognition waits.
+5. Postpone real report OCR/AI extraction until the manual flow is useful.
+6. Use `clean utility with soft warmth` as the visual direction.
 
 Reason:
 

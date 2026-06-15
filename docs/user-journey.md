@@ -14,7 +14,7 @@ User sees or eats food
 
 1. User picks up a packaged food in a supermarket.
 2. User wonders: `这个我能吃吗？`
-3. User taps `+` and chooses `查食物`.
+3. User opens `查食物` from the home screen.
 4. User takes a photo of the ingredient list.
 5. Food Sense extracts text and compares it with the user's personal food profile.
 6. Food Sense shows matched ingredients and explains the reason.

@@ -115,17 +115,30 @@ Update on 2026-06-15:
 - `食物档案` was shortened to `档案` to keep bottom navigation labels concise and consistent.
 - The full meaning remains personal food/ingredient profile.
 
-## 2026-06-15: Use equal-length action labels
+## 2026-06-15: Use equal-length home action labels
 
 Decision:
 
-- Use `查食物`, `记饮食`, and `记不适` for the three center `+` actions.
+- Use `查食物`, `记饮食`, and `记不适` for the three primary home actions.
 
 Reason:
 
 - The previous labels had uneven length and rhythm.
 - The new labels are short, action-oriented, and consistent.
 - They still map to the user's real tasks: checking food, logging intake, and recording discomfort.
+
+## 2026-06-15: Remove bottom `+` from V1 navigation
+
+Decision:
+
+- V1 bottom navigation should be `首页 / 记录 / 档案 / 发现`.
+- The three primary actions should live directly on the home screen instead of behind a center `+`.
+
+Reason:
+
+- The first version has only three core actions.
+- Showing them on the home screen makes the product easier to understand.
+- A hidden `+` adds navigation complexity before the product needs it.
 
 ## 2026-06-14: Move V1 into low-fidelity page structure
 

@@ -36,7 +36,7 @@ I am holding a packaged food and want to know whether the visible ingredients co
 
 Required for first build:
 
-1. `+` action sheet
+1. Home action card
 2. `查食物`
 3. `检查结果`
 4. optional save into `记录`
@@ -97,7 +97,7 @@ Avoid:
 ### 2.5 Button Map
 
 ```text
-+ -> 查食物
+首页 / 查食物 -> 查食物
 查食物 / 开始检查 -> 检查结果
 检查结果 / 保存为记录 -> 记录
 检查结果 / 添加到观察 -> 档案详情
@@ -123,7 +123,7 @@ I am eating a complex meal and do not want to record every single dish.
 
 Required for first build:
 
-1. `+` action sheet
+1. Home action card
 2. `记饮食`
 3. `记录`
 4. `首页` recent activity preview
@@ -180,7 +180,7 @@ Avoid:
 ### 3.5 Button Map
 
 ```text
-+ -> 记饮食
+首页 / 记饮食 -> 记饮食
 记饮食 / 保存记录 -> 记录
 记录 item -> 记录详情 or edit form
 首页 recent item -> 记录详情 or 记录
@@ -206,7 +206,7 @@ I feel uncomfortable after eating and want to quickly save what happened and see
 
 Required for first build:
 
-1. `+` action sheet
+1. Home action card
 2. `记不适`
 3. `症状后回看`
 4. `记录`
@@ -265,7 +265,7 @@ Avoid:
 ### 4.5 Button Map
 
 ```text
-+ -> 记不适
+首页 / 记不适 -> 记不适
 记不适 / 保存并回看 -> 症状后回看
 症状后回看 / 2h 4h 8h 24h -> update visible records
 症状后回看 / 标记为继续观察 -> 档案详情
@@ -373,16 +373,15 @@ The 13 low-fidelity views reduce into this first build set:
 ### Build Now
 
 1. 首页
-2. + 快捷动作面板
-3. 记录
-4. 档案
-5. 档案详情 / 添加项目
-6. 记饮食
-7. 记不适
-8. 症状后回看
-9. 隐私与数据
-10. 查食物 text-first
-11. 检查结果
+2. 记录
+3. 档案
+4. 档案详情 / 添加项目
+5. 记饮食
+6. 记不适
+7. 症状后回看
+8. 隐私与数据
+9. 查食物 text-first
+10. 检查结果
 
 ### Build Lightly
 
