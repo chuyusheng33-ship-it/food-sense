@@ -74,7 +74,9 @@ These can be implemented after the local loop is working, but they are part of t
 2. `记饮食` image recognition:
    - Take photo.
    - Choose from album.
+   - For complex meals, recognize likely foods from a table photo, menu, or order screenshot.
    - Generate editable food content from meals, menus, order screenshots, drinks, snacks, or packaged food.
+   - Treat recognition as a suggestion; it does not need to be complete or perfectly reliable.
 
 3. Report import:
    - Extract candidate rows from report images.
@@ -140,7 +142,7 @@ Required behavior:
 
 - A one-line record is acceptable.
 - Time is saved and editable.
-- Image recognition can generate editable content when AI is connected.
+- After photo upload or album selection, image recognition should suggest likely foods and generate editable content.
 - The app should not make the user feel the record is invalid unless complete.
 
 ### 3.3 Discomfort After Eating

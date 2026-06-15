@@ -153,6 +153,9 @@ Primary fields:
 Complex meal support:
 
 - Allow one photo plus one sentence.
+- After photo upload or album selection, automatically suggest likely foods from the image.
+- Generated food content must be editable before saving.
+- Recognition is a suggestion and does not need to be complete.
 
 Primary action:
 
