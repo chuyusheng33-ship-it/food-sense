@@ -258,7 +258,31 @@ Reason:
 
 Working agreement:
 
+- The user makes final product decisions.
+- Codex should explain tradeoffs in plain language.
+- Product docs should be updated as decisions change.
+- Meaningful changes should be committed and pushed to GitHub.
 - See `docs/archive/collaboration-agreement.md`.
+
+## 2026-06-15: Set V1 UI direction
+
+Decision:
+
+- Use a clean, warm, professional-but-life-like UI direction for V1.
+- Avoid a hospital-like visual system.
+- Avoid an overly cute or playful visual system.
+- Keep the home screen simple and centered on `查食物 / 记饮食 / 记不适`.
+
+Reason:
+
+- Food Sense handles sensitive health-adjacent information, so the interface needs trust and calm.
+- The product is still a daily assistant, not a medical portal.
+- Warnings need to be noticeable without frightening users.
+- Green should not be used as a strong success signal because it can imply `safe`.
+
+Output:
+
+- `docs/v1-ui-direction.md`
 
 ## 2026-06-15: Build local-first core loop while keeping AI recognition in V1
 

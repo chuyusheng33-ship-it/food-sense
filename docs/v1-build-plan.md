@@ -262,4 +262,8 @@ The V1 private-test build is acceptable when:
 2. Which AI recognition provider should power image input?
 3. What exact consent copy should appear before uploading images or text?
 4. Should report images be stored locally, or should only structured results be saved?
-5. Which visual direction should V1 use?
+5. How should the first clickable build test whether `档案` is clear enough?
+
+Resolved:
+
+- V1 UI direction is defined in `docs/v1-ui-direction.md`: clean and warm, professional but life-like, calm about warnings, and careful with uncertainty.

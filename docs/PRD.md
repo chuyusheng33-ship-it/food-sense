@@ -278,7 +278,7 @@ V1 输出：
 
 ## 9. 初始信息架构
 
-当前 V1 低保真阶段暂定结构如下。详细页面结构见 `docs/v1-page-structure.md`，低保真草图见 `design/wireframes/v1-low-fi.md`，第一轮构建计划见 `docs/v1-build-plan.md`。
+当前 V1 低保真阶段暂定结构如下。详细页面结构见 `docs/v1-page-structure.md`，低保真草图见 `design/wireframes/v1-low-fi.md`，UI 方向见 `docs/v1-ui-direction.md`，第一轮构建计划见 `docs/v1-build-plan.md`。
 
 候选底部导航：
 
@@ -344,7 +344,10 @@ V1 小范围试用成功的标准：
 4. 报告原图是否保存在本地，还是只保存结构化结果？
 5. 复杂餐自动提取后，用户如何轻松编辑？
 6. 发现规律需要多少数据才值得提示？
-7. 产品视觉气质应该更偏临床、平静生活化，还是温暖助手型？
+
+已解决方向：
+
+- V1 视觉气质采用干净温暖、专业但生活化的方向，见 `docs/v1-ui-direction.md`。
 
 ## 13. MVP 定义
 
