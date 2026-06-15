@@ -178,3 +178,22 @@ Reason:
 Output:
 
 - `docs/v1-mvp-slice.md`
+
+## 2026-06-15: Use four real paths to validate V1 before app scaffolding
+
+Decision:
+
+- Before app scaffolding, validate the V1 plan against four real user paths:
+  - supermarket / packaged food
+  - hot pot / complex meal
+  - discomfort after eating
+  - hospital report to food profile
+
+Reason:
+
+- The MVP slice defines what to build, but the walkthrough checks whether the flows make sense in real life.
+- It clarifies required fields, deferred features, cautious wording, and button destinations.
+
+Output:
+
+- `docs/v1-flow-walkthrough.md`
