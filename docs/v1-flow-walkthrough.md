@@ -160,7 +160,7 @@ Use:
 
 - `饮食内容`
 - `复杂餐可以先记一条`
-- `时间 · 建议，可修改`
+- `时间`
 
 Avoid:
 
@@ -180,7 +180,7 @@ Avoid:
 Recommended:
 
 - Fully build this path in the first implementation slice.
-- Start with text-first records and suggested time only.
+- Start with text-first records and editable time only.
 - Do not require photos.
 
 ## 4. Path 3: Discomfort After Eating

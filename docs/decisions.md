@@ -175,9 +175,9 @@ Reason:
 
 Decision:
 
-- For `记饮食`, time should be auto-suggested from input when possible and marked editable.
+- For `记饮食`, time should be auto-suggested from input when possible and remain editable.
 - Do not include scene or tag suggestions in the first `记饮食` form.
-- Use labels like `时间 · 建议，可修改`.
+- The UI label should simply be `时间`; avoid extra helper copy unless users are confused.
 
 Reason:
 

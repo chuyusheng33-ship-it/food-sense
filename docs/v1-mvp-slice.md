@@ -59,8 +59,8 @@ These should work with real local data:
 4. Food logging:
    - Record time.
    - Add short text description.
-   - Suggest time after input.
-   - Mark suggested time as editable.
+   - Auto-fill time when possible.
+   - Keep time editable.
    - Save locally.
 
 5. Symptom logging:
@@ -240,7 +240,7 @@ The first implementation slice is acceptable when:
 3. A user can record discomfort in under 30 seconds.
 4. After saving discomfort, the app shows prior food records in 2, 4, 8, and 24 hour windows.
 5. A user can paste ingredient text and see whether it matches profile names or aliases.
-6. A user sees that auto-filled time is a suggestion and can edit it.
+6. A user can edit the auto-filled time.
 7. A user can review all records in a timeline.
 8. A user can delete all local data.
 9. The UI never uses diagnostic certainty language.
