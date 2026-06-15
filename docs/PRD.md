@@ -278,7 +278,7 @@ V1 输出：
 
 ## 9. 初始信息架构
 
-当前 V1 低保真阶段暂定结构如下。详细页面结构见 `docs/v1-page-structure.md`，低保真草图见 `design/wireframes/v1-low-fi.md`，UI 方向见 `docs/v1-ui-direction.md`，第一轮构建计划见 `docs/v1-build-plan.md`。
+当前 V1 低保真阶段暂定结构如下。详细页面结构见 `docs/v1-page-structure.md`，低保真草图见 `design/wireframes/v1-low-fi.md`，UI 方向见 `docs/v1-ui-direction.md`，UI 方向选项见 `docs/v1-ui-options.md`，第一轮构建计划见 `docs/v1-build-plan.md`。
 
 候选底部导航：
 

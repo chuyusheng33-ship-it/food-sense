@@ -306,6 +306,25 @@ Output:
 - `docs/v1-ui-direction.md`
 - `design/wireframes/v1-low-fi.md`
 
+## 2026-06-15: Explore three static UI directions before app build
+
+Decision:
+
+- Before building the React/Vite app, review three static UI directions.
+- Use code-based static mockups because ImageGen is not available in the current tool environment.
+- Do not treat these mockups as the final app.
+
+Reason:
+
+- The product owner wants to confirm UI feel before app construction.
+- Static mockups are enough to compare layout, color, and component tone.
+- This keeps the Product Design workflow while avoiding premature app scaffolding.
+
+Output:
+
+- `docs/v1-ui-options.md`
+- `design/ui-directions/v1-ui-options.html`
+
 ## 2026-06-15: Build local-first core loop while keeping AI recognition in V1
 
 Decision:

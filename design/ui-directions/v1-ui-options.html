@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Food Sense V1 UI Directions</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background: #f4f1ec;
+        color: #2d2925;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(244, 241, 236, 0.92)),
+          #f4f1ec;
+      }
+
+      .board {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 40px 32px 56px;
+      }
+
+      .board-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        align-items: flex-end;
+        margin-bottom: 28px;
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: #7b7066;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 34px;
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+
+      .summary {
+        max-width: 520px;
+        color: #70675f;
+        font-size: 15px;
+        line-height: 1.55;
+      }
+
+      .directions {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px;
+      }
+
+      .direction {
+        display: grid;
+        gap: 16px;
+        align-content: start;
+      }
+
+      .direction-note {
+        min-height: 128px;
+      }
+
+      .direction-note h2 {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+
+      .direction-note p {
+        color: #746b62;
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .phone {
+        width: min(100%, 390px);
+        min-height: 844px;
+        margin: 0 auto;
+        border: 1px solid rgba(55, 48, 42, 0.1);
+        border-radius: 34px;
+        overflow: hidden;
+        box-shadow: 0 24px 64px rgba(56, 45, 35, 0.14);
+        position: relative;
+      }
+
+      .screen {
+        min-height: 844px;
+        padding: 24px 20px 88px;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 22px;
+      }
+
+      .brand {
+        font-size: 20px;
+        font-weight: 800;
+      }
+
+      .date-pill,
+      .soft-pill,
+      .filter {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 32px;
+        border-radius: 999px;
+        padding: 0 12px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .hero {
+        margin-bottom: 18px;
+      }
+
+      .hero h3 {
+        font-size: 27px;
+        line-height: 1.18;
+        letter-spacing: 0;
+        margin-bottom: 8px;
+      }
+
+      .hero p {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .actions {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .action {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 16px;
+        border-radius: 22px;
+      }
+
+      .action strong {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+
+      .action span,
+      .small {
+        display: block;
+        font-size: 13px;
+        line-height: 1.38;
+      }
+
+      .action-mark {
+        flex: 0 0 38px;
+        width: 38px;
+        height: 38px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        font-weight: 900;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin: 18px 0 10px;
+      }
+
+      .section-title h3 {
+        font-size: 16px;
+      }
+
+      .section-title a {
+        color: inherit;
+        font-size: 13px;
+        text-decoration: none;
+        opacity: 0.72;
+      }
+
+      .surface {
+        border-radius: 22px;
+        overflow: hidden;
+      }
+
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 16px;
+      }
+
+      .row + .row {
+        border-top: 1px solid rgba(60, 52, 45, 0.08);
+      }
+
+      .row-main strong {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .row-main span {
+        color: inherit;
+        display: block;
+        font-size: 13px;
+        line-height: 1.35;
+        opacity: 0.72;
+      }
+
+      .time {
+        flex: 0 0 auto;
+        font-size: 12px;
+        font-weight: 800;
+        opacity: 0.62;
+      }
+
+      .calendar {
+        border-radius: 24px;
+        padding: 14px;
+        margin-bottom: 14px;
+      }
+
+      .calendar-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        font-weight: 800;
+      }
+
+      .week,
+      .days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 6px;
+        text-align: center;
+      }
+
+      .week {
+        color: inherit;
+        opacity: 0.54;
+        font-size: 11px;
+        font-weight: 800;
+        margin-bottom: 6px;
+      }
+
+      .day {
+        position: relative;
+        min-height: 34px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        font-size: 13px;
+        font-weight: 750;
+      }
+
+      .day::after {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        width: 4px;
+        height: 4px;
+        border-radius: 999px;
+        opacity: 0;
+      }
+
+      .day.has-record::after {
+        opacity: 1;
+      }
+
+      .filters {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 10px;
+        overflow: hidden;
+      }
+
+      .result {
+        border-radius: 24px;
+        padding: 16px;
+        margin-top: 14px;
+      }
+
+      .result h3 {
+        font-size: 18px;
+        margin-bottom: 6px;
+      }
+
+      .match {
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(60, 52, 45, 0.1);
+      }
+
+      .match strong {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 6px;
+      }
+
+      .match p {
+        font-size: 13px;
+        line-height: 1.45;
+        opacity: 0.78;
+      }
+
+      .profile-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .profile-item {
+        border-radius: 18px;
+        padding: 14px;
+      }
+
+      .profile-item strong {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 4px;
+      }
+
+      .profile-item span {
+        font-size: 13px;
+        line-height: 1.4;
+        opacity: 0.72;
+      }
+
+      .nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 72px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        padding: 8px 18px 12px;
+      }
+
+      .nav-item {
+        height: 44px;
+        border-radius: 16px;
+        display: grid;
+        place-items: center;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .option-a .screen {
+        background: #fbf8f2;
+        color: #312a25;
+      }
+
+      .option-a .date-pill,
+      .option-a .soft-pill {
+        background: #f1e7d8;
+        color: #7b5744;
+      }
+
+      .option-a .hero p {
+        color: #766d62;
+      }
+
+      .option-a .action {
+        background: #fffdf8;
+        border: 1px solid #eee4d7;
+      }
+
+      .option-a .action.primary {
+        background: #d95d4f;
+        color: #fffaf5;
+        border-color: #d95d4f;
+      }
+
+      .option-a .action-mark {
+        background: rgba(255, 255, 255, 0.36);
+      }
+
+      .option-a .surface,
+      .option-a .calendar,
+      .option-a .result,
+      .option-a .profile-item {
+        background: #fffdf8;
+        border: 1px solid #eee4d7;
+      }
+
+      .option-a .day.active {
+        background: #d95d4f;
+        color: #fffaf5;
+      }
+
+      .option-a .day.has-record::after {
+        background: #b7845a;
+      }
+
+      .option-a .filter {
+        background: #f4eadc;
+        color: #84634f;
+      }
+
+      .option-a .filter.active {
+        background: #312a25;
+        color: #fffaf5;
+      }
+
+      .option-a .result {
+        background: #fff5e7;
+      }
+
+      .option-a .nav {
+        background: rgba(251, 248, 242, 0.94);
+        border-top: 1px solid #eadfce;
+      }
+
+      .option-a .nav-item.active {
+        background: #efe2d1;
+        color: #7b4e3f;
+      }
+
+      .option-b .screen {
+        background: #f8f7f2;
+        color: #232b25;
+      }
+
+      .option-b .date-pill,
+      .option-b .soft-pill {
+        background: #e6ece1;
+        color: #53634d;
+      }
+
+      .option-b .hero p {
+        color: #677066;
+      }
+
+      .option-b .actions {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .option-b .action {
+        min-height: 118px;
+        align-items: flex-start;
+        flex-direction: column;
+        background: #ffffff;
+        border: 1px solid #e4e7dd;
+        border-radius: 20px;
+      }
+
+      .option-b .action.primary {
+        grid-column: span 2;
+        min-height: 92px;
+        background: #516342;
+        color: #fbfaf3;
+      }
+
+      .option-b .action-mark {
+        background: #edf1e9;
+        color: #516342;
+      }
+
+      .option-b .action.primary .action-mark {
+        background: rgba(255, 255, 255, 0.2);
+        color: #fbfaf3;
+      }
+
+      .option-b .surface,
+      .option-b .calendar,
+      .option-b .result,
+      .option-b .profile-item {
+        background: #ffffff;
+        border: 1px solid #e4e7dd;
+      }
+
+      .option-b .day.active {
+        background: #516342;
+        color: #fbfaf3;
+      }
+
+      .option-b .day.has-record::after {
+        background: #b56b47;
+      }
+
+      .option-b .filter {
+        background: #edf1e9;
+        color: #516342;
+      }
+
+      .option-b .filter.active {
+        background: #232b25;
+        color: #fbfaf3;
+      }
+
+      .option-b .result {
+        background: #fbf1e8;
+      }
+
+      .option-b .nav {
+        background: rgba(248, 247, 242, 0.94);
+        border-top: 1px solid #dde2d7;
+      }
+
+      .option-b .nav-item.active {
+        background: #e5eadf;
+        color: #516342;
+      }
+
+      .option-c .screen {
+        background: #fffaf4;
+        color: #2e261e;
+      }
+
+      .option-c .date-pill,
+      .option-c .soft-pill {
+        background: #f2e9dd;
+        color: #8b5d44;
+      }
+
+      .option-c .hero {
+        padding: 18px;
+        border-radius: 28px;
+        background: #f8eadb;
+      }
+
+      .option-c .hero p {
+        color: #745f50;
+      }
+
+      .option-c .actions {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+      }
+
+      .option-c .action {
+        min-height: 116px;
+        padding: 12px;
+        border-radius: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        background: #ffffff;
+        border: 1px solid #f0e2d3;
+      }
+
+      .option-c .action strong {
+        font-size: 16px;
+      }
+
+      .option-c .action span {
+        font-size: 12px;
+      }
+
+      .option-c .action.primary {
+        background: #b9564f;
+        color: #fffaf4;
+      }
+
+      .option-c .action-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 13px;
+        background: #f6eadf;
+        color: #9a5b42;
+      }
+
+      .option-c .action.primary .action-mark {
+        background: rgba(255, 255, 255, 0.22);
+        color: #fffaf4;
+      }
+
+      .option-c .surface,
+      .option-c .calendar,
+      .option-c .result,
+      .option-c .profile-item {
+        background: #ffffff;
+        border: 1px solid #f0e2d3;
+      }
+
+      .option-c .day.active {
+        background: #b9564f;
+        color: #fffaf4;
+      }
+
+      .option-c .day.has-record::after {
+        background: #9f7a42;
+      }
+
+      .option-c .filter {
+        background: #f5eadf;
+        color: #8b5d44;
+      }
+
+      .option-c .filter.active {
+        background: #2e261e;
+        color: #fffaf4;
+      }
+
+      .option-c .result {
+        background: #fff3de;
+      }
+
+      .option-c .nav {
+        background: rgba(255, 250, 244, 0.94);
+        border-top: 1px solid #eadbc9;
+      }
+
+      .option-c .nav-item.active {
+        background: #f4e4d5;
+        color: #8b5d44;
+      }
+
+      @media (max-width: 1180px) {
+        .directions {
+          grid-template-columns: 1fr;
+        }
+
+        .direction {
+          grid-template-columns: minmax(240px, 390px) minmax(280px, 1fr);
+          align-items: start;
+        }
+
+        .direction-note {
+          min-height: 0;
+          order: 2;
+        }
+      }
+
+      @media (max-width: 820px) {
+        .board {
+          padding: 28px 16px 40px;
+        }
+
+        .board-header {
+          display: block;
+        }
+
+        .summary {
+          margin-top: 12px;
+        }
+
+        .direction {
+          grid-template-columns: 1fr;
+        }
+
+        .direction-note {
+          order: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="board">
+      <header class="board-header">
+        <div>
+          <p class="eyebrow">Food Sense / V1 UI directions</p>
+          <h1>三种可选视觉方向</h1>
+        </div>
+        <p class="summary">
+          静态设计评审稿，用来选择产品感觉。这里展示首页、记录日历、检查结果和档案片段；不是正式 app，也不代表最终功能已经实现。
+        </p>
+      </header>
+
+      <section class="directions" aria-label="Food Sense UI directions">
+        <article class="direction">
+          <div class="direction-note">
+            <h2>1. Warm Utility</h2>
+            <p>
+              最接近当前推荐方向：温暖、克制、清楚。适合第一版私测，学习成本低，结果提示明显但不吓人。
+            </p>
+          </div>
+          <div class="phone option-a">
+            <div class="screen">
+              <div class="topbar">
+                <div class="brand">Food Sense</div>
+                <div class="date-pill">今天</div>
+              </div>
+              <section class="hero">
+                <h3>今天要做什么？</h3>
+                <p>查眼前食物，记录饮食或不适，慢慢形成自己的观察。</p>
+              </section>
+              <section class="actions">
+                <div class="action primary">
+                  <div>
+                    <strong>查食物</strong>
+                    <span>看配料、菜单或外卖截图</span>
+                  </div>
+                  <div class="action-mark">查</div>
+                </div>
+                <div class="action">
+                  <div>
+                    <strong>记饮食</strong>
+                    <span>保存一餐、饮料或零食</span>
+                  </div>
+                  <div class="action-mark">食</div>
+                </div>
+                <div class="action">
+                  <div>
+                    <strong>记不适</strong>
+                    <span>记录时间、类型和程度</span>
+                  </div>
+                  <div class="action-mark">感</div>
+                </div>
+              </section>
+
+              <div class="section-title">
+                <h3>记录</h3>
+                <a href="#">日历</a>
+              </div>
+              <div class="calendar">
+                <div class="calendar-head">
+                  <span>2026年6月</span>
+                  <span class="soft-pill">14 今天</span>
+                </div>
+                <div class="week">
+                  <span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span>
+                </div>
+                <div class="days">
+                  <span class="day">8</span><span class="day">9</span><span class="day has-record">10</span><span class="day">11</span><span class="day has-record">12</span><span class="day">13</span><span class="day active has-record">14</span>
+                </div>
+              </div>
+              <div class="filters">
+                <span class="filter active">全部</span>
+                <span class="filter">饮食</span>
+                <span class="filter">不适</span>
+                <span class="filter">检查</span>
+              </div>
+              <div class="surface">
+                <div class="row">
+                  <div class="row-main">
+                    <strong>不舒服</strong>
+                    <span>腹痛 · 中等</span>
+                  </div>
+                  <span class="time">15:20</span>
+                </div>
+                <div class="row">
+                  <div class="row-main">
+                    <strong>午餐</strong>
+                    <span>牛肉饭、酸奶</span>
+                  </div>
+                  <span class="time">12:40</span>
+                </div>
+              </div>
+
+              <div class="result">
+                <h3>发现需要注意的项目</h3>
+                <p class="small">基于目前可见信息</p>
+                <div class="match">
+                  <strong>乳制品</strong>
+                  <p>原文：全脂乳粉。原因：在你的档案中。</p>
+                </div>
+              </div>
+
+              <nav class="nav">
+                <div class="nav-item active">首页</div>
+                <div class="nav-item">记录</div>
+                <div class="nav-item">档案</div>
+              </nav>
+            </div>
+          </div>
+        </article>
+
+        <article class="direction">
+          <div class="direction-note">
+            <h2>2. Quiet Journal</h2>
+            <p>
+              更像私人健康日志：绿色只作为档案和记录氛围，不表达“安全”。整体更沉静，适合重视长期观察的用户。
+            </p>
+          </div>
+          <div class="phone option-b">
+            <div class="screen">
+              <div class="topbar">
+                <div class="brand">Food Sense</div>
+                <div class="date-pill">本地保存</div>
+              </div>
+              <section class="hero">
+                <h3>记录身体给你的线索</h3>
+                <p>从一顿饭、一张配料表、一次不适开始。</p>
+              </section>
+              <section class="actions">
+                <div class="action primary">
+                  <div>
+                    <strong>查食物</strong>
+                    <span>对照你的档案</span>
+                  </div>
+                  <div class="action-mark">查</div>
+                </div>
+                <div class="action">
+                  <div class="action-mark">食</div>
+                  <div>
+                    <strong>记饮食</strong>
+                    <span>一餐也可以粗略记录</span>
+                  </div>
+                </div>
+                <div class="action">
+                  <div class="action-mark">感</div>
+                  <div>
+                    <strong>记不适</strong>
+                    <span>保存后回看之前吃过什么</span>
+                  </div>
+                </div>
+              </section>
+
+              <div class="section-title">
+                <h3>6月14日</h3>
+                <a href="#">切换日期</a>
+              </div>
+              <div class="calendar">
+                <div class="calendar-head">
+                  <span>2026年6月</span>
+                  <span>‹ ›</span>
+                </div>
+                <div class="week">
+                  <span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span>
+                </div>
+                <div class="days">
+                  <span class="day">8</span><span class="day">9</span><span class="day has-record">10</span><span class="day">11</span><span class="day has-record">12</span><span class="day">13</span><span class="day active has-record">14</span>
+                </div>
+              </div>
+              <div class="surface">
+                <div class="row">
+                  <div class="row-main">
+                    <strong>酸奶配料检查</strong>
+                    <span>命中：乳制品</span>
+                  </div>
+                  <span class="time">09:10</span>
+                </div>
+                <div class="row">
+                  <div class="row-main">
+                    <strong>午餐</strong>
+                    <span>牛肉饭、酸奶</span>
+                  </div>
+                  <span class="time">12:40</span>
+                </div>
+                <div class="row">
+                  <div class="row-main">
+                    <strong>腹痛</strong>
+                    <span>这些记录出现在不适之前</span>
+                  </div>
+                  <span class="time">15:20</span>
+                </div>
+              </div>
+
+              <div class="section-title">
+                <h3>档案</h3>
+                <a href="#">添加</a>
+              </div>
+              <div class="profile-list">
+                <div class="profile-item">
+                  <strong>蔗糖</strong>
+                  <span>白砂糖、糖浆 · 医院报告</span>
+                </div>
+                <div class="profile-item">
+                  <strong>乳制品</strong>
+                  <span>多次出现在不适前 · 可能相关</span>
+                </div>
+              </div>
+
+              <nav class="nav">
+                <div class="nav-item">首页</div>
+                <div class="nav-item active">记录</div>
+                <div class="nav-item">档案</div>
+              </nav>
+            </div>
+          </div>
+        </article>
+
+        <article class="direction">
+          <div class="direction-note">
+            <h2>3. Soft Assistant</h2>
+            <p>
+              更亲近、更像随身助手，首页更轻快。风险是略显产品化，需要后续把严肃场景压稳。
+            </p>
+          </div>
+          <div class="phone option-c">
+            <div class="screen">
+              <div class="topbar">
+                <div class="brand">Food Sense</div>
+                <div class="date-pill">6月14日</div>
+              </div>
+              <section class="hero">
+                <h3>今天吃了什么，有哪里不舒服？</h3>
+                <p>先记下来，之后再一起回看。</p>
+              </section>
+              <section class="actions">
+                <div class="action primary">
+                  <div class="action-mark">查</div>
+                  <div>
+                    <strong>查食物</strong>
+                    <span>配料和菜单</span>
+                  </div>
+                </div>
+                <div class="action">
+                  <div class="action-mark">食</div>
+                  <div>
+                    <strong>记饮食</strong>
+                    <span>一餐一条</span>
+                  </div>
+                </div>
+                <div class="action">
+                  <div class="action-mark">感</div>
+                  <div>
+                    <strong>记不适</strong>
+                    <span>保存回看</span>
+                  </div>
+                </div>
+              </section>
+
+              <div class="section-title">
+                <h3>检查结果</h3>
+                <a href="#">保存</a>
+              </div>
+              <div class="result">
+                <h3>信息可能不完整</h3>
+                <p class="small">可以补充配料或询问商家。</p>
+                <div class="match">
+                  <strong>暂未发现明显命中</strong>
+                  <p>目前可见信息中，没有匹配到你的档案项目。</p>
+                </div>
+              </div>
+
+              <div class="section-title">
+                <h3>记录日历</h3>
+                <a href="#">六月</a>
+              </div>
+              <div class="calendar">
+                <div class="calendar-head">
+                  <span>今天</span>
+                  <span class="soft-pill">3 条记录</span>
+                </div>
+                <div class="week">
+                  <span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span>
+                </div>
+                <div class="days">
+                  <span class="day">8</span><span class="day">9</span><span class="day has-record">10</span><span class="day">11</span><span class="day has-record">12</span><span class="day">13</span><span class="day active has-record">14</span>
+                </div>
+              </div>
+              <div class="surface">
+                <div class="row">
+                  <div class="row-main">
+                    <strong>午餐</strong>
+                    <span>牛肉饭、酸奶</span>
+                  </div>
+                  <span class="time">12:40</span>
+                </div>
+                <div class="row">
+                  <div class="row-main">
+                    <strong>隐私与数据</strong>
+                    <span>本地保存 · AI 上传前说明</span>
+                  </div>
+                  <span class="time">查看</span>
+                </div>
+              </div>
+
+              <nav class="nav">
+                <div class="nav-item active">首页</div>
+                <div class="nav-item">记录</div>
+                <div class="nav-item">档案</div>
+              </nav>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
