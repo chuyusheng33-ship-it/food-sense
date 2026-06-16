@@ -1,6 +1,6 @@
 # Food Sense V1 UI Direction
 
-Version: V0.2
+Version: V0.3
 Date: 2026-06-16
 
 This document defines the first visual and interaction direction for Food Sense V1.
@@ -21,8 +21,15 @@ The interface should feel like a personal food reaction assistant, not a diagnos
 
 Working recommendation:
 
-- Use the `Warm Utility` option from `docs/v1-ui-options.md` as the base direction unless the product owner chooses another option.
+- Use the uploaded soft olive mobile reference as the visual anchor for V1.
+- Keep the `Warm Utility` structure, but shift the accent color toward soft olive instead of tomato/coral.
 - Keep the first build restrained. The goal is trust, speed, and clarity, not a strong brand statement yet.
+
+Reference image:
+
+```text
+design/ui-references/food-sense-v1-soft-olive-reference.png
+```
 
 ## 2. Product UI Principles
 
@@ -122,8 +129,9 @@ Recommended direction:
 
 - Background: warm off-white, not pure hospital white.
 - Text: deep neutral, not cold blue-gray.
-- Primary action: muted tomato, cranberry, or warm coral.
-- Supporting color: soft olive or sage for profile and record surfaces.
+- Primary action: soft olive, close to the reference image's quiet green.
+- Supporting color: pale sage for profile and record surfaces.
+- Warning / attention color: warm amber, muted coral, or soft rust.
 - Neutral surfaces: light cream or very pale warm gray.
 - Border: low-contrast warm gray.
 
@@ -131,9 +139,28 @@ Avoid:
 
 - Hospital blue as the dominant color.
 - Bright medical red for normal warnings.
-- Strong green as the main success color, because it can imply `safe`.
+- Bright or medical green as a result-state success color.
 - Overly cute pastel palettes.
 - One-note palettes where the whole app reads as only beige, only green, or only red.
+
+Important distinction:
+
+- Olive can be used for navigation, primary actions, selected chips, and calm interactive states.
+- Olive should not mean `safe`.
+- `暂未发现明显命中` should still use neutral treatment, not green success styling.
+
+Suggested first token direction:
+
+```text
+App background: warm light gray
+Cards: white / warm white
+Primary: soft olive
+Primary text on olive: white or very pale warm white
+Attention: warm amber / soft rust
+Text: near black warm neutral
+Muted text: warm gray
+Border: pale warm gray
+```
 
 ### 4.2 Result States
 
@@ -200,6 +227,7 @@ Recommended first build:
 
 - Use stacked action rows on mobile.
 - Each row has one clear label and one small visual cue.
+- Match the reference's rounded white surfaces and soft shadow style, but keep Food Sense less image-heavy.
 - Avoid a dense 3-card grid unless the first screen feels too long.
 
 ### 5.2 Bottom Navigation
@@ -213,6 +241,7 @@ Use three stable items:
 Rules:
 
 - The active item should be clear, but not loud.
+- Use soft olive for the active bottom navigation item.
 - Avoid badge-heavy navigation in V1.
 - Keep labels short.
 - Do not put primary creation actions in the bottom navigation.
@@ -535,14 +564,15 @@ The first UI implementation should prove:
 
 Before building polished screens, the product owner should choose:
 
-1. Use `Warm Utility` as the base, or revise toward `Quiet Journal` / `Soft Assistant`.
-2. Choose the primary color family: muted tomato, cranberry, or warm coral.
+1. Confirm the uploaded soft olive reference as the V1 visual anchor.
+2. Confirm whether the primary color should be soft olive.
 3. Confirm whether home actions should be stacked rows for the first build.
 4. Confirm whether `档案` remains the V1 bottom navigation label through private testing.
 
 Current recommendation:
 
-- Start with `Warm Utility`.
+- Start with `Warm Utility` structure plus the uploaded soft olive reference.
 - Use stacked home action rows.
 - Keep `档案` for private testing.
-- Use a muted tomato / warm coral primary color, then adjust after seeing the first clickable build.
+- Use soft olive for primary navigation and actions.
+- Use warm amber / soft rust only for attention states, not as the main brand color.

@@ -1,7 +1,7 @@
 # Food Sense V1 UI Options
 
-Version: V0.1
-Date: 2026-06-15
+Version: V0.2
+Date: 2026-06-16
 
 This document records the first static UI direction options for Food Sense V1.
 
@@ -9,6 +9,12 @@ Preview file:
 
 ```text
 design/ui-directions/v1-ui-options.html
+```
+
+Selected reference:
+
+```text
+design/ui-references/food-sense-v1-soft-olive-reference.png
 ```
 
 ## Purpose
@@ -63,7 +69,7 @@ Risk:
 
 ## Recommendation
 
-Start from Option 1 unless the product owner prefers a stronger journal or assistant direction.
+Start from Option 1, then apply the uploaded soft olive mobile reference as the visual anchor.
 
 Option 1 is the safest foundation for V1 private testing because it is clear, warm, and unlikely to overstate medical certainty.
 
@@ -71,12 +77,36 @@ Option 2 is the best alternative if the product should feel more like a private 
 
 Option 3 is useful if first-time approachability becomes more important than restraint.
 
+## Product Owner Preference
+
+On 2026-06-16, the product owner shared a mobile UI reference and said this style feels good.
+
+Extracted direction for Food Sense:
+
+- Warm light gray app background.
+- Rounded white cards.
+- Soft olive primary accent.
+- Calm bottom navigation.
+- Clear search/input surfaces.
+- Gentle shadows and enough breathing room.
+
+Adaptation boundary:
+
+- Do not copy the event marketplace content model.
+- Do not make Food Sense image-heavy just because the reference uses event cards.
+- Use the visual tone, spacing, card softness, and olive accent.
+- Keep Food Sense focused on `查食物 / 记饮食 / 记不适`.
+
 ## Next Decision
 
-Choose one:
+Current working choice:
 
-1. Use Option 1 as the base.
-2. Use Option 2 as the base.
-3. Use Option 3 as the base.
-4. Combine parts of multiple options.
-5. Bring external app screenshots and revise the directions.
+```text
+Warm Utility structure + soft olive reference style
+```
+
+Still to confirm during first clickable build:
+
+1. Exact olive shade.
+2. Whether home actions should be stacked rows or compact cards.
+3. How rounded cards and buttons should feel before becoming too soft.

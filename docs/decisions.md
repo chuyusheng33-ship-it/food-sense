@@ -289,10 +289,38 @@ Working UI rules:
 
 Still needs product owner confirmation:
 
-- Final V1 base option: `Warm Utility`, `Quiet Journal`, `Soft Assistant`, or a mix.
-- Primary color family: muted tomato, cranberry, or warm coral.
+- Final V1 base option remains `Warm Utility` structure plus the soft olive visual reference unless revised.
+- Exact soft olive shade for the first clickable build.
 - Whether home actions should use stacked rows in the first clickable build.
 - Whether `档案` remains the V1 navigation label through private testing.
+
+## 2026-06-16: Use uploaded soft olive UI reference as V1 visual anchor
+
+Decision:
+
+- Use the product owner's uploaded mobile UI reference as the V1 visual anchor.
+- Combine the `Warm Utility` structure with the reference's warm light gray background, rounded white cards, soft olive accents, calm bottom navigation, and generous spacing.
+- Shift the likely primary color from muted tomato / coral toward soft olive.
+
+Reason:
+
+- The reference feels clean, warm, modern, and everyday without becoming cute or medical.
+- Soft olive fits Food Sense better than hospital blue or alarm red.
+- The card and navigation style can make the app feel polished while keeping the home screen simple.
+
+Boundary:
+
+- Do not copy the event marketplace content model.
+- Do not make Food Sense image-heavy just because the reference uses image cards.
+- Do not use green to mean `安全`.
+- `暂未发现明显命中` should stay neutral, not green success.
+- Warning and attention states should still use warm amber, muted coral, or soft rust.
+
+Output:
+
+- `design/ui-references/food-sense-v1-soft-olive-reference.png`
+- `docs/v1-ui-direction.md`
+- `docs/v1-ui-options.md`
 
 ## 2026-06-15: Set V1 UI direction
 
