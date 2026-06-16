@@ -451,6 +451,26 @@ Reason:
 - A second home icon makes the page feel busier and duplicates navigation.
 - Removing it keeps the main pages cleaner.
 
+## 2026-06-16: Move check result copy out of the title area
+
+Decision:
+
+- Keep the `检查结果` page title short.
+- Move `基于目前可见信息` out of the title area and into the content area above the result summary.
+- Add a short caution note that the result is for observation only and does not mean a food definitely caused symptoms or that the user can directly draw a conclusion.
+
+Reason:
+
+- This keeps `检查结果` consistent with `饮食回看`.
+- The title area should identify the page, while caution copy works better as page content.
+- The page still needs cautious wording because food matching can be incomplete.
+
+Output:
+
+- `design/prototypes/v1-ui-prototype.html`
+- `docs/v1-ui-direction.md`
+- `docs/v1-page-structure.md`
+
 ## 2026-06-16: Move symptom review copy out of the title area
 
 Decision:

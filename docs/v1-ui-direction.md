@@ -421,6 +421,12 @@ Do not ask for a scene.
 
 ### 6.3 检查结果
 
+Header:
+
+- Use the short title `检查结果`.
+- Do not put caution copy in the title area.
+- Put `基于目前可见信息` as a content-level notice above the result summary.
+
 Required result framing:
 
 ```text

@@ -107,6 +107,12 @@ Purpose:
 
 - Show whether visible information contains items from the user's food profile.
 
+Header:
+
+- Title: `检查结果`.
+- Keep the title area short.
+- Move the cautious framing `基于目前可见信息` into the content area above the result summary.
+
 Result states:
 
 - `发现需要注意的项目`
