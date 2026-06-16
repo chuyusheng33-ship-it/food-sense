@@ -1,11 +1,11 @@
 # Food Sense V1 UI Direction
 
-Version: V0.1
-Date: 2026-06-15
+Version: V0.2
+Date: 2026-06-16
 
 This document defines the first visual and interaction direction for Food Sense V1.
 
-It is not a final design system. It is the product-facing UI direction to guide the first React/Vite mobile PWA build.
+It is not a final design system. It is the product-facing UI direction for the first React + TypeScript + Vite mobile PWA build.
 
 ## 1. Direction Summary
 
@@ -17,7 +17,12 @@ Food Sense V1 should feel:
 - Calm when warning users.
 - Clear about uncertainty.
 
-The interface should feel like a personal food reaction assistant, not a diagnosis report, diet tracker, or medical dashboard.
+The interface should feel like a personal food reaction assistant, not a diagnosis report, diet tracker, nutrition app, or medical dashboard.
+
+Working recommendation:
+
+- Use the `Warm Utility` option from `docs/v1-ui-options.md` as the base direction unless the product owner chooses another option.
+- Keep the first build restrained. The goal is trust, speed, and clarity, not a strong brand statement yet.
 
 ## 2. Product UI Principles
 
@@ -29,13 +34,13 @@ The app should prioritize the three core actions:
 查食物 / 记饮食 / 记不适
 ```
 
-The home screen should stay simple. It should not become a dashboard full of charts, scores, tips, or labels.
+The home screen should stay simple. It should not become a dashboard full of charts, scores, tips, lessons, or lifestyle content.
 
 ### 2.2 Low Burden
 
 V1 forms should ask only for information that changes the user's next step.
 
-Do not add scene fields, suggested tags, nutrition fields, or extra categories unless they clearly reduce work.
+Do not add scene fields, nutrition fields, suggested tags, or extra categories unless they clearly reduce work.
 
 ### 2.3 Editable AI
 
@@ -45,7 +50,8 @@ For images, menus, reports, and complex meals:
 
 - Recognition output is suggested content.
 - Users can edit before saving.
-- The UI should not imply the result is complete or medically certain.
+- The UI should not imply the result is complete.
+- The UI should not imply the result is medically certain.
 
 ### 2.4 Careful Language
 
@@ -64,6 +70,7 @@ Avoid certainty language:
 - `一定导致`
 - `过敏`
 - `绝对不能吃`
+- `完全没问题`
 
 ## 3. Mobile Layout Rules
 
@@ -75,17 +82,26 @@ V1 is mobile-first.
 - Keep bottom navigation fixed with three items: `首页 / 记录 / 档案`.
 - Do not use a bottom center `+`.
 - Keep primary actions on the home screen.
-- Keep page headers compact, with back navigation only when the user is inside a flow.
+- Keep page headers compact.
+- Use back navigation only inside a task flow.
 
-### 3.2 Spacing And Density
+### 3.2 Screen Width And Safe Area
+
+- Design for common phone widths first.
+- Keep readable content within a comfortable horizontal padding.
+- Avoid edge-to-edge cards that make dense text feel cramped.
+- Keep bottom actions above the bottom navigation or safe area.
+
+### 3.3 Spacing And Density
 
 - Use generous touch targets.
 - Keep forms short and scan-friendly.
 - Avoid nested cards.
 - Use clear section breaks instead of heavy boxes everywhere.
 - Let important actions appear above the fold on common phone screens when possible.
+- Use compact section titles. Do not use hero-scale type inside forms, cards, or timelines.
 
-### 3.3 Home Screen
+### 3.4 Home Screen
 
 The home screen should include only:
 
@@ -100,15 +116,16 @@ Empty state can prompt the user to add the first profile item, but it must still
 
 The palette should be warm, restrained, and readable.
 
-### 4.1 Base Colors
+### 4.1 Base Color Roles
 
 Recommended direction:
 
 - Background: warm off-white, not pure hospital white.
 - Text: deep neutral, not cold blue-gray.
-- Primary action: calm food-adjacent color such as muted tomato, cranberry, or warm coral.
+- Primary action: muted tomato, cranberry, or warm coral.
 - Supporting color: soft olive or sage for profile and record surfaces.
 - Neutral surfaces: light cream or very pale warm gray.
+- Border: low-contrast warm gray.
 
 Avoid:
 
@@ -116,6 +133,7 @@ Avoid:
 - Bright medical red for normal warnings.
 - Strong green as the main success color, because it can imply `safe`.
 - Overly cute pastel palettes.
+- One-note palettes where the whole app reads as only beige, only green, or only red.
 
 ### 4.2 Result States
 
@@ -136,12 +154,28 @@ Result states should be visually distinct but calm.
 `信息不足`
 
 - Use neutral gray or soft amber.
-- The UI should invite the user to add more information or ask the seller.
+- Invite the user to add more information or ask the seller.
 
 `无法识别`
 
 - Use neutral gray.
 - Offer retry, text input, or manual save.
+
+### 4.3 Severity States
+
+For `记不适`, severity uses three levels:
+
+```text
+轻微 / 中等 / 严重
+```
+
+Visual treatment:
+
+- `轻微`: neutral or soft warm tint.
+- `中等`: warm amber.
+- `严重`: deeper warm rust, not emergency red.
+
+Do not make severity look like a medical triage system.
 
 ## 5. Component Direction
 
@@ -155,9 +189,18 @@ Use three large, clear action rows or buttons:
 记不适
 ```
 
-Each action can have a short supporting line only if it helps the first-time user. Do not over-explain every action.
+Rules:
 
-The three actions should feel equal in importance. `查食物` can be visually first, but not so dominant that logging becomes secondary.
+- The three actions should feel equal in importance.
+- `查食物` can appear first, but it should not make logging feel secondary.
+- Each action can have a short supporting line only if it helps the first-time user.
+- Do not over-explain every action.
+
+Recommended first build:
+
+- Use stacked action rows on mobile.
+- Each row has one clear label and one small visual cue.
+- Avoid a dense 3-card grid unless the first screen feels too long.
 
 ### 5.2 Bottom Navigation
 
@@ -167,7 +210,12 @@ Use three stable items:
 首页 / 记录 / 档案
 ```
 
-The active item should be clear, but not loud. Avoid badge-heavy navigation in V1.
+Rules:
+
+- The active item should be clear, but not loud.
+- Avoid badge-heavy navigation in V1.
+- Keep labels short.
+- Do not put primary creation actions in the bottom navigation.
 
 ### 5.3 Upload Entry
 
@@ -177,7 +225,11 @@ For `查食物` and `记饮食`, use the same input pattern:
 拍照上传 / 从相册选择 / 输入文字
 ```
 
-The upload entry should feel like a normal choice, not a technical file picker.
+Rules:
+
+- The upload entry should feel like a normal choice, not a technical file picker.
+- The three choices should be visible without hiding them behind a generic upload button.
+- If image recognition is used, show the recognized content in editable form.
 
 When AI upload is triggered, show a clear consent moment that explains:
 
@@ -201,6 +253,22 @@ Avoid:
 - Long helper text under every field.
 - Required-looking fields that are actually optional.
 - Tags or scene choices in the first food logging flow.
+- Placeholder text that sounds dismissive, such as `简单写一下`.
+
+Preferred labels:
+
+```text
+饮食内容
+检查内容
+时间
+开始时间
+症状类型
+严重程度
+持续时间
+备注
+保存记录
+保存并回看
+```
 
 ### 5.5 Result Cards
 
@@ -212,13 +280,20 @@ Result cards should show:
 - Reason.
 - Suggested next step.
 
-They should not look like medical diagnosis cards. The card language should stay close to the source:
+They should not look like medical diagnosis cards. Keep language close to the source:
 
 ```text
 命中：乳制品
 原文：全脂乳粉
 原因：在你的档案中
 ```
+
+Rules:
+
+- Do not use a `safe` or `risk score` pattern.
+- Do not show a medical-looking badge.
+- If there is no clear match, say `暂未发现明显命中`, not `安全`.
+- If the source is incomplete, show `信息不足` clearly.
 
 ### 5.6 Timeline
 
@@ -235,7 +310,7 @@ The calendar should:
 Each record item should show:
 
 - Time.
-- Type: 饮食 / 不适 / 检查.
+- Type: `饮食 / 不适 / 检查`.
 - Short content.
 - Important match or severity, if any.
 
@@ -258,9 +333,29 @@ Profile item rows should show:
 
 `可能相关` must look like an observation, not a confirmed medical result.
 
+Recommended visual hierarchy:
+
+- `已知需注意`: slightly stronger surface or label.
+- `观察中`: neutral surface.
+- `可能相关`: observation-style surface with evidence text.
+
 ## 6. Screen-Specific Notes
 
-### 6.1 查食物
+### 6.1 首页
+
+Keep the first screen calm and useful.
+
+Recommended order:
+
+1. `Food Sense` and date / today context.
+2. `今天要做什么？`
+3. Three action rows.
+4. Recent record preview.
+5. `本地保存 · 隐私与数据`.
+
+Do not add trend charts, health scores, food education content, or daily tips in V1.
+
+### 6.2 查食物
 
 If the profile is empty, show this clearly before the user interprets a result:
 
@@ -270,9 +365,39 @@ If the profile is empty, show this clearly before the user interprets a result:
 
 The screen can still let the user save check content for later.
 
-### 6.2 记饮食
+The input area should support:
 
-The page should make incomplete records feel acceptable.
+- `拍照上传`
+- `从相册选择`
+- `输入文字`
+
+Do not ask for a scene.
+
+### 6.3 检查结果
+
+Required result framing:
+
+```text
+基于目前可见信息
+```
+
+Use one of these states:
+
+- `发现需要注意的项目`
+- `暂未发现明显命中`
+- `信息不足`
+- `无法识别`
+
+Do not use:
+
+- `安全`
+- `可以放心吃`
+- `你对这个过敏`
+- `这一定导致不适`
+
+### 6.4 记饮食
+
+The page should make incomplete records feel acceptable without saying `容易漏记`.
 
 For complex meals, AI can generate a starting description such as:
 
@@ -282,7 +407,14 @@ For complex meals, AI can generate a starting description such as:
 
 The user can edit it before saving.
 
-### 6.3 记不适
+Rules:
+
+- Time field stays visible and editable.
+- Do not write `建议，可修改`.
+- Do not add scene field.
+- Do not add suggested tags in the first flow.
+
+### 6.5 记不适
 
 The page should be quick and calm.
 
@@ -294,7 +426,7 @@ Severity uses three levels:
 
 The save action should lead to symptom review.
 
-### 6.4 症状后回看
+### 6.6 症状后回看
 
 Always show the boundary copy near the top:
 
@@ -304,7 +436,44 @@ Always show the boundary copy near the top:
 
 The UI can highlight repeated or matched items, but should never claim causality.
 
-### 6.5 隐私与数据
+The time window control should be:
+
+```text
+2小时 / 4小时 / 8小时 / 24小时
+```
+
+### 6.7 档案
+
+The `档案` page should feel like a personal reference area, not a diagnosis page.
+
+Primary sections:
+
+- `已知需注意`
+- `可能相关`
+
+Actions:
+
+- `添加`
+- `上传报告`
+
+If empty, offer:
+
+- Add first item.
+- Upload report.
+- Start recording first.
+
+### 6.8 报告提取确认
+
+This screen must make user confirmation obvious.
+
+Rules:
+
+- AI-extracted rows are candidates, not final profile items.
+- User can edit, delete, or uncheck extracted rows.
+- Only confirmed rows enter `档案`.
+- Do not imply the app has interpreted the medical meaning of the report.
+
+### 6.9 隐私与数据
 
 The privacy page should be short, plain, and reachable.
 
@@ -326,7 +495,7 @@ Tone:
 - Not overly medical.
 - Not playful for serious states.
 
-Avoid phrases that feel dismissive or add burden, such as:
+Avoid phrases that feel dismissive or add burden:
 
 - `简单写一下`
 - `补充信息`
@@ -335,6 +504,7 @@ Avoid phrases that feel dismissive or add burden, such as:
 Prefer direct labels:
 
 - `饮食内容`
+- `检查内容`
 - `时间`
 - `备注`
 - `保存记录`
@@ -361,12 +531,18 @@ The first UI implementation should prove:
 5. Profile items are easy to add and scan.
 6. Privacy and AI upload moments are visible at the right time.
 
-## 9. Open UI Questions
+## 9. Product Owner Decisions Needed
 
-These should be tested during the first clickable build:
+Before building polished screens, the product owner should choose:
 
-1. Is `档案` clear enough as the bottom navigation label?
-2. Should the three home actions be stacked rows or a compact grid?
-3. Which warm primary color feels trustworthy without feeling medical?
-4. How much supporting text should first-time users see before the screen feels heavy?
-5. Should `暂未发现明显命中` use a neutral state only, or a very soft positive state without green?
+1. Use `Warm Utility` as the base, or revise toward `Quiet Journal` / `Soft Assistant`.
+2. Choose the primary color family: muted tomato, cranberry, or warm coral.
+3. Confirm whether home actions should be stacked rows for the first build.
+4. Confirm whether `档案` remains the V1 bottom navigation label through private testing.
+
+Current recommendation:
+
+- Start with `Warm Utility`.
+- Use stacked home action rows.
+- Keep `档案` for private testing.
+- Use a muted tomato / warm coral primary color, then adjust after seeing the first clickable build.

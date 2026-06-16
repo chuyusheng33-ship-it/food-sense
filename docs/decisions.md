@@ -264,6 +264,36 @@ Working agreement:
 - Meaningful changes should be committed and pushed to GitHub.
 - See `docs/archive/collaboration-agreement.md`.
 
+## 2026-06-16: Define V1 UI direction before app build
+
+Decision:
+
+- Use a clean, warm, professional-but-everyday UI direction for V1.
+- Treat `Warm Utility` as the current recommended base direction.
+- Keep the first build mobile-first, restrained, and focused on the three core actions.
+- Avoid medical dashboard styling, strong green success states, and alarming red warning states.
+
+Reason:
+
+- Food Sense is health-adjacent, so trust and careful language matter more than visual novelty.
+- The product needs to feel useful in daily eating situations, not like a hospital report.
+- V1 private testing should validate clarity, speed, and confidence boundaries before stronger branding.
+
+Working UI rules:
+
+- Home actions stay as `查食物`, `记饮食`, `记不适`.
+- Bottom navigation stays as `首页 / 记录 / 档案`.
+- Result states use `发现需要注意的项目`, `暂未发现明显命中`, `信息不足`, and `无法识别`.
+- `暂未发现明显命中` must not look or sound like `安全`.
+- AI recognition results are always editable suggestions.
+
+Still needs product owner confirmation:
+
+- Final V1 base option: `Warm Utility`, `Quiet Journal`, `Soft Assistant`, or a mix.
+- Primary color family: muted tomato, cranberry, or warm coral.
+- Whether home actions should use stacked rows in the first clickable build.
+- Whether `档案` remains the V1 navigation label through private testing.
+
 ## 2026-06-15: Set V1 UI direction
 
 Decision:
