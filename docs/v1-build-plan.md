@@ -58,10 +58,10 @@ The product must stay cautious: it can say `可能相关`, `建议继续观察`,
 6. Timeline:
    - Provide a calendar entry or month view.
    - Let users switch dates instead of only viewing today.
-   - Show food records, discomfort records, and check records for the selected day in time order.
+   - Show food records, symptom records, and check records in separate sections for the selected day.
    - Food records should show the meal photo and recognized food items when available.
    - Mark days that contain records.
-   - Support simple filtering by type.
+   - Support simple section switching.
 
 7. Privacy controls:
    - Explain local-first storage.

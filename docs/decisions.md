@@ -404,6 +404,27 @@ Product boundary:
 - Recognition remains editable and may be incomplete.
 - The goal is food reaction observation, not nutrition tracking.
 
+## 2026-06-16: Split record page into clear sections
+
+Decision:
+
+- Keep `记录` as one bottom-navigation destination, but split its content into clear sections for `饮食`, `症状`, and `检查`.
+- Do not mix all record types into one undifferentiated feed.
+- Let users switch between record sections while keeping the same date context.
+
+Reason:
+
+- The user wants records to be easy to distinguish.
+- Separate sections are easier to scan than a single mixed timeline.
+- This keeps the record page organized without adding more top-level navigation.
+
+Behavior:
+
+- `饮食` shows meal cards with photo and food-item list.
+- `症状` shows symptom cards and can link to symptom review.
+- `检查` shows check results and matched items.
+- Date selection still applies across sections.
+
 ## 2026-06-15: Set V1 UI direction
 
 Decision:

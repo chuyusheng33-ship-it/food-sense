@@ -225,35 +225,31 @@ Language boundary:
 
 Purpose:
 
-- Let users choose a date and review that day's food checks, food logs, and symptoms.
-- Support longer-term review instead of only showing today's records.
+- Let users choose a date and review that day's records in clear sections.
+- Keep food, symptom, and check records easy to distinguish.
 
 Primary content:
 
 - Calendar entry or month view.
 - Selected date.
-- Timeline for the selected day.
-- Item types:
-  - food check
-  - food record
-  - symptom record
-- Filters:
-  - all
-  - food
-  - symptoms
-  - checks
+- Three clear sections:
+  - food records
+  - symptom records
+  - check records
+- Each section has its own short timeline or card list.
 - Tap item to view or edit details.
 
 Primary actions:
 
 - Change date from the calendar.
+- Switch between record sections.
 - Edit or delete an entry.
 
 Calendar behavior:
 
 - Default to today.
 - Mark days that have records.
-- Tapping a day updates the timeline below.
+- Tapping a day updates the section lists below.
 - Keep the calendar lightweight; V1 does not need charts or trend analytics inside the record page.
 
 ### 3.8 档案

@@ -628,6 +628,14 @@
         font-weight: 750;
       }
 
+      .record-section {
+        display: none;
+      }
+
+      .record-section.active {
+        display: block;
+      }
+
       .record-time {
         color: var(--primary);
         font-size: 12px;
@@ -1130,50 +1138,67 @@
           </div>
 
           <div class="chips">
-            <button class="chip active">全部</button>
-            <button class="chip">饮食</button>
-            <button class="chip">不适</button>
-            <button class="chip">检查</button>
+            <button class="chip active" data-record-section="food">饮食</button>
+            <button class="chip" data-record-section="symptoms">症状</button>
+            <button class="chip" data-record-section="checks">检查</button>
           </div>
 
-          <article class="record-card">
-            <div class="meta">
-              <span class="record-time">15:20</span>
-              <span class="pill attention">不适</span>
+          <div class="record-section active" data-record-panel="food">
+            <div class="section-head">
+              <h2>饮食记录</h2>
             </div>
-            <h3>腹痛 · 中等</h3>
-            <p>保存后已回看 4 小时内饮食。</p>
-          </article>
+            <article class="record-card">
+              <div class="meta">
+                <span class="record-time">12:40</span>
+                <span class="pill">饮食</span>
+              </div>
+              <img
+                class="meal-photo"
+                style="border-radius: 16px; margin-bottom: 12px"
+                src="/design/ui-references/food-sense-meal-photo-reference.png"
+                alt="饮食照片"
+              />
+              <h3>牛肉饭、酸奶</h3>
+              <div class="food-line">
+                <span class="food-pill">米饭</span>
+                <span class="food-pill">牛肉</span>
+                <span class="food-pill">青菜</span>
+                <span class="food-pill">酸奶</span>
+              </div>
+              <p style="margin-top: 10px">命中档案项：乳制品。</p>
+            </article>
+          </div>
 
-          <article class="record-card">
-            <div class="meta">
-              <span class="record-time">12:40</span>
-              <span class="pill">饮食</span>
+          <div class="record-section" data-record-panel="symptoms">
+            <div class="section-head">
+              <h2>症状记录</h2>
             </div>
-            <img
-              class="meal-photo"
-              style="border-radius: 16px; margin-bottom: 12px"
-              src="/design/ui-references/food-sense-meal-photo-reference.png"
-              alt="饮食照片"
-            />
-            <h3>牛肉饭、酸奶</h3>
-            <div class="food-line">
-              <span class="food-pill">米饭</span>
-              <span class="food-pill">牛肉</span>
-              <span class="food-pill">青菜</span>
-              <span class="food-pill">酸奶</span>
-            </div>
-            <p style="margin-top: 10px">命中档案项：乳制品。</p>
-          </article>
+            <article class="record-card">
+              <div class="meta">
+                <span class="record-time">15:20</span>
+                <span class="pill attention">中等</span>
+              </div>
+              <h3>腹痛</h3>
+              <p>保存后已回看 4 小时内饮食。</p>
+              <div class="button-row single" style="margin-top: 12px">
+                <button class="secondary-btn" data-go="review">查看症状后回看</button>
+              </div>
+            </article>
+          </div>
 
-          <article class="record-card">
-            <div class="meta">
-              <span class="record-time">09:10</span>
-              <span class="pill neutral">检查</span>
+          <div class="record-section" data-record-panel="checks">
+            <div class="section-head">
+              <h2>检查记录</h2>
             </div>
-            <h3>酸奶配料</h3>
-            <p>发现需要注意的项目：乳制品、蔗糖。</p>
-          </article>
+            <article class="record-card">
+              <div class="meta">
+                <span class="record-time">09:10</span>
+                <span class="pill neutral">检查</span>
+              </div>
+              <h3>酸奶配料</h3>
+              <p>发现需要注意的项目：乳制品、蔗糖。</p>
+            </article>
+          </div>
         </section>
 
         <section class="screen" data-screen="profile">
@@ -1337,7 +1362,19 @@
         mealContent.focus();
       });
 
-      document.querySelectorAll(".chip, .window-btn").forEach((button) => {
+      document.querySelectorAll("[data-record-section]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const target = button.dataset.recordSection;
+          document.querySelectorAll("[data-record-section]").forEach((item) => {
+            item.classList.toggle("active", item === button);
+          });
+          document.querySelectorAll("[data-record-panel]").forEach((panel) => {
+            panel.classList.toggle("active", panel.dataset.recordPanel === target);
+          });
+        });
+      });
+
+      document.querySelectorAll(".chip:not([data-record-section]), .window-btn").forEach((button) => {
         button.addEventListener("click", () => {
           const siblings = [...button.parentElement.children];
           siblings.forEach((sibling) => sibling.classList.remove("active"));

@@ -326,7 +326,7 @@ Rules:
 
 ### 5.6 Timeline
 
-The record timeline should be easy to scan.
+The record page should be easy to scan and should not mix every record type into one confusing feed.
 
 The record page should include a lightweight calendar entry or month view so users can move beyond today and review a specific date.
 
@@ -336,18 +336,33 @@ The calendar should:
 - Mark days that have records.
 - Avoid heavy analytics or health-score styling in V1.
 
-Each record item should show:
-
-- Time.
-- Type: `饮食 / 不适 / 检查`.
-- Short content.
-- Important match or severity, if any.
-
-Filtering should stay light:
+Use clear sections or segmented views:
 
 ```text
-全部 / 饮食 / 不适 / 检查
+饮食 / 症状 / 检查
 ```
+
+Each section should show only its own record type.
+
+Food record items should show:
+
+- Time.
+- Meal photo when available.
+- Recognized or entered food items.
+- Important profile match, if any.
+
+Symptom record items should show:
+
+- Time.
+- Symptom type.
+- Severity.
+- Link to symptom review, if useful.
+
+Check record items should show:
+
+- Time.
+- Checked content.
+- Result state and matched items, if any.
 
 ### 5.7 Profile Items
 
