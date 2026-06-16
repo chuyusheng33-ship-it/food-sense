@@ -438,6 +438,19 @@ Reason:
 - Centered, smaller titles make the pages feel calmer and more polished.
 - The screen focus should stay on the task controls and form content.
 
+## 2026-06-16: Remove duplicate home icons from main tabs
+
+Decision:
+
+- Remove the top-right home icon from `记录` and `档案`.
+- Use the bottom navigation as the only main way to move between `首页`, `记录`, and `档案`.
+
+Reason:
+
+- `记录` and `档案` are already top-level bottom navigation pages.
+- A second home icon makes the page feel busier and duplicates navigation.
+- Removing it keeps the main pages cleaner.
+
 ## 2026-06-15: Set V1 UI direction
 
 Decision:

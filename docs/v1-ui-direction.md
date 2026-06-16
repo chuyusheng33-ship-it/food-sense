@@ -246,6 +246,7 @@ Rules:
 - Avoid badge-heavy navigation in V1.
 - Keep labels short.
 - Do not put primary creation actions in the bottom navigation.
+- Do not add an extra home icon inside `记录` or `档案`; bottom navigation already provides the way back to `首页`.
 
 ### 5.3 Upload Entry
 
