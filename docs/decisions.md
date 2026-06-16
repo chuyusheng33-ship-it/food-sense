@@ -322,6 +322,31 @@ Output:
 - `docs/v1-ui-direction.md`
 - `docs/v1-ui-options.md`
 
+## 2026-06-16: Build UI prototype before development boundary docs
+
+Decision:
+
+- Do not move directly from PRD and UI direction into SDD or production app development.
+- Build a clickable V1 UI prototype first so the product owner can review Food Sense's actual screen direction.
+- Treat the prototype as visual and flow review only, not as the production React app.
+
+Reason:
+
+- A reference image and direction document are not enough to validate Food Sense's own UI.
+- The product owner needs to see the Food Sense screens before approving development.
+- This prevents coding too early and discovering late that the UI direction does not feel right.
+
+Output:
+
+- `design/prototypes/v1-ui-prototype.html`
+- `docs/v1-ui-prototype-notes.md`
+
+Next gate:
+
+- Product owner reviews the prototype and gives feedback.
+- After prototype approval, create `docs/DESIGN.md`, `docs/ARCHITECTURE.md`, and `TODO.md`.
+- Formal app development starts only after those boundaries are clear.
+
 ## 2026-06-15: Set V1 UI direction
 
 Decision:
