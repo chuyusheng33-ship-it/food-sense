@@ -143,12 +143,20 @@ Input methods:
 - Take and upload photo.
 - Choose from album.
 - Text note.
+- Copy from recent food records.
 
 Primary fields:
 
 - `饮食内容`: photo-derived or text-entered meal description.
 - Time, suggested from input when possible and marked editable.
 - Extracted food tags, if AI or manual parsing is available.
+
+Recent copy support:
+
+- Let the user copy a recent food record when this meal is the same or similar.
+- 复制会生成一条新的可编辑草稿，不会关联或修改原记录。
+- The user can change the time and food content before saving.
+- Keep this lightweight in V1; do not introduce a full template system yet.
 
 Complex meal support:
 

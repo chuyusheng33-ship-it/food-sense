@@ -364,6 +364,26 @@ Future note:
 
 - A search or quick-check entry can be reconsidered after private testing if users repeatedly want to paste ingredients directly from the home screen.
 
+## 2026-06-16: Add copy-from-recent to food logging
+
+Decision:
+
+- `记饮食` should let users copy a recent food record into a new editable record.
+- The copied record should prefill `饮食内容`; time should be updated or remain editable before saving.
+- V1 should keep this as a lightweight recent-record action, not a full template, favorite meal, or meal plan system.
+
+Reason:
+
+- Many users repeat meals, drinks, breakfasts, or takeout orders.
+- 复制上一条或最近记录可以减少输入，帮助用户在 30 秒内完成饮食记录。
+- This supports real use without adding scene fields or heavy categorization.
+
+Product boundary:
+
+- 复制会生成一条新记录，不会修改旧记录。
+- Users can modify the copied content before saving.
+- The feature should not imply nutrition tracking or a diet-plan system.
+
 ## 2026-06-15: Set V1 UI direction
 
 Decision:

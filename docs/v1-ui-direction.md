@@ -428,6 +428,13 @@ Do not use:
 
 The page should make incomplete records feel acceptable without saying `容易漏记`.
 
+The page should also support repeated meals:
+
+- Show a lightweight `从最近复制` entry near the input methods.
+- Use it when the current meal is the same or similar to a previous record.
+- Copying should create an editable draft.
+- Do not make this a heavy template or favorites system in V1.
+
 For complex meals, AI can generate a starting description such as:
 
 ```text

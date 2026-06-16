@@ -44,6 +44,7 @@ The product must stay cautious: it can say `可能相关`, `建议继续观察`,
 
 4. Food logging:
    - Input by text.
+   - Copy from a recent food record into a new editable record.
    - Save time and description.
    - Keep time editable.
    - Store locally.
@@ -144,6 +145,7 @@ Required screens:
 Required behavior:
 
 - A one-line record is acceptable.
+- A repeated meal can be copied from a recent food record and edited before saving.
 - Time is saved and editable.
 - After photo upload or album selection, image recognition should suggest likely foods and generate editable content.
 - The app should not make the user feel the record is invalid unless complete.
@@ -209,9 +211,10 @@ Build:
 1. 首页.
 2. 档案 add/edit/delete.
 3. 记饮食 text flow.
-4. 记症状 flow.
-5. 症状后回看.
-6. 记录 timeline.
+4. 记饮食 copy-from-recent flow.
+5. 记症状 flow.
+6. 症状后回看.
+7. 记录 timeline.
 
 ### Step 3: 查食物 Text Matching
 

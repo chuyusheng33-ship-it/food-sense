@@ -915,6 +915,21 @@
             </button>
           </div>
 
+          <article class="record-card" style="margin-top: 0">
+            <div class="meta">
+              <span class="record-time">从最近复制</span>
+              <span class="pill neutral">可修改</span>
+            </div>
+            <h3>牛肉饭、酸奶</h3>
+            <p>适合这顿饭和之前一样时使用。复制后会生成一条新的记录。</p>
+            <div class="button-row single" style="margin-top: 12px">
+              <button class="secondary-btn" id="copy-recent-meal">
+                <i data-lucide="copy" size="17"></i>
+                使用这条
+              </button>
+            </div>
+          </article>
+
           <label for="meal-content">饮食内容</label>
           <textarea id="meal-content" class="textarea-box">火锅：牛肉、虾滑、豆腐、青菜、蘸料，喝了半杯奶茶</textarea>
 
@@ -1239,6 +1254,14 @@
 
       routeButtons.forEach((button) => {
         button.addEventListener("click", () => setScreen(button.dataset.go));
+      });
+
+      document.getElementById("copy-recent-meal")?.addEventListener("click", () => {
+        const mealContent = document.getElementById("meal-content");
+        const mealTime = document.getElementById("meal-time");
+        mealContent.value = "牛肉饭、酸奶";
+        mealTime.value = "现在";
+        mealContent.focus();
       });
 
       document.querySelectorAll(".chip, .window-btn").forEach((button) => {
