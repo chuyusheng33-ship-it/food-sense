@@ -451,6 +451,19 @@ Reason:
 - A second home icon makes the page feel busier and duplicates navigation.
 - Removing it keeps the main pages cleaner.
 
+## 2026-06-16: Move symptom review copy out of the title area
+
+Decision:
+
+- Shorten the `症状后回看` page title to `饮食回看`.
+- Move the caution line `这些记录出现在不适之前，不代表一定导致症状。` out of the title area and into the content area above the food list.
+
+Reason:
+
+- The title area was carrying too much text.
+- A shorter title makes the page feel cleaner.
+- The caution line still needs to be visible, but it works better as content than as a subtitle.
+
 ## 2026-06-15: Set V1 UI direction
 
 Decision:

@@ -214,6 +214,7 @@ Primary content:
 - Highlighted profile matches.
 - Repeated foods from recent records.
 - Button to mark item as `继续观察`.
+- Show the caution line in the content area above the record list, not inside the page title.
 
 Language boundary:
 
