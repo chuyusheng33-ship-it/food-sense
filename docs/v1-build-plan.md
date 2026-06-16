@@ -45,6 +45,8 @@ The product must stay cautious: it can say `可能相关`, `建议继续观察`,
 4. Food logging:
    - Input by text.
    - Copy from a recent food record into a new editable record.
+   - Save a meal photo when the user uses photo or album input.
+   - Store recognized food items as an editable list.
    - Save time and description.
    - Keep time editable.
    - Store locally.
@@ -57,6 +59,7 @@ The product must stay cautious: it can say `可能相关`, `建议继续观察`,
    - Provide a calendar entry or month view.
    - Let users switch dates instead of only viewing today.
    - Show food records, discomfort records, and check records for the selected day in time order.
+   - Food records should show the meal photo and recognized food items when available.
    - Mark days that contain records.
    - Support simple filtering by type.
 
@@ -147,7 +150,8 @@ Required behavior:
 - A one-line record is acceptable.
 - A repeated meal can be copied from a recent food record and edited before saving.
 - Time is saved and editable.
-- After photo upload or album selection, image recognition should suggest likely foods and generate editable content.
+- After photo upload or album selection, image recognition should suggest likely foods, generate editable content, and save a visible food-item list.
+- The saved record can show the meal photo and specific foods, but V1 should not show calories or nutrition analysis.
 - The app should not make the user feel the record is invalid unless complete.
 
 ### 3.3 Discomfort After Eating

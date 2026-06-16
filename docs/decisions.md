@@ -384,6 +384,26 @@ Product boundary:
 - Users can modify the copied content before saving.
 - The feature should not imply nutrition tracking or a diet-plan system.
 
+## 2026-06-16: Show meal photos and recognized foods in records
+
+Decision:
+
+- Food records should be able to show the meal photo when available.
+- Food records should also show a clear list of recognized or entered food items.
+- The `记录` page should make food records feel like meal cards, not only text notes.
+
+Reason:
+
+- Users need to remember what they actually ate, especially for complex meals.
+- A photo plus food-item list is more useful for later symptom review than a short text line alone.
+- This supports the V1 goal of AI-assisted meal recognition.
+
+Product boundary:
+
+- V1 should not show calories, nutrients, food scores, or diet advice.
+- Recognition remains editable and may be incomplete.
+- The goal is food reaction observation, not nutrition tracking.
+
 ## 2026-06-15: Set V1 UI direction
 
 Decision:

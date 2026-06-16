@@ -435,6 +435,13 @@ The page should also support repeated meals:
 - Copying should create an editable draft.
 - Do not make this a heavy template or favorites system in V1.
 
+The saved record should feel more like a meal card than a text note:
+
+- Show a meal photo when available.
+- Show the recognized or entered food items as a clear list.
+- Keep the list mobile-friendly and easy to scan.
+- Do not show calorie, nutrient, or score-style information in V1.
+
 For complex meals, AI can generate a starting description such as:
 
 ```text

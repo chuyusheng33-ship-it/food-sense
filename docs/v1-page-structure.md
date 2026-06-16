@@ -150,6 +150,8 @@ Primary fields:
 - `饮食内容`: photo-derived or text-entered meal description.
 - Time, suggested from input when possible and marked editable.
 - Extracted food tags, if AI or manual parsing is available.
+- Food photo preview for the saved meal.
+- Visible list of recognized food items.
 
 Recent copy support:
 
@@ -164,6 +166,12 @@ Complex meal support:
 - After photo upload or album selection, automatically suggest likely foods from the image.
 - Generated food content must be editable before saving.
 - Recognition is a suggestion and does not need to be complete.
+
+Record card support:
+
+- A saved food record should show a meal photo when available.
+- The card should also show the named food items that were recognized or entered.
+- Keep the card readable on mobile; do not try to turn it into a nutrition dashboard.
 
 Primary action:
 
