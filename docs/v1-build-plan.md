@@ -44,7 +44,7 @@ The product must stay cautious: it can say `可能相关`, `建议继续观察`,
 
 4. Food logging:
    - Input by text.
-   - Copy from a recent food record into a new editable record.
+   - Choose from past food records and copy one into a new editable record.
    - Save a meal photo when the user uses photo or album input.
    - Store recognized food items as an editable list.
    - Save time and description.
@@ -148,7 +148,7 @@ Required screens:
 Required behavior:
 
 - A one-line record is acceptable.
-- A repeated meal can be copied from a recent food record and edited before saving.
+- A repeated meal can be selected from past food records and edited before saving.
 - Time is saved and editable.
 - After photo upload or album selection, image recognition should suggest likely foods, generate editable content, and save a visible food-item list.
 - The saved record can show the meal photo and specific foods, but V1 should not show calories or nutrition analysis.

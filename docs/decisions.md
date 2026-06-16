@@ -368,14 +368,15 @@ Future note:
 
 Decision:
 
-- `记饮食` should let users copy a recent food record into a new editable record.
+- `记饮食` should let users open a past-food-record selection page.
+- Users can choose from past meal cards instead of only copying the single most recent record.
 - The copied record should prefill `饮食内容`; time should be updated or remain editable before saving.
-- V1 should keep this as a lightweight recent-record action, not a full template, favorite meal, or meal plan system.
+- V1 should keep this as a lightweight selection action, not a full template, favorite meal, or meal plan system.
 
 Reason:
 
 - Many users repeat meals, drinks, breakfasts, or takeout orders.
-- 复制上一条或最近记录可以减少输入，帮助用户在 30 秒内完成饮食记录。
+- 从过往饮食记录中选择可以减少输入，帮助用户在 30 秒内完成饮食记录。
 - This supports real use without adding scene fields or heavy categorization.
 
 Product boundary:

@@ -608,6 +608,30 @@
         margin-bottom: 12px;
       }
 
+      .copy-entry {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 16px;
+        text-align: left;
+      }
+
+      .copy-entry strong {
+        display: block;
+        color: var(--text);
+        font-size: 15px;
+        margin-bottom: 4px;
+      }
+
+      .copy-entry span {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
       .meal-card {
         overflow: hidden;
         padding: 0;
@@ -979,20 +1003,13 @@
             </button>
           </div>
 
-          <article class="record-card" style="margin-top: 0">
-            <div class="meta">
-              <span class="record-time">从最近复制</span>
-              <span class="pill neutral">可修改</span>
-            </div>
-            <h3>牛肉饭、酸奶</h3>
-            <p>适合这顿饭和之前一样时使用。复制后会生成一条新的记录。</p>
-            <div class="button-row single" style="margin-top: 12px">
-              <button class="secondary-btn" id="copy-recent-meal">
-                <i data-lucide="copy" size="17"></i>
-                使用这条
-              </button>
-            </div>
-          </article>
+          <button class="card copy-entry" data-go="meal-history">
+            <span>
+              <strong>从过往饮食选择</strong>
+              适合这顿饭和之前一样或很相似时使用。
+            </span>
+            <i data-lucide="chevron-right" size="20"></i>
+          </button>
 
           <article class="record-card meal-card">
             <img
@@ -1033,6 +1050,87 @@
           <div class="button-row single">
             <button class="primary-btn" data-go="records">保存记录</button>
           </div>
+        </section>
+
+        <section class="screen" data-screen="meal-history">
+          <div class="page-top centered">
+            <button class="back-btn" data-go="meal" aria-label="返回记饮食">
+              <i data-lucide="chevron-left" size="22"></i>
+            </button>
+            <div class="page-title centered">
+              <h1>选择饮食记录</h1>
+              <p>选择一条过往记录，生成新的可修改草稿。</p>
+            </div>
+          </div>
+
+          <article class="record-card meal-card">
+            <img
+              class="meal-photo"
+              src="/design/ui-references/food-sense-meal-photo-reference.png"
+              alt="过往饮食照片"
+            />
+            <div class="meal-body">
+              <div class="meta">
+                <span class="record-time">昨天 12:30</span>
+                <span class="pill neutral">可修改</span>
+              </div>
+              <h3>鸡蛋糕套餐</h3>
+              <div class="food-line" aria-label="这条记录中的食物">
+                <span class="food-pill">鸡蛋糕</span>
+                <span class="food-pill">排骨</span>
+                <span class="food-pill">鸡蛋汤</span>
+                <span class="food-pill">油菜</span>
+                <span class="food-pill">米饭</span>
+              </div>
+              <div class="button-row single" style="margin-top: 12px">
+                <button
+                  class="secondary-btn"
+                  data-copy-meal="鸡蛋糕套餐：鸡蛋糕、排骨、鸡蛋汤、油菜、米饭"
+                >
+                  <i data-lucide="copy" size="17"></i>
+                  使用这条
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="record-card">
+            <div class="meta">
+              <span class="record-time">6月14日 19:10</span>
+              <span class="pill neutral">可修改</span>
+            </div>
+            <h3>牛肉饭、酸奶</h3>
+            <div class="food-line" aria-label="这条记录中的食物">
+              <span class="food-pill">牛肉饭</span>
+              <span class="food-pill">酸奶</span>
+            </div>
+            <p style="margin-top: 10px">选择后只复制饮食内容，不会修改原记录。</p>
+            <div class="button-row single" style="margin-top: 12px">
+              <button class="secondary-btn" data-copy-meal="牛肉饭、酸奶">
+                <i data-lucide="copy" size="17"></i>
+                使用这条
+              </button>
+            </div>
+          </article>
+
+          <article class="record-card">
+            <div class="meta">
+              <span class="record-time">6月13日 08:20</span>
+              <span class="pill neutral">可修改</span>
+            </div>
+            <h3>燕麦、拿铁</h3>
+            <div class="food-line" aria-label="这条记录中的食物">
+              <span class="food-pill">燕麦</span>
+              <span class="food-pill">牛奶</span>
+              <span class="food-pill">咖啡</span>
+            </div>
+            <div class="button-row single" style="margin-top: 12px">
+              <button class="secondary-btn" data-copy-meal="燕麦、拿铁">
+                <i data-lucide="copy" size="17"></i>
+                使用这条
+              </button>
+            </div>
+          </article>
         </section>
 
         <section class="screen" data-screen="symptom">
@@ -1335,6 +1433,7 @@
             <button class="route-btn" data-go="check">查食物 <span>Check</span></button>
             <button class="route-btn" data-go="result">检查结果 <span>Result</span></button>
             <button class="route-btn" data-go="meal">记饮食 <span>Meal</span></button>
+            <button class="route-btn" data-go="meal-history">选择饮食记录 <span>Copy</span></button>
             <button class="route-btn" data-go="symptom">记症状 <span>Symptom</span></button>
             <button class="route-btn" data-go="review">症状后回看 <span>Review</span></button>
             <button class="route-btn" data-go="records">记录 <span>Timeline</span></button>
@@ -1372,12 +1471,15 @@
         button.addEventListener("click", () => setScreen(button.dataset.go));
       });
 
-      document.getElementById("copy-recent-meal")?.addEventListener("click", () => {
-        const mealContent = document.getElementById("meal-content");
-        const mealTime = document.getElementById("meal-time");
-        mealContent.value = "牛肉饭、酸奶";
-        mealTime.value = "现在";
-        mealContent.focus();
+      document.querySelectorAll("[data-copy-meal]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const mealContent = document.getElementById("meal-content");
+          const mealTime = document.getElementById("meal-time");
+          mealContent.value = button.dataset.copyMeal;
+          mealTime.value = "现在";
+          setScreen("meal");
+          mealContent.focus();
+        });
       });
 
       document.querySelectorAll("[data-record-section]").forEach((button) => {

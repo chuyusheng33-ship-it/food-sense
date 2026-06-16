@@ -149,7 +149,7 @@ Input methods:
 - Take and upload photo.
 - Choose from album.
 - Text note.
-- Copy from recent food records.
+- Choose from past food records.
 
 Primary fields:
 
@@ -159,9 +159,10 @@ Primary fields:
 - Food photo preview for the saved meal.
 - Visible list of recognized food items.
 
-Recent copy support:
+Past record copy support:
 
-- Let the user copy a recent food record when this meal is the same or similar.
+- Let the user open a past food record selection page when this meal is the same or similar to something logged before.
+- Show past food records as selectable cards with time, meal title, food items, and photo when available.
 - 复制会生成一条新的可编辑草稿，不会关联或修改原记录。
 - The user can change the time and food content before saving.
 - Keep this lightweight in V1; do not introduce a full template system yet.

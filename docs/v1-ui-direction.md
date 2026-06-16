@@ -453,7 +453,9 @@ The page should make incomplete records feel acceptable without saying `容易�
 
 The page should also support repeated meals:
 
-- Show a lightweight `从最近复制` entry near the input methods.
+- Show a lightweight `从过往饮食选择` entry near the input methods.
+- Tapping it opens a simple selection page with past meal cards.
+- Past meal cards should show time, meal title, food items, and a photo when available.
 - Use it when the current meal is the same or similar to a previous record.
 - Copying should create an editable draft.
 - Do not make this a heavy template or favorites system in V1.
