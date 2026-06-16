@@ -347,6 +347,23 @@ Next gate:
 - After prototype approval, create `docs/DESIGN.md`, `docs/ARCHITECTURE.md`, and `TODO.md`.
 - Formal app development starts only after those boundaries are clear.
 
+## 2026-06-16: Remove home search from V1 prototype
+
+Decision:
+
+- Remove the search-style input from the V1 home prototype.
+- Keep the home screen focused on the three primary actions: `查食物`, `记饮食`, and `记症状`.
+
+Reason:
+
+- The home search looked like a general search feature, but V1 does not need global search yet.
+- If it only opens `查食物`, it duplicates the main action and adds visual noise.
+- Early users should first understand the three core actions without extra interpretation.
+
+Future note:
+
+- A search or quick-check entry can be reconsidered after private testing if users repeatedly want to paste ingredients directly from the home screen.
+
 ## 2026-06-15: Set V1 UI direction
 
 Decision:

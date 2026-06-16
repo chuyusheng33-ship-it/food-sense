@@ -202,14 +202,6 @@
         box-shadow: var(--card-shadow);
       }
 
-      .search-row {
-        display: grid;
-        grid-template-columns: 1fr 60px;
-        gap: 10px;
-        margin-bottom: 18px;
-      }
-
-      .search-box,
       .input-box,
       .textarea-box {
         background: var(--surface);
@@ -217,25 +209,6 @@
         border-radius: 17px;
         color: var(--text);
         box-shadow: var(--card-shadow);
-      }
-
-      .search-box {
-        min-height: 54px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 0 15px;
-        color: var(--muted);
-        font-size: 13px;
-      }
-
-      .filter-btn {
-        border-radius: 17px;
-        background: var(--primary);
-        color: white;
-        display: grid;
-        place-items: center;
-        box-shadow: 0 12px 26px rgba(89, 99, 33, 0.24);
       }
 
       .hero-card {
@@ -790,16 +763,6 @@
                 <i data-lucide="shield-check" size="20"></i>
               </button>
             </div>
-          </div>
-
-          <div class="search-row">
-            <button class="search-box" data-go="check">
-              <i data-lucide="search" size="18"></i>
-              <span>检查配料、菜单或商品说明</span>
-            </button>
-            <button class="filter-btn" data-go="profile" aria-label="查看档案">
-              <i data-lucide="sliders-horizontal" size="22"></i>
-            </button>
           </div>
 
           <div class="hero-card">
