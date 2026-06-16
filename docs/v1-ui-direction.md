@@ -38,7 +38,7 @@ design/ui-references/food-sense-v1-soft-olive-reference.png
 The app should prioritize the three core actions:
 
 ```text
-查食物 / 记饮食 / 记不适
+查食物 / 记饮食 / 记症状
 ```
 
 The home screen should stay simple. It should not become a dashboard full of charts, scores, tips, lessons, or lifestyle content.
@@ -190,7 +190,7 @@ Result states should be visually distinct but calm.
 
 ### 4.3 Severity States
 
-For `记不适`, severity uses three levels:
+For `记症状`, severity uses three levels:
 
 ```text
 轻微 / 中等 / 严重
@@ -213,7 +213,7 @@ Use three large, clear action rows or buttons:
 ```text
 查食物
 记饮食
-记不适
+记症状
 ```
 
 Rules:
@@ -443,7 +443,7 @@ Rules:
 - Do not add scene field.
 - Do not add suggested tags in the first flow.
 
-### 6.5 记不适
+### 6.5 记症状
 
 The page should be quick and calm.
 

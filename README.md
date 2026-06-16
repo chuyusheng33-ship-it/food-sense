@@ -47,7 +47,7 @@ The home screen shows the three primary actions:
 
 - `查食物`
 - `记饮食`
-- `记不适`
+- `记症状`
 
 Current low-fidelity materials:
 

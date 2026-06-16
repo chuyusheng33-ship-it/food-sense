@@ -68,7 +68,7 @@ Current working labels:
 
 - `查食物`
 - `记饮食`
-- `记不适`
+- `记症状`
 
 Reason:
 
@@ -119,7 +119,7 @@ Update on 2026-06-15:
 
 Decision:
 
-- Use `查食物`, `记饮食`, and `记不适` for the three primary home actions.
+- Use `查食物`, `记饮食`, and `记症状` for the three primary home actions.
 
 Reason:
 
@@ -201,7 +201,7 @@ Reason:
 
 Decision:
 
-- Use three severity levels in `记不适`: `轻微`, `中等`, `严重`.
+- Use three severity levels in `记症状`: `轻微`, `中等`, `严重`.
 
 Reason:
 
@@ -281,7 +281,7 @@ Reason:
 
 Working UI rules:
 
-- Home actions stay as `查食物`, `记饮食`, `记不适`.
+- Home actions stay as `查食物`, `记饮食`, `记症状`.
 - Bottom navigation stays as `首页 / 记录 / 档案`.
 - Result states use `发现需要注意的项目`, `暂未发现明显命中`, `信息不足`, and `无法识别`.
 - `暂未发现明显命中` must not look or sound like `安全`.
@@ -354,7 +354,7 @@ Decision:
 - Use a clean, warm, professional-but-life-like UI direction for V1.
 - Avoid a hospital-like visual system.
 - Avoid an overly cute or playful visual system.
-- Keep the home screen simple and centered on `查食物 / 记饮食 / 记不适`.
+- Keep the home screen simple and centered on `查食物 / 记饮食 / 记症状`.
 
 Reason:
 

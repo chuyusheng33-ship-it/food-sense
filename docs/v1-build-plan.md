@@ -34,7 +34,7 @@ The product must stay cautious: it can say `可能相关`, `建议继续观察`,
 2. Home primary actions:
    - `查食物`
    - `记饮食`
-   - `记不适`
+   - `记症状`
 
 3. Food profile:
    - Add, edit, and delete items.
@@ -159,7 +159,7 @@ User records discomfort and immediately reviews what appeared before it.
 Required screens:
 
 1. 首页
-2. 记不适
+2. 记症状
 3. 症状后回看
 4. 记录
 
@@ -209,7 +209,7 @@ Build:
 1. 首页.
 2. 档案 add/edit/delete.
 3. 记饮食 text flow.
-4. 记不适 flow.
+4. 记症状 flow.
 5. 症状后回看.
 6. 记录 timeline.
 

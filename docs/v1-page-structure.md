@@ -20,7 +20,7 @@ The home screen shows the three primary actions:
 ```text
 查食物
 记饮食
-记不适
+记症状
 ```
 
 `档案` is the user's personal food reaction profile. It contains report-confirmed items, manually added items, and possible patterns discovered from food and symptom records.
@@ -33,7 +33,7 @@ V1 low-fidelity screens:
 2. 查食物
 3. 检查结果
 4. 记饮食
-5. 记不适
+5. 记症状
 6. 症状后回看
 7. 记录
 8. 档案
@@ -54,7 +54,7 @@ Purpose:
 Primary content:
 
 - Main prompt: `今天要做什么？`
-- Three action shortcuts: `查食物`, `记饮食`, `记不适`.
+- Three action shortcuts: `查食物`, `记饮食`, `记症状`.
 - One recent activity preview.
 - Local storage / privacy link.
 
@@ -161,7 +161,7 @@ Primary action:
 
 - `保存记录`
 
-### 3.5 记不适
+### 3.5 记症状
 
 Purpose:
 
@@ -360,7 +360,7 @@ Primary content:
 
 ```text
 首页
--> 记不适
+-> 记症状
 -> save symptom
 -> 症状后回看
 -> choose 2h / 4h / 8h / 24h

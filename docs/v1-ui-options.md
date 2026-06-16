@@ -95,7 +95,7 @@ Adaptation boundary:
 - Do not copy the event marketplace content model.
 - Do not make Food Sense image-heavy just because the reference uses event cards.
 - Use the visual tone, spacing, card softness, and olive accent.
-- Keep Food Sense focused on `查食物 / 记饮食 / 记不适`.
+- Keep Food Sense focused on `查食物 / 记饮食 / 记症状`.
 
 ## Next Decision
 

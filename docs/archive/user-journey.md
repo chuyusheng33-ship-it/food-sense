@@ -41,7 +41,7 @@ User sees or eats food
 ## Scenario 4: Symptom Review
 
 1. User feels abdominal pain a few hours after eating.
-2. User chooses `记不适`.
+2. User chooses `记症状`.
 3. User records time, symptom type, severity, duration, and notes.
 4. Food Sense immediately shows foods recorded in the last 2, 4, 8, and 24 hours.
 5. Food Sense highlights known profile matches and repeated foods.

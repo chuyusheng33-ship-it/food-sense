@@ -26,7 +26,7 @@ The goal is to let the product owner review:
 - Whether the soft olive visual direction feels right for Food Sense.
 - Whether the home screen is simple enough.
 - Whether the three main actions are clear.
-- Whether `查食物`, `记饮食`, `记不适`, `记录`, and `档案` feel coherent together.
+- Whether `查食物`, `记饮食`, `记症状`, `记录`, and `档案` feel coherent together.
 - Whether result language avoids medical certainty.
 - Whether the app feels like a personal assistant instead of a diagnosis tool.
 
@@ -36,7 +36,7 @@ The goal is to let the product owner review:
 2. 查食物
 3. 检查结果
 4. 记饮食
-5. 记不适
+5. 记症状
 6. 症状后回看
 7. 记录
 8. 档案
