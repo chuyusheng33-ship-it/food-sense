@@ -115,6 +115,18 @@
         margin-bottom: 22px;
       }
 
+      .page-top.centered {
+        justify-content: center;
+        position: relative;
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+
+      .page-top.centered .back-btn {
+        position: absolute;
+        left: 0;
+      }
+
       .identity {
         display: flex;
         align-items: center;
@@ -179,16 +191,20 @@
       }
 
       .page-title h1 {
-        font-size: 24px;
-        line-height: 1.14;
+        font-size: 22px;
+        line-height: 1.12;
         letter-spacing: 0;
       }
 
       .page-title p {
         margin-top: 5px;
         color: var(--muted);
-        font-size: 13px;
+        font-size: 12px;
         line-height: 1.4;
+      }
+
+      .page-title.centered {
+        text-align: center;
       }
 
       .back-btn {
@@ -850,11 +866,11 @@
         </section>
 
         <section class="screen" data-screen="check">
-          <div class="page-top">
+          <div class="page-top centered">
             <button class="back-btn" data-go="home" aria-label="返回首页">
               <i data-lucide="chevron-left" size="22"></i>
             </button>
-            <div class="page-title">
+            <div class="page-title centered">
               <h1>查食物</h1>
               <p>检查配料、菜单、外卖截图或商品说明。</p>
             </div>
@@ -934,11 +950,11 @@
         </section>
 
         <section class="screen" data-screen="meal">
-          <div class="page-top">
+          <div class="page-top centered">
             <button class="back-btn" data-go="home" aria-label="返回首页">
               <i data-lucide="chevron-left" size="22"></i>
             </button>
-            <div class="page-title">
+            <div class="page-title centered">
               <h1>记饮食</h1>
               <p>记录一餐、零食、饮料或复杂餐。</p>
             </div>
@@ -1016,11 +1032,11 @@
         </section>
 
         <section class="screen" data-screen="symptom">
-          <div class="page-top">
+          <div class="page-top centered">
             <button class="back-btn" data-go="home" aria-label="返回首页">
               <i data-lucide="chevron-left" size="22"></i>
             </button>
-            <div class="page-title">
+            <div class="page-title centered">
               <h1>记症状</h1>
               <p>快速记录，然后回看之前吃过什么。</p>
             </div>

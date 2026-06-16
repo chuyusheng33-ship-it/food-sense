@@ -425,6 +425,19 @@ Behavior:
 - `检查` shows check results and matched items.
 - Date selection still applies across sections.
 
+## 2026-06-16: Center primary flow page titles
+
+Decision:
+
+- In primary action flows, center the top title area for `查食物`, `记饮食`, and `记症状`.
+- Reduce title and subtitle size compared with the earlier prototype.
+
+Reason:
+
+- The previous title area felt too large and left-heavy.
+- Centered, smaller titles make the pages feel calmer and more polished.
+- The screen focus should stay on the task controls and form content.
+
 ## 2026-06-15: Set V1 UI direction
 
 Decision:

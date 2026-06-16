@@ -91,6 +91,7 @@ V1 is mobile-first.
 - Keep primary actions on the home screen.
 - Keep page headers compact.
 - Use back navigation only inside a task flow.
+- For primary action flows such as `查食物`, `记饮食`, and `记症状`, center the page title area and keep the title/subtitle smaller than home hero text.
 
 ### 3.2 Screen Width And Safe Area
 
