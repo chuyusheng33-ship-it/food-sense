@@ -65,14 +65,15 @@ The prototype intentionally does not:
 
 Visual direction:
 
-- Warm light gray app background.
-- Rounded white cards.
+- Apple-style grouped mobile app direction.
+- Light iOS-like gray app background.
+- Rounded white grouped surfaces with subtle hairline borders.
+- Reduced shadows and less decorative hero treatment.
 - Soft olive primary accent.
 - Sage for food/profile context.
 - Mist blue for neutral information and privacy/data moments.
 - Amber/rust for attention and stronger symptom/result states.
-- Calm bottom navigation.
-- Gentle shadows.
+- Translucent bottom navigation.
 - Compact mobile-first layout.
 
 Language direction:
@@ -89,7 +90,7 @@ Before moving to SDD and formal development, review:
 3. Does the expanded soft olive palette feel richer without becoming noisy?
 4. Do the result cards feel calm enough but still noticeable?
 5. Is `档案` understandable as a bottom navigation label?
-6. Is the overall style close enough to the selected reference?
+6. Does the Apple-style direction feel polished without making Food Sense look too generic?
 
 ## Next Step After Approval
 

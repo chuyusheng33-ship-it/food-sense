@@ -2,6 +2,30 @@
 
 This file records product decisions and the reasoning behind them.
 
+## 2026-06-17: Optimize prototype toward Apple-style mobile UI
+
+Decision:
+
+- Keep the Food Sense V1 structure, flows, cautious language, and soft olive color system.
+- Adjust the clickable prototype toward an Apple / iOS grouped-app feel:
+  - lighter system gray background.
+  - white grouped surfaces with hairline borders.
+  - less shadow and less decorative hero treatment.
+  - iOS-like large title rhythm on the home screen.
+  - lighter filled/tinted button treatment.
+  - blurred translucent bottom navigation.
+
+Reason:
+
+- The product owner confirmed an Apple UI direction.
+- Food Sense should feel polished, trustworthy, and everyday, not like a heavy dashboard or temporary prototype.
+- Apple-style restraint fits the product's health-adjacent caution better than louder visual branding.
+
+Output:
+
+- `design/prototypes/v1-ui-prototype.html`
+- `docs/v1-ui-prototype-notes.md`
+
 ## 2026-06-17: Expand soft olive into a fuller V1 color system
 
 Decision:
