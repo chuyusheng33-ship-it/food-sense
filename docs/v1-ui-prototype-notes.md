@@ -1,7 +1,7 @@
 # Food Sense V1 UI Prototype Notes
 
-Version: V0.1
-Date: 2026-06-16
+Version: V0.2
+Date: 2026-06-17
 
 Prototype file:
 
@@ -36,17 +36,19 @@ The goal is to let the product owner review:
 2. 查食物
 3. 检查结果
 4. 记饮食
-5. 记症状
-6. 症状后回看
-7. 记录
-8. 档案
-9. 隐私与数据
+5. 选择饮食记录
+6. 记症状
+7. 饮食回看
+8. 记录
+9. 档案
+10. 隐私与数据
 
 ## Interaction Level
 
 The prototype supports light click-through navigation:
 
 - Home actions open their related flows.
+- `记饮食` can open `选择饮食记录` and copy a past meal into an editable draft.
 - Bottom navigation switches between `首页`, `记录`, and `档案`.
 - Route buttons in the side panel jump to each screen.
 - Chips and time windows can be selected visually.
@@ -66,6 +68,9 @@ Visual direction:
 - Warm light gray app background.
 - Rounded white cards.
 - Soft olive primary accent.
+- Sage for food/profile context.
+- Mist blue for neutral information and privacy/data moments.
+- Amber/rust for attention and stronger symptom/result states.
 - Calm bottom navigation.
 - Gentle shadows.
 - Compact mobile-first layout.
@@ -81,7 +86,7 @@ Before moving to SDD and formal development, review:
 
 1. Does the homepage feel clear or still too busy?
 2. Should the three home actions stay as compact cards, or become larger stacked rows?
-3. Does soft olive feel right as the main color?
+3. Does the expanded soft olive palette feel richer without becoming noisy?
 4. Do the result cards feel calm enough but still noticeable?
 5. Is `档案` understandable as a bottom navigation label?
 6. Is the overall style close enough to the selected reference?

@@ -8,21 +8,30 @@
     <style>
       :root {
         color-scheme: light;
-        --app-bg: #eeeee8;
+        --background: #eeede7;
+        --app-bg: var(--background);
         --phone-bg: #f3f3ee;
         --surface: #fffffb;
-        --surface-soft: #f8f8f3;
+        --surface-soft: #f7f6ef;
         --primary: #596321;
-        --primary-dark: #434b19;
+        --primary-dark: #3f4718;
         --primary-soft: #eef1df;
-        --attention: #c97945;
-        --attention-soft: #fff0e5;
+        --sage: #dde5d2;
+        --sage-soft: #f0f4e9;
+        --mist: #dce6e8;
+        --mist-soft: #eef5f5;
         --amber: #d7a245;
-        --amber-soft: #fff7e4;
+        --amber-soft: #fff5dd;
+        --rust: #b96b43;
+        --rust-soft: #fff0e7;
+        --clay: #c98f67;
+        --clay-soft: #f8ece3;
+        --attention: var(--rust);
+        --attention-soft: var(--rust-soft);
         --text: #22231f;
         --muted: #7d7d73;
         --faint: #a7a79d;
-        --border: #e4e4dc;
+        --border: #e3e1d7;
         --shadow: 0 18px 48px rgba(46, 48, 38, 0.14);
         --card-shadow: 0 10px 28px rgba(50, 52, 42, 0.07);
         --radius-lg: 22px;
@@ -345,6 +354,21 @@
         border-color: rgba(215, 162, 69, 0.26);
       }
 
+      .notice.mist {
+        background: var(--mist-soft);
+        border-color: rgba(92, 122, 128, 0.18);
+      }
+
+      .notice.sage {
+        background: var(--sage-soft);
+        border-color: rgba(89, 99, 33, 0.14);
+      }
+
+      .notice.rust {
+        background: var(--rust-soft);
+        border-color: rgba(185, 107, 67, 0.22);
+      }
+
       .notice p {
         color: var(--muted);
         font-size: 13px;
@@ -368,7 +392,7 @@
         min-height: 72px;
         border-radius: 17px;
         background: var(--surface);
-        color: var(--text);
+        color: var(--primary);
         display: grid;
         place-items: center;
         gap: 7px;
@@ -377,6 +401,7 @@
       }
 
       .method span {
+        color: var(--text);
         font-size: 12px;
         font-weight: 750;
       }
@@ -393,6 +418,14 @@
         width: 100%;
         border-color: var(--border);
         outline: none;
+      }
+
+      .input-box:focus,
+      .textarea-box:focus {
+        border-color: rgba(89, 99, 33, 0.42);
+        box-shadow:
+          var(--card-shadow),
+          0 0 0 3px rgba(238, 241, 223, 0.9);
       }
 
       .input-box {
@@ -447,13 +480,18 @@
         border-radius: 24px;
         padding: 18px;
         margin-bottom: 14px;
-        background: var(--attention-soft);
-        border: 1px solid rgba(201, 121, 69, 0.22);
+        background: var(--rust-soft);
+        border: 1px solid rgba(185, 107, 67, 0.22);
+      }
+
+      .result-summary.attention {
+        background: var(--rust-soft);
+        border-color: rgba(185, 107, 67, 0.24);
       }
 
       .result-summary.neutral {
-        background: var(--surface);
-        border-color: var(--border);
+        background: var(--mist-soft);
+        border-color: rgba(92, 122, 128, 0.18);
       }
 
       .result-summary h2 {
@@ -495,8 +533,23 @@
       }
 
       .pill.attention {
-        background: var(--attention-soft);
+        background: var(--rust-soft);
         color: #914f29;
+      }
+
+      .pill.amber {
+        background: var(--amber-soft);
+        color: #7e5b1e;
+      }
+
+      .pill.sage {
+        background: var(--sage-soft);
+        color: var(--primary-dark);
+      }
+
+      .pill.mist {
+        background: var(--mist-soft);
+        color: #4e666b;
       }
 
       .pill.neutral {
@@ -541,6 +594,24 @@
         background: var(--primary);
         color: white;
         border-color: var(--primary);
+      }
+
+      .chip.severity-light.active {
+        background: var(--sage);
+        color: var(--primary-dark);
+        border-color: var(--sage);
+      }
+
+      .chip.severity-medium.active {
+        background: var(--amber);
+        color: #2d2617;
+        border-color: var(--amber);
+      }
+
+      .chip.severity-severe.active {
+        background: var(--rust);
+        color: white;
+        border-color: var(--rust);
       }
 
       .calendar {
@@ -608,6 +679,24 @@
         margin-bottom: 12px;
       }
 
+      .record-card.food-context,
+      .profile-card.food-context {
+        background: linear-gradient(180deg, var(--surface), var(--sage-soft));
+        border: 1px solid rgba(89, 99, 33, 0.08);
+      }
+
+      .record-card.info-context,
+      .profile-card.info-context {
+        background: linear-gradient(180deg, var(--surface), var(--mist-soft));
+        border: 1px solid rgba(92, 122, 128, 0.12);
+      }
+
+      .record-card.attention-context,
+      .profile-card.attention-context {
+        background: linear-gradient(180deg, var(--surface), var(--rust-soft));
+        border: 1px solid rgba(185, 107, 67, 0.14);
+      }
+
       .copy-entry {
         display: flex;
         align-items: center;
@@ -662,7 +751,7 @@
         display: inline-flex;
         align-items: center;
         padding: 0 10px;
-        background: #f2f2eb;
+        background: var(--sage-soft);
         color: #3c3d34;
         font-size: 12px;
         font-weight: 750;
@@ -874,16 +963,16 @@
             <button class="link-btn" data-go="records">查看 <i data-lucide="chevron-right" size="16"></i></button>
           </div>
 
-          <article class="record-card">
+          <article class="record-card food-context">
             <div class="meta">
               <span class="record-time">12:40</span>
-              <span class="pill neutral">饮食</span>
+              <span class="pill sage">饮食</span>
             </div>
             <h3>午餐：牛肉饭、酸奶</h3>
             <p>已保存到本地。后续记录不适时，会出现在时间窗口回看里。</p>
           </article>
 
-          <button class="notice" data-go="privacy" style="width: 100%; text-align: left">
+          <button class="notice mist" data-go="privacy" style="width: 100%; text-align: left">
             <strong>本地保存 · 隐私与数据</strong>
             <p>V1 优先把记录保存在这台设备。AI 识别前会先说明上传内容。</p>
           </button>
@@ -923,7 +1012,7 @@
           <label for="check-content">检查内容</label>
           <textarea id="check-content" class="textarea-box">配料：生牛乳、白砂糖、全脂乳粉、乳清蛋白粉</textarea>
 
-          <div class="notice" style="margin-top: 14px">
+          <div class="notice mist" style="margin-top: 14px">
             <strong>图片识别前会先说明</strong>
             <p>如果需要 AI 识别图片，会先告诉你上传什么、用于什么、保存什么。</p>
           </div>
@@ -944,17 +1033,17 @@
             </div>
           </div>
 
-          <div class="notice" style="margin-bottom: 14px">
+          <div class="notice mist" style="margin-bottom: 14px">
             <strong>基于目前可见信息</strong>
             <p>以下内容仅用于观察当前匹配，不代表一定导致症状，也不能直接下结论。</p>
           </div>
 
-          <div class="result-summary">
+          <div class="result-summary attention">
             <h2>发现需要注意的项目</h2>
             <p>以下内容和你的档案有匹配。信息可能不完整，可继续观察或询问商家。</p>
           </div>
 
-          <article class="result-card">
+          <article class="result-card attention-context">
             <div class="meta">
               <h3>乳制品</h3>
               <span class="pill attention">已知需注意</span>
@@ -963,10 +1052,10 @@
             <p>原因：这些名称在你的档案别名中。</p>
           </article>
 
-          <article class="result-card">
+          <article class="result-card food-context">
             <div class="meta">
               <h3>蔗糖</h3>
-              <span class="pill">观察中</span>
+              <span class="pill sage">观察中</span>
             </div>
             <p>原文：白砂糖</p>
             <p>原因：白砂糖和档案中的蔗糖相关。</p>
@@ -1011,7 +1100,7 @@
             <i data-lucide="chevron-right" size="20"></i>
           </button>
 
-          <article class="record-card meal-card">
+          <article class="record-card meal-card food-context">
             <img
               class="meal-photo"
               src="/design/ui-references/food-sense-meal-photo-reference.png"
@@ -1020,7 +1109,7 @@
             <div class="meal-body">
               <div class="meta">
                 <span class="record-time">照片记录</span>
-                <span class="pill">1 人份</span>
+                <span class="pill sage">1 人份</span>
               </div>
               <h3>鸡蛋糕套餐</h3>
               <div class="food-line" aria-label="识别出的食物">
@@ -1042,7 +1131,7 @@
           <label for="meal-time">时间</label>
           <input id="meal-time" class="input-box" value="今天 12:40" />
 
-          <div class="notice" style="margin-top: 14px">
+          <div class="notice sage" style="margin-top: 14px">
             <strong>识别结果可以修改</strong>
             <p>照片或订单识别只作为记录建议，不要求完整无遗漏。</p>
           </div>
@@ -1063,7 +1152,7 @@
             </div>
           </div>
 
-          <article class="record-card meal-card">
+          <article class="record-card meal-card food-context">
             <img
               class="meal-photo"
               src="/design/ui-references/food-sense-meal-photo-reference.png"
@@ -1094,7 +1183,7 @@
             </div>
           </article>
 
-          <article class="record-card">
+          <article class="record-card food-context">
             <div class="meta">
               <span class="record-time">6月14日 19:10</span>
               <span class="pill neutral">可修改</span>
@@ -1113,7 +1202,7 @@
             </div>
           </article>
 
-          <article class="record-card">
+          <article class="record-card food-context">
             <div class="meta">
               <span class="record-time">6月13日 08:20</span>
               <span class="pill neutral">可修改</span>
@@ -1159,9 +1248,9 @@
 
           <label>严重程度</label>
           <div class="chips">
-            <button class="chip">轻微</button>
-            <button class="chip active">中等</button>
-            <button class="chip">严重</button>
+            <button class="chip severity-light">轻微</button>
+            <button class="chip severity-medium active">中等</button>
+            <button class="chip severity-severe">严重</button>
           </div>
 
           <label>持续时间</label>
@@ -1190,7 +1279,7 @@
             </div>
           </div>
 
-          <div class="notice" style="margin-bottom: 14px">
+          <div class="notice mist" style="margin-bottom: 14px">
             <strong>先看之前吃过什么</strong>
             <p>这些记录出现在不适之前，不代表一定导致症状。</p>
           </div>
@@ -1202,7 +1291,7 @@
             <button class="window-btn">24小时</button>
           </div>
 
-          <article class="record-card">
+          <article class="record-card attention-context">
             <div class="meta">
               <span class="record-time">12:40</span>
               <span class="pill attention">命中乳制品</span>
@@ -1211,10 +1300,10 @@
             <p>出现在不适前 2小时40分钟。可能值得继续观察。</p>
           </article>
 
-          <article class="record-card">
+          <article class="record-card food-context">
             <div class="meta">
               <span class="record-time">10:30</span>
-              <span class="pill">可能含糖</span>
+              <span class="pill sage">可能含糖</span>
             </div>
             <h3>奶茶，少糖</h3>
             <p>记录中提到饮料和糖，后续可与其他记录一起看。</p>
@@ -1266,10 +1355,10 @@
             <div class="section-head">
               <h2>饮食记录</h2>
             </div>
-            <article class="record-card">
+            <article class="record-card food-context">
               <div class="meta">
                 <span class="record-time">12:40</span>
-                <span class="pill">饮食</span>
+                <span class="pill sage">饮食</span>
               </div>
               <img
                 class="meal-photo"
@@ -1295,7 +1384,7 @@
             <article class="record-card">
               <div class="meta">
                 <span class="record-time">15:20</span>
-                <span class="pill attention">中等</span>
+                <span class="pill amber">中等</span>
               </div>
               <h3>腹痛</h3>
               <p>保存后已回看 4 小时内饮食。</p>
@@ -1309,10 +1398,10 @@
             <div class="section-head">
               <h2>检查记录</h2>
             </div>
-            <article class="record-card">
+            <article class="record-card info-context">
               <div class="meta">
                 <span class="record-time">09:10</span>
-                <span class="pill neutral">检查</span>
+                <span class="pill mist">检查</span>
               </div>
               <h3>酸奶配料</h3>
               <p>发现需要注意的项目：乳制品、蔗糖。</p>
@@ -1338,7 +1427,7 @@
             <button class="chip">可能相关</button>
           </div>
 
-          <article class="profile-card">
+          <article class="profile-card attention-context">
             <div class="meta">
               <h3>乳制品</h3>
               <span class="pill attention">已知需注意</span>
@@ -1347,10 +1436,10 @@
             <p>来源：手动添加</p>
           </article>
 
-          <article class="profile-card">
+          <article class="profile-card food-context">
             <div class="meta">
               <h3>蔗糖</h3>
-              <span class="pill">观察中</span>
+              <span class="pill sage">观察中</span>
             </div>
             <p>别名：白砂糖、糖浆、砂糖</p>
             <p>来源：医院报告确认项</p>
@@ -1360,10 +1449,10 @@
             <h2>可能相关</h2>
           </div>
 
-          <article class="profile-card">
+          <article class="profile-card info-context">
             <div class="meta">
               <h3>奶茶</h3>
-              <span class="pill neutral">建议继续观察</span>
+              <span class="pill mist">建议继续观察</span>
             </div>
             <p>多次出现在不适前。记录还不够多，暂不代表因果。</p>
           </article>
@@ -1380,17 +1469,17 @@
             </div>
           </div>
 
-          <div class="notice">
+          <div class="notice mist">
             <strong>本地保存</strong>
             <p>档案、饮食、不适和检查记录优先保存在浏览器本地。</p>
           </div>
 
-          <div class="notice">
+          <div class="notice mist">
             <strong>AI 上传说明</strong>
             <p>使用图片识别或报告提取前，会先说明上传内容、用途和保存内容。</p>
           </div>
 
-          <div class="notice attention">
+          <div class="notice rust">
             <strong>删除所有本地数据</strong>
             <p>这个操作会清除本设备里的 Food Sense 数据。</p>
           </div>

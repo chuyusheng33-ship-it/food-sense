@@ -26,6 +26,27 @@ Output:
 
 - `docs/v1-ui-direction.md`
 
+## 2026-06-17: Apply V1 color system to the clickable prototype
+
+Decision:
+
+- Apply the expanded soft olive color system to `design/prototypes/v1-ui-prototype.html`.
+- Use:
+  - sage-tinted cards for food records and profile context.
+  - mist-tinted notices for neutral information, privacy/data, and cautious framing.
+  - amber/rust for attention, matched items, delete-local-data, and medium/stronger symptom severity.
+
+Reason:
+
+- The product owner pointed out that the prototype looked too single-color.
+- Applying semantic colors in the prototype lets us review the real feel before React development.
+- The palette should clarify meaning without making the app look like a medical dashboard or a nutrition tracker.
+
+Output:
+
+- `design/prototypes/v1-ui-prototype.html`
+- `docs/v1-ui-prototype-notes.md`
+
 ## 2026-06-14: Use `food-sense` as the project codename
 
 Decision:
