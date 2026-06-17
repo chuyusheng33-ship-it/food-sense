@@ -122,19 +122,72 @@ Empty state can prompt the user to add the first profile item, but it must still
 
 ## 4. Color And State Direction
 
-The palette should be warm, restrained, and readable.
+The palette should be warm, restrained, readable, and not one-note.
 
-### 4.1 Base Color Roles
+Soft olive is the anchor color, but it should not carry every meaning. V1 needs a small supporting palette so the app can distinguish actions, records, profile content, attention states, and neutral uncertainty without feeling medical or cute.
 
-Recommended direction:
+### 4.1 V1 Color System
 
-- Background: warm off-white, not pure hospital white.
-- Text: deep neutral, not cold blue-gray.
-- Primary action: soft olive, close to the reference image's quiet green.
-- Supporting color: pale sage for profile and record surfaces.
-- Warning / attention color: warm amber, muted coral, or soft rust.
-- Neutral surfaces: light cream or very pale warm gray.
-- Border: low-contrast warm gray.
+Core tokens:
+
+| Role | Token | Hex | Use |
+| --- | --- | --- | --- |
+| App background | `background` | `#EEEDE7` | App canvas and phone background |
+| Surface | `surface` | `#FFFFFB` | Cards, forms, bottom navigation |
+| Soft surface | `surface-soft` | `#F7F6EF` | Secondary panels and quiet grouped areas |
+| Text | `text` | `#22231F` | Primary copy |
+| Muted text | `muted` | `#7D7D73` | Helper copy and timestamps |
+| Border | `border` | `#E3E1D7` | Card borders, dividers, input outlines |
+| Primary olive | `primary` | `#596321` | Primary buttons, selected states, active navigation |
+| Deep olive | `primary-dark` | `#3F4718` | Pressed states and strong headings when needed |
+| Olive tint | `primary-soft` | `#EEF1DF` | Selected chips, soft primary backgrounds |
+
+Supporting colors:
+
+| Role | Token | Hex | Use |
+| --- | --- | --- | --- |
+| Sage | `sage` | `#DDE5D2` | Profile surfaces, known/observed food context |
+| Mist blue | `mist` | `#DCE6E8` | Neutral information, no clear match, data/privacy moments |
+| Warm amber | `amber` | `#D7A245` | Attention without panic, medium severity |
+| Amber tint | `amber-soft` | `#FFF5DD` | Attention card backgrounds |
+| Soft rust | `rust` | `#B96B43` | Stronger attention, severe symptom level |
+| Rust tint | `rust-soft` | `#FFF0E7` | Matched item / stronger attention backgrounds |
+| Clay | `clay` | `#C98F67` | Human warmth for small accents, empty states, illustrations |
+
+### 4.2 Color Use Rules
+
+Use olive for:
+
+- Primary actions.
+- Active bottom navigation.
+- Selected chips.
+- Calm confirmation that an action is selected or saved.
+
+Do not use olive for:
+
+- `暂未发现明显命中` as a success state.
+- Any message that could be read as `safe`.
+- Medical certainty.
+
+Use sage for:
+
+- `档案` content.
+- Known or observed food profile areas.
+- Quiet food-related context.
+
+Use mist blue for:
+
+- Privacy/data explanations.
+- `暂未发现明显命中`.
+- Neutral information where the app is not warning the user.
+
+Use amber/rust for:
+
+- `发现需要注意的项目`.
+- Stronger attention.
+- Symptom severity above light.
+
+Do not use bright red in V1 unless a future version adds a true emergency flow.
 
 Avoid:
 
@@ -144,38 +197,36 @@ Avoid:
 - Overly cute pastel palettes.
 - One-note palettes where the whole app reads as only beige, only green, or only red.
 
-Important distinction:
+### 4.3 Component Color Mapping
 
-- Olive can be used for navigation, primary actions, selected chips, and calm interactive states.
-- Olive should not mean `safe`.
-- `暂未发现明显命中` should still use neutral treatment, not green success styling.
+Recommended first mapping:
 
-Suggested first token direction:
+| Component | Default | Active / Important | Attention |
+| --- | --- | --- | --- |
+| Home action | `surface` | Olive icon or label accent | None |
+| Primary button | `primary` | `primary-dark` on press | None |
+| Secondary button | `surface` + `border` | Olive text | None |
+| Bottom nav | Muted text | `primary` | None |
+| Upload method | `surface` | Olive icon | None |
+| Form field | `surface` + `border` | Olive focus border | None |
+| Record card | `surface` | Type pill uses olive/mist/amber | None |
+| Profile card | `surface` or sage tint | Olive label | Amber/rust only for attention |
+| Result summary | `surface` or mist tint | State-dependent | Amber/rust tint for matches |
+| Notice | `surface-soft` or mist tint | None | Amber tint only when action is needed |
 
-```text
-App background: warm light gray
-Cards: white / warm white
-Primary: soft olive
-Primary text on olive: white or very pale warm white
-Attention: warm amber / soft rust
-Text: near black warm neutral
-Muted text: warm gray
-Border: pale warm gray
-```
-
-### 4.2 Result States
+### 4.4 Result States
 
 Result states should be visually distinct but calm.
 
 `发现需要注意的项目`
 
-- Use warm amber, muted coral, or soft rust.
+- Use warm amber or soft rust.
 - The state should feel noticeable, not alarming.
 - Do not use emergency red unless the product has a true emergency feature, which V1 does not.
 
 `暂未发现明显命中`
 
-- Use neutral or muted blue-gray.
+- Use neutral or mist blue.
 - Do not use strong green.
 - Copy must clarify this is based on visible information, not a safety guarantee.
 
@@ -189,7 +240,7 @@ Result states should be visually distinct but calm.
 - Use neutral gray.
 - Offer retry, text input, or manual save.
 
-### 4.3 Severity States
+### 4.5 Severity States
 
 For `记症状`, severity uses three levels:
 
@@ -199,7 +250,7 @@ For `记症状`, severity uses three levels:
 
 Visual treatment:
 
-- `轻微`: neutral or soft warm tint.
+- `轻微`: neutral or sage/mist tint.
 - `中等`: warm amber.
 - `严重`: deeper warm rust, not emergency red.
 
@@ -601,17 +652,19 @@ The first UI implementation should prove:
 
 ## 9. Product Owner Decisions Needed
 
-Before building polished screens, the product owner should choose:
+Before building polished screens, the product owner should still choose:
 
-1. Confirm the uploaded soft olive reference as the V1 visual anchor.
-2. Confirm whether the primary color should be soft olive.
-3. Confirm whether home actions should be stacked rows for the first build.
-4. Confirm whether `档案` remains the V1 bottom navigation label through private testing.
+1. Confirm whether home actions should use stacked rows or the current compact grid in the first build.
+2. Confirm whether `档案` remains the V1 bottom navigation label through private testing.
+3. Review the expanded color system in the clickable prototype before implementation begins.
 
 Current recommendation:
 
 - Start with `Warm Utility` structure plus the uploaded soft olive reference.
-- Use stacked home action rows.
+- Use the expanded soft olive color system in this document.
+- Consider stacked home action rows if the compact grid feels too compressed.
 - Keep `档案` for private testing.
-- Use soft olive for primary navigation and actions.
-- Use warm amber / soft rust only for attention states, not as the main brand color.
+- Use olive for primary navigation and actions.
+- Use mist blue for neutral information and no-clear-match states.
+- Use sage for profile and food context.
+- Use warm amber / soft rust only for attention states.

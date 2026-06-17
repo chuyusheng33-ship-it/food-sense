@@ -2,6 +2,30 @@
 
 This file records product decisions and the reasoning behind them.
 
+## 2026-06-17: Expand soft olive into a fuller V1 color system
+
+Decision:
+
+- Keep soft olive as the V1 anchor color.
+- Add a small supporting palette instead of making every surface and state olive.
+- Use:
+  - `primary olive` for primary actions, selected states, and active navigation.
+  - `sage` for profile and food-context surfaces.
+  - `mist blue` for neutral information, privacy/data moments, and no-clear-match states.
+  - `amber` and `soft rust` for attention and stronger symptom/result states.
+  - `clay` sparingly for human warmth in small accents.
+
+Reason:
+
+- The current prototype feels too one-color.
+- Olive is good for trust and calmness, but it should not imply `safe`.
+- Food Sense needs visual distinction between action, profile, neutral uncertainty, attention, and symptom severity.
+- A small controlled palette keeps the app warmer and more usable without becoming cute, medical, or visually noisy.
+
+Output:
+
+- `docs/v1-ui-direction.md`
+
 ## 2026-06-14: Use `food-sense` as the project codename
 
 Decision:
@@ -287,10 +311,11 @@ Working UI rules:
 - `暂未发现明显命中` must not look or sound like `安全`.
 - AI recognition results are always editable suggestions.
 
-Still needs product owner confirmation:
+Updated on 2026-06-17:
 
-- Final V1 base option remains `Warm Utility` structure plus the soft olive visual reference unless revised.
-- Exact soft olive shade for the first clickable build.
+- V1 now has an expanded color system anchored on soft olive.
+- Exact first-pass color tokens are defined in `docs/v1-ui-direction.md`.
+- The remaining visual question is how strongly to apply the expanded palette in the clickable prototype.
 - Whether home actions should use stacked rows in the first clickable build.
 - Whether `档案` remains the V1 navigation label through private testing.
 
