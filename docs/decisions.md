@@ -26,6 +26,12 @@ Output:
 - `design/prototypes/v1-ui-prototype.html`
 - `docs/v1-ui-prototype-notes.md`
 
+Update:
+
+- The local `apple-ui-designer` skill exists at `/Users/chuyu/.codex/skills/apple-ui-designer`.
+- In this thread it was not exposed in the active skill list, so its `SKILL.md` and `README.md` were read manually.
+- Next time a new Codex window/thread starts, check whether `apple-ui-designer` appears in the active skill list before doing more Apple-style UI work.
+
 ## 2026-06-17: Expand soft olive into a fuller V1 color system
 
 Decision:

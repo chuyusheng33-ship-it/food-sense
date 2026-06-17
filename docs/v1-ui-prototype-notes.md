@@ -69,6 +69,8 @@ Visual direction:
 - Light iOS-like gray app background.
 - Rounded white grouped surfaces with subtle hairline borders.
 - Reduced shadows and less decorative hero treatment.
+- Home primary actions use an iOS-like grouped list rhythm instead of custom promo cards.
+- Context cards use white grouped surfaces with subtle semantic markers instead of large tinted gradients.
 - Soft olive primary accent.
 - Sage for food/profile context.
 - Mist blue for neutral information and privacy/data moments.

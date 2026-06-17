@@ -158,11 +158,21 @@
       .avatar {
         width: 38px;
         height: 38px;
+        border-radius: 11px;
+        background: var(--primary);
+        box-shadow: none;
+        position: relative;
+      }
+
+      .avatar::after {
+        content: "";
+        width: 14px;
+        height: 14px;
         border-radius: 50%;
-        background:
-          radial-gradient(circle at 38% 32%, #f7f7f1 0 9%, transparent 10%),
-          linear-gradient(145deg, #32372a, #171a16);
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+        border: 2px solid rgba(255, 255, 255, 0.82);
+        position: absolute;
+        left: 10px;
+        top: 10px;
       }
 
       h1,
@@ -277,35 +287,50 @@
 
       .quick-actions {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        gap: 0;
         margin-bottom: 24px;
+        overflow: hidden;
+        border: 1px solid var(--hairline);
+        border-radius: var(--radius-lg);
+        background: var(--surface);
       }
 
       .quick-action {
-        min-height: 92px;
-        border-radius: 18px;
-        background: var(--surface);
-        display: grid;
-        place-items: center;
-        gap: 8px;
-        padding: 13px 8px;
+        min-height: 58px;
+        border-radius: 0;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+        padding: 0 14px;
         color: var(--text);
-        border: 1px solid var(--hairline);
-        box-shadow: var(--card-shadow);
+        border: 0;
+        box-shadow: none;
+        position: relative;
+      }
+
+      .quick-action:not(:last-child)::after {
+        content: "";
+        height: 1px;
+        background: var(--hairline);
+        position: absolute;
+        left: 62px;
+        right: 0;
+        bottom: 0;
       }
 
       .quick-action .mark {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
         background: var(--primary-soft);
         box-shadow: none;
       }
 
       .quick-action span {
-        font-size: 13px;
-        font-weight: 850;
+        font-size: 16px;
+        font-weight: 700;
       }
 
       .section-head {
@@ -684,20 +709,20 @@
 
       .record-card.food-context,
       .profile-card.food-context {
-        background: linear-gradient(180deg, var(--surface), var(--sage-soft));
-        border: 1px solid rgba(89, 99, 33, 0.08);
+        background: var(--surface);
+        border-left: 4px solid rgba(89, 99, 33, 0.42);
       }
 
       .record-card.info-context,
       .profile-card.info-context {
-        background: linear-gradient(180deg, var(--surface), var(--mist-soft));
-        border: 1px solid rgba(92, 122, 128, 0.12);
+        background: var(--surface);
+        border-left: 4px solid rgba(92, 122, 128, 0.35);
       }
 
       .record-card.attention-context,
       .profile-card.attention-context {
-        background: linear-gradient(180deg, var(--surface), var(--rust-soft));
-        border: 1px solid rgba(185, 107, 67, 0.14);
+        background: var(--surface);
+        border-left: 4px solid rgba(185, 107, 67, 0.42);
       }
 
       .copy-entry {
