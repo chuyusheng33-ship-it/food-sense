@@ -71,9 +71,8 @@ Visual direction:
 - Light iOS-like gray app background.
 - Rounded white grouped surfaces with subtle hairline borders.
 - Reduced shadows and less decorative hero treatment.
-- Home primary actions use an iOS-like grouped list rhythm instead of custom promo cards.
-- Home primary actions now include short support lines to make the three core jobs clearer without adding a dashboard.
-- Home iconography is tuned toward food observation and personal recording instead of generic app utilities.
+- Home keeps the earlier large visual layout: top visual check entry, dark olive hero card, and three square action cards.
+- Home action icons use the latest Food Sense icon direction: `scan-search`, `notebook-pen`, and `heart-pulse`.
 - Context cards use white grouped surfaces with subtle semantic markers instead of large tinted gradients.
 - Soft olive primary accent.
 - Sage for food/profile context.
@@ -93,7 +92,7 @@ Language direction:
 Before moving to formal development, review:
 
 1. Does the homepage feel clear or still too busy?
-2. Do the three home action subtitles help first-time clarity without making the page feel heavy?
+2. Does the restored home layout feel warmer while keeping the three actions clear?
 3. Does the expanded soft olive palette feel richer without becoming noisy?
 4. Do the result cards feel calm enough but still noticeable?
 5. Is `档案` understandable as a bottom navigation label?

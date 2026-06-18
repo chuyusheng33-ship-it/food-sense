@@ -252,15 +252,16 @@ Home has three primary actions:
 查食物 / 记饮食 / 记症状
 ```
 
-Use one grouped list with three rows.
+Use three square action cards on the home screen.
 
-Each row includes:
+Each card includes:
 
 - A small semantic icon container.
 - A clear action label.
-- A short support line only when it improves first-use clarity.
 
 The three actions should feel equal.
+
+The home screen can keep a visual check entry above the hero card, but it should route to `查食物` rather than becoming a separate global search feature in V1.
 
 ### 7.2 Result Cards
 

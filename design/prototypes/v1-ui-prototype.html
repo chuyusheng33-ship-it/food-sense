@@ -125,6 +125,10 @@
         margin-bottom: 20px;
       }
 
+      .screen[data-screen="home"] .top-row {
+        margin-bottom: 18px;
+      }
+
       .page-top.centered {
         justify-content: center;
         position: relative;
@@ -141,6 +145,10 @@
         display: flex;
         align-items: center;
         gap: 12px;
+      }
+
+      .screen[data-screen="home"] .identity {
+        gap: 14px;
       }
 
       .mark {
@@ -191,6 +199,28 @@
         transform-origin: left center;
       }
 
+      .screen[data-screen="home"] .avatar {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #1d2419;
+        box-shadow: 0 12px 28px rgba(29, 36, 25, 0.12);
+      }
+
+      .screen[data-screen="home"] .avatar::after {
+        width: 11px;
+        height: 11px;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.92);
+        left: 17px;
+        top: 17px;
+      }
+
+      .screen[data-screen="home"] .avatar::before {
+        content: none;
+      }
+
       h1,
       h2,
       h3,
@@ -202,6 +232,18 @@
         display: block;
         font-size: 16px;
         line-height: 1.15;
+      }
+
+      .screen[data-screen="home"] .hello strong {
+        font-size: 19px;
+        line-height: 1.1;
+      }
+
+      .screen[data-screen="home"] .hello span {
+        display: block;
+        margin-top: 6px;
+        font-size: 15px;
+        font-weight: 600;
       }
 
       .hello span,
@@ -226,6 +268,16 @@
         color: var(--primary);
         border: 1px solid var(--hairline);
         box-shadow: none;
+      }
+
+      .screen[data-screen="home"] .icon-btn {
+        width: 58px;
+        height: 58px;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.9);
+        color: var(--primary);
+        border: 1px solid rgba(255, 255, 255, 0.76);
+        box-shadow: 0 12px 28px rgba(35, 35, 31, 0.08);
       }
 
       .page-title h1 {
@@ -267,100 +319,138 @@
         box-shadow: var(--card-shadow);
       }
 
+      .home-search-row {
+        display: grid;
+        grid-template-columns: 1fr 58px;
+        gap: 8px;
+        align-items: stretch;
+        margin-bottom: 20px;
+      }
+
+      .home-search {
+        min-height: 64px;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.92);
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 12px;
+        border: 1px solid rgba(255, 255, 255, 0.74);
+        box-shadow: 0 14px 34px rgba(35, 35, 31, 0.08);
+        text-align: left;
+        font-size: 14px;
+        font-weight: 650;
+        white-space: nowrap;
+      }
+
+      .home-search i {
+        color: #7b7b71;
+        flex: 0 0 auto;
+      }
+
+      .home-filter {
+        min-height: 64px;
+        border-radius: 22px;
+        background: var(--primary);
+        color: white;
+        display: grid;
+        place-items: center;
+        box-shadow: none;
+      }
+
       .hero-card {
-        min-height: auto;
-        padding: 4px 2px 8px;
-        border-radius: 0;
-        background: transparent;
-        color: var(--text);
-        overflow: visible;
+        min-height: 148px;
+        padding: 28px 28px;
+        border-radius: 24px;
+        background: linear-gradient(135deg, #3a4429 0%, #303b24 100%);
+        color: white;
+        overflow: hidden;
         position: relative;
-        margin-bottom: 16px;
+        margin-bottom: 20px;
         box-shadow: none;
       }
 
       .hero-card::after {
-        content: none;
+        content: "";
+        width: 176px;
+        height: 176px;
+        border-radius: 50%;
+        border: 34px solid rgba(255, 255, 255, 0.09);
+        position: absolute;
+        right: -76px;
+        top: -34px;
       }
 
       .hero-card h2 {
-        max-width: 310px;
-        font-size: 31px;
+        max-width: 270px;
+        font-size: 30px;
         line-height: 1.08;
         letter-spacing: 0;
         position: relative;
         font-weight: 850;
+        z-index: 1;
       }
 
       .hero-card p {
-        max-width: 310px;
-        margin-top: 8px;
-        color: var(--muted);
-        font-size: 14px;
-        line-height: 1.45;
+        max-width: 282px;
+        margin-top: 16px;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 15px;
+        line-height: 1.5;
         position: relative;
+        z-index: 1;
       }
 
       .quick-actions {
         display: grid;
-        gap: 0;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
         margin-bottom: 24px;
-        overflow: hidden;
-        border: 1px solid var(--hairline);
-        border-radius: var(--radius-lg);
-        background: var(--surface);
+        overflow: visible;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
       }
 
       .quick-action {
-        min-height: 58px;
-        border-radius: 0;
-        background: transparent;
-        display: flex;
+        min-height: 112px;
+        border-radius: 22px;
+        background: var(--surface);
+        display: grid;
         align-items: center;
-        justify-content: flex-start;
+        justify-items: center;
+        align-content: center;
         gap: 12px;
-        padding: 0 14px;
+        padding: 14px 8px;
         color: var(--text);
-        border: 0;
-        box-shadow: none;
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        box-shadow: 0 14px 34px rgba(35, 35, 31, 0.07);
         position: relative;
       }
 
       .quick-action:not(:last-child)::after {
-        content: "";
-        height: 1px;
-        background: var(--hairline);
-        position: absolute;
-        left: 62px;
-        right: 0;
-        bottom: 0;
+        content: none;
       }
 
       .quick-action .mark {
-        width: 34px;
-        height: 34px;
-        border-radius: 10px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
         background: var(--primary-soft);
         box-shadow: none;
+        border: 0;
       }
 
       .quick-action .action-copy {
         min-width: 0;
+        text-align: center;
       }
 
       .quick-action .action-title {
         display: block;
         font-size: 16px;
-        font-weight: 700;
-      }
-
-      .quick-action .action-subtitle {
-        display: block;
-        margin-top: 2px;
-        color: var(--muted);
-        font-size: 12px;
-        line-height: 1.25;
-        font-weight: 500;
+        font-weight: 800;
       }
 
       .section-head {
@@ -996,6 +1086,16 @@
             </div>
           </div>
 
+          <div class="home-search-row">
+            <button class="home-search" data-go="check" aria-label="检查配料、菜单或商品说明">
+              <i data-lucide="search" size="27"></i>
+              <span>检查配料、菜单或商品说明</span>
+            </button>
+            <button class="home-filter" data-go="check" aria-label="打开查食物">
+              <i data-lucide="sliders-horizontal" size="29"></i>
+            </button>
+          </div>
+
           <div class="hero-card">
             <h2>今天要做什么？</h2>
             <p>从查食物、记饮食、记症状开始，慢慢形成自己的食物观察。</p>
@@ -1006,21 +1106,18 @@
               <span class="mark"><i data-lucide="scan-search" size="19"></i></span>
               <span class="action-copy">
                 <span class="action-title">查食物</span>
-                <span class="action-subtitle">看配料、菜单或截图</span>
               </span>
             </button>
             <button class="quick-action" data-go="meal">
               <span class="mark"><i data-lucide="notebook-pen" size="19"></i></span>
               <span class="action-copy">
                 <span class="action-title">记饮食</span>
-                <span class="action-subtitle">留下吃过什么</span>
               </span>
             </button>
             <button class="quick-action" data-go="symptom">
               <span class="mark"><i data-lucide="heart-pulse" size="19"></i></span>
               <span class="action-copy">
                 <span class="action-title">记症状</span>
-                <span class="action-subtitle">回看之前吃过什么</span>
               </span>
             </button>
           </div>

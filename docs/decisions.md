@@ -2,6 +2,33 @@
 
 This file records product decisions and the reasoning behind them.
 
+## 2026-06-18: Restore original home layout while keeping latest action icons
+
+Decision:
+
+- Keep the earlier home layout with:
+  - top visual check entry.
+  - dark olive hero card.
+  - three square action cards.
+- Use the latest Food Sense action icons in those cards:
+  - `scan-search` for `查食物`.
+  - `notebook-pen` for `记饮食`.
+  - `heart-pulse` for `记症状`.
+- Keep the label `记症状`, not the older `记不适`.
+- Treat the top visual check entry as a shortcut to `查食物`, not as a separate global search feature.
+
+Reason:
+
+- The product owner confirmed the older home layout has the right warmth and visual rhythm.
+- The newer icons better express Food Sense's food-observation and personal-recording identity.
+- Restoring layout without adding global search keeps V1 scope controlled.
+
+Output:
+
+- `design/prototypes/v1-ui-prototype.html`
+- `docs/DESIGN.md`
+- `docs/v1-ui-prototype-notes.md`
+
 ## 2026-06-18: Define Food Sense V1 visual identity system
 
 Decision:
