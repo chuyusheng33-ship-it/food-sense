@@ -1,7 +1,7 @@
 # Food Sense V1 UI Prototype Notes
 
-Version: V0.2
-Date: 2026-06-17
+Version: V0.3
+Date: 2026-06-18
 
 Prototype file:
 
@@ -29,6 +29,7 @@ The goal is to let the product owner review:
 - Whether `查食物`, `记饮食`, `记症状`, `记录`, and `档案` feel coherent together.
 - Whether result language avoids medical certainty.
 - Whether the app feels like a personal assistant instead of a diagnosis tool.
+- Whether the Apple-style foundation still leaves Food Sense with its own warm food-observation identity.
 
 ## Included Screens
 
@@ -66,10 +67,13 @@ The prototype intentionally does not:
 Visual direction:
 
 - Apple-style grouped mobile app direction.
+- Food Sense-specific visual identity defined in `docs/DESIGN.md`.
 - Light iOS-like gray app background.
 - Rounded white grouped surfaces with subtle hairline borders.
 - Reduced shadows and less decorative hero treatment.
 - Home primary actions use an iOS-like grouped list rhythm instead of custom promo cards.
+- Home primary actions now include short support lines to make the three core jobs clearer without adding a dashboard.
+- Home iconography is tuned toward food observation and personal recording instead of generic app utilities.
 - Context cards use white grouped surfaces with subtle semantic markers instead of large tinted gradients.
 - Soft olive primary accent.
 - Sage for food/profile context.
@@ -77,6 +81,7 @@ Visual direction:
 - Amber/rust for attention and stronger symptom/result states.
 - Translucent bottom navigation.
 - Compact mobile-first layout.
+- System-first Chinese typography, matching the V1 design system.
 
 Language direction:
 
@@ -85,14 +90,14 @@ Language direction:
 
 ## Feedback To Collect
 
-Before moving to SDD and formal development, review:
+Before moving to formal development, review:
 
 1. Does the homepage feel clear or still too busy?
-2. Should the three home actions stay as compact cards, or become larger stacked rows?
+2. Do the three home action subtitles help first-time clarity without making the page feel heavy?
 3. Does the expanded soft olive palette feel richer without becoming noisy?
 4. Do the result cards feel calm enough but still noticeable?
 5. Is `档案` understandable as a bottom navigation label?
-6. Does the Apple-style direction feel polished without making Food Sense look too generic?
+6. Does the Apple-style foundation now feel like Food Sense rather than a generic utility app?
 
 ## Next Step After Approval
 

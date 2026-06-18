@@ -2,6 +2,35 @@
 
 This file records product decisions and the reasoning behind them.
 
+## 2026-06-18: Define Food Sense V1 visual identity system
+
+Decision:
+
+- Keep the approved Apple / iOS grouped-app foundation.
+- Add a small Food Sense-specific visual identity layer instead of continuing toward a fully generic iOS utility.
+- Use `docs/DESIGN.md` as the V1 visual source of truth.
+- Keep soft olive as the primary brand accent.
+- Use semantic supporting colors:
+  - sage for food/profile context.
+  - mist blue for neutral information, privacy, and no-clear-match states.
+  - amber/rust for attention and stronger symptom/result states.
+- Use system-first typography with Chinese readability first.
+- Avoid restaurant red, handwritten fonts, food-delivery visuals, medical blue/green dominance, and diagnosis-style warning badges.
+
+Reason:
+
+- The current Apple-style prototype is cleaner and more trustworthy, but risks becoming too generic.
+- Food Sense needs enough visual memory to feel like a personal food reaction assistant, while staying calm and non-diagnostic.
+- `ui-ux-pro-max` recommendations were useful for mobile-first, accessibility, semantic color, and typography checks, but its generic food-app red palette and handwritten/casual type recommendations do not fit Food Sense.
+- The visual system should support private testing and React development without turning into a heavy brand project.
+
+Output:
+
+- `docs/DESIGN.md`
+- `docs/v1-ui-direction.md`
+- `docs/v1-ui-prototype-notes.md`
+- `design/prototypes/v1-ui-prototype.html`
+
 ## 2026-06-17: Optimize prototype toward Apple-style mobile UI
 
 Decision:
@@ -420,7 +449,7 @@ Output:
 Next gate:
 
 - Product owner reviews the prototype and gives feedback.
-- After prototype approval, create `docs/DESIGN.md`, `docs/ARCHITECTURE.md`, and `TODO.md`.
+- After prototype approval, use `docs/DESIGN.md` as the visual source of truth and create `docs/ARCHITECTURE.md` and `TODO.md`.
 - Formal app development starts only after those boundaries are clear.
 
 ## 2026-06-16: Remove home search from V1 prototype

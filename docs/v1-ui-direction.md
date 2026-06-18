@@ -1,11 +1,17 @@
 # Food Sense V1 UI Direction
 
-Version: V0.3
-Date: 2026-06-16
+Version: V0.4
+Date: 2026-06-18
 
 This document defines the first visual and interaction direction for Food Sense V1.
 
-It is not a final design system. It is the product-facing UI direction for the first React + TypeScript + Vite mobile PWA build.
+The visual source of truth is now:
+
+```text
+docs/DESIGN.md
+```
+
+This file remains the product-facing UI direction and screen guidance for the first React + TypeScript + Vite mobile PWA build.
 
 ## 1. Direction Summary
 
@@ -19,11 +25,13 @@ Food Sense V1 should feel:
 
 The interface should feel like a personal food reaction assistant, not a diagnosis report, diet tracker, nutrition app, or medical dashboard.
 
-Working recommendation:
+Approved V1 direction:
 
-- Use the uploaded soft olive mobile reference as the visual anchor for V1.
-- Keep the `Warm Utility` structure, but shift the accent color toward soft olive instead of tomato/coral.
-- Keep the first build restrained. The goal is trust, speed, and clarity, not a strong brand statement yet.
+- Keep an Apple / iOS grouped-app foundation.
+- Add a small Food Sense visual signature through soft olive, food-observation iconography, and semantic color use.
+- Keep the first build restrained. The goal is trust, speed, and clarity, not a loud brand statement yet.
+
+Do not follow generic food-app styling such as restaurant red, handwritten fonts, recipe imagery, or appetite-driven visuals. Food Sense is a personal food reaction assistant, not a restaurant or nutrition app.
 
 Reference image:
 
@@ -126,18 +134,20 @@ The palette should be warm, restrained, readable, and not one-note.
 
 Soft olive is the anchor color, but it should not carry every meaning. V1 needs a small supporting palette so the app can distinguish actions, records, profile content, attention states, and neutral uncertainty without feeling medical or cute.
 
+For exact tokens and typography rules, use `docs/DESIGN.md`.
+
 ### 4.1 V1 Color System
 
 Core tokens:
 
 | Role | Token | Hex | Use |
 | --- | --- | --- | --- |
-| App background | `background` | `#EEEDE7` | App canvas and phone background |
-| Surface | `surface` | `#FFFFFB` | Cards, forms, bottom navigation |
-| Soft surface | `surface-soft` | `#F7F6EF` | Secondary panels and quiet grouped areas |
-| Text | `text` | `#22231F` | Primary copy |
-| Muted text | `muted` | `#7D7D73` | Helper copy and timestamps |
-| Border | `border` | `#E3E1D7` | Card borders, dividers, input outlines |
+| App background | `background` | `#F5F5F7` | iOS-like app canvas |
+| Surface | `surface` | `#FFFFFF` | Grouped lists, cards, forms, bottom navigation |
+| Soft surface | `surface-soft` | `#F9F9FB` | Secondary panels and quiet grouped areas |
+| Text | `text` | `#1D1D1F` | Primary copy |
+| Muted text | `muted` | `#6E6E73` | Helper copy and timestamps |
+| Border | `border` | `rgba(60, 60, 67, 0.16)` | Card borders, dividers, input outlines |
 | Primary olive | `primary` | `#596321` | Primary buttons, selected states, active navigation |
 | Deep olive | `primary-dark` | `#3F4718` | Pressed states and strong headings when needed |
 | Olive tint | `primary-soft` | `#EEF1DF` | Selected chips, soft primary backgrounds |
@@ -196,6 +206,25 @@ Avoid:
 - Bright or medical green as a result-state success color.
 - Overly cute pastel palettes.
 - One-note palettes where the whole app reads as only beige, only green, or only red.
+- Restaurant red or appetite-led color systems.
+- Handwritten, playful, or recipe-app typography.
+
+## 4.6 Typography Identity
+
+Food Sense V1 uses system-first typography:
+
+```text
+ui-sans-serif / system-ui / -apple-system / SF Pro / PingFang SC / Noto Sans SC
+```
+
+Reason:
+
+- It feels native on iOS.
+- It keeps Chinese UI text readable.
+- It avoids external font loading for the V1 PWA.
+- It keeps the product from drifting into lifestyle, recipe, or medical-brand typography.
+
+Do not use handwritten or decorative fonts in the core app.
 
 ### 4.3 Component Color Mapping
 

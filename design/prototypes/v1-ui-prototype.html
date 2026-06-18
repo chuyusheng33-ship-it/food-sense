@@ -39,9 +39,9 @@
         --radius-md: 14px;
         --radius-sm: 10px;
         font-family:
-          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-          "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
-          sans-serif;
+          ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "SF Pro Text", "SF Pro Display", "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
       }
 
       * {
@@ -162,17 +162,33 @@
         background: var(--primary);
         box-shadow: none;
         position: relative;
+        display: grid;
+        place-items: center;
+        color: rgba(255, 255, 255, 0.9);
       }
 
       .avatar::after {
         content: "";
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        border: 2px solid rgba(255, 255, 255, 0.82);
+        width: 17px;
+        height: 17px;
+        border-radius: 50% 50% 48% 50%;
+        border: 2px solid currentColor;
         position: absolute;
-        left: 10px;
-        top: 10px;
+        left: 8px;
+        top: 11px;
+      }
+
+      .avatar::before {
+        content: "";
+        width: 9px;
+        height: 2px;
+        border-radius: 999px;
+        background: currentColor;
+        position: absolute;
+        right: 8px;
+        top: 13px;
+        transform: rotate(-34deg);
+        transform-origin: left center;
       }
 
       h1,
@@ -328,9 +344,23 @@
         box-shadow: none;
       }
 
-      .quick-action span {
+      .quick-action .action-copy {
+        min-width: 0;
+      }
+
+      .quick-action .action-title {
+        display: block;
         font-size: 16px;
         font-weight: 700;
+      }
+
+      .quick-action .action-subtitle {
+        display: block;
+        margin-top: 2px;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.25;
+        font-weight: 500;
       }
 
       .section-head {
@@ -974,15 +1004,24 @@
           <div class="quick-actions">
             <button class="quick-action" data-go="check">
               <span class="mark"><i data-lucide="scan-search" size="19"></i></span>
-              <span>查食物</span>
+              <span class="action-copy">
+                <span class="action-title">查食物</span>
+                <span class="action-subtitle">看配料、菜单或截图</span>
+              </span>
             </button>
             <button class="quick-action" data-go="meal">
-              <span class="mark"><i data-lucide="utensils" size="19"></i></span>
-              <span>记饮食</span>
+              <span class="mark"><i data-lucide="notebook-pen" size="19"></i></span>
+              <span class="action-copy">
+                <span class="action-title">记饮食</span>
+                <span class="action-subtitle">留下吃过什么</span>
+              </span>
             </button>
             <button class="quick-action" data-go="symptom">
-              <span class="mark"><i data-lucide="activity" size="19"></i></span>
-              <span>记症状</span>
+              <span class="mark"><i data-lucide="heart-pulse" size="19"></i></span>
+              <span class="action-copy">
+                <span class="action-title">记症状</span>
+                <span class="action-subtitle">回看之前吃过什么</span>
+              </span>
             </button>
           </div>
 
@@ -997,7 +1036,7 @@
               <span class="pill sage">饮食</span>
             </div>
             <h3>午餐：牛肉饭、酸奶</h3>
-            <p>已保存到本地。后续记录不适时，会出现在时间窗口回看里。</p>
+            <p>已保存到本地。后续记录症状时，会出现在时间窗口回看里。</p>
           </article>
 
           <button class="notice mist" data-go="privacy" style="width: 100%; text-align: left">
@@ -1346,7 +1385,7 @@
           <div class="top-row">
             <div class="page-title">
               <h1>记录</h1>
-              <p>按日期查看饮食、不适和检查。</p>
+              <p>按日期查看饮食、症状和检查。</p>
             </div>
           </div>
 
@@ -1499,7 +1538,7 @@
 
           <div class="notice mist">
             <strong>本地保存</strong>
-            <p>档案、饮食、不适和检查记录优先保存在浏览器本地。</p>
+            <p>档案、饮食、症状和检查记录优先保存在浏览器本地。</p>
           </div>
 
           <div class="notice mist">
