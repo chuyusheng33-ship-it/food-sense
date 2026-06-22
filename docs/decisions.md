@@ -2,6 +2,32 @@
 
 This file records product decisions and the reasoning behind them.
 
+## 2026-06-22: Remove home search and adopt lighter action-first home
+
+Decision:
+
+- Remove the search-style row from the home screen.
+- Keep `查食物 / 记饮食 / 记症状` as the dominant first-screen interaction area.
+- Replace the large dark olive home hero with a lighter grouped hero.
+- Add a small mist information note for the non-diagnostic boundary:
+  - `基于目前可见信息`
+  - Food Sense helps observe possible relationships, not diagnose.
+
+Reason:
+
+- `查食物` already covers food checking, so a separate search-like row duplicates the main action.
+- The search row made the home screen feel more generic and less like a guided personal food reaction assistant.
+- A lighter hero keeps Food Sense warmth while avoiding a promotional or landing-page feeling.
+- The three V1 actions should be immediately clear for private test users.
+- This re-confirms the earlier 2026-06-16 search removal after the 2026-06-18 restored home layout briefly brought a search-style entry back.
+
+Output:
+
+- `design/prototypes/v1-ui-prototype.html`
+- `docs/DESIGN.md`
+- `docs/v1-ui-direction.md`
+- `docs/v1-ui-prototype-notes.md`
+
 ## 2026-06-18: Restore original home layout while keeping latest action icons
 
 Decision:

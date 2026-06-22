@@ -261,7 +261,20 @@ Each card includes:
 
 The three actions should feel equal.
 
-The home screen can keep a visual check entry above the hero card, but it should route to `查食物` rather than becoming a separate global search feature in V1.
+The home screen should not use a search-style entry in V1.
+
+Reason:
+
+- The first screen should make the three core actions obvious.
+- `查食物` is already one of the three primary actions.
+- A search-style row can make the product feel like a generic search utility instead of a personal food reaction assistant.
+
+The approved home direction is:
+
+- Keep the iOS grouped-app foundation.
+- Use a light home hero rather than a dark promotional card.
+- Add one quiet mist information note for the non-diagnostic boundary.
+- Keep `查食物 / 记饮食 / 记症状` as the dominant interaction area.
 
 ### 7.2 Result Cards
 

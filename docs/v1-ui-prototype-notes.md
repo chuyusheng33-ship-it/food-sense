@@ -1,7 +1,7 @@
 # Food Sense V1 UI Prototype Notes
 
-Version: V0.3
-Date: 2026-06-18
+Version: V0.4
+Date: 2026-06-22
 
 Prototype file:
 
@@ -70,8 +70,9 @@ Visual direction:
 - Food Sense-specific visual identity defined in `docs/DESIGN.md`.
 - Light iOS-like gray app background.
 - Rounded white grouped surfaces with subtle hairline borders.
-- Reduced shadows and less decorative hero treatment.
-- Home keeps the earlier large visual layout: top visual check entry, dark olive hero card, and three square action cards.
+- Reduced shadows and a lighter home hero treatment.
+- Home removes the earlier search-style entry. The three primary actions are now the clear first interaction path.
+- Home uses a lighter grouped hero and a small mist information note to keep Food Sense warmth without making the page feel like a marketing screen.
 - Home action icons use the latest Food Sense icon direction: `scan-search`, `notebook-pen`, and `heart-pulse`.
 - Context cards use white grouped surfaces with subtle semantic markers instead of large tinted gradients.
 - Soft olive primary accent.
@@ -91,8 +92,8 @@ Language direction:
 
 Before moving to formal development, review:
 
-1. Does the homepage feel clear or still too busy?
-2. Does the restored home layout feel warmer while keeping the three actions clear?
+1. Does the homepage feel clear with the search box removed?
+2. Does the lighter home layout keep enough Food Sense warmth while making the three actions dominant?
 3. Does the expanded soft olive palette feel richer without becoming noisy?
 4. Do the result cards feel calm enough but still noticeable?
 5. Is `档案` understandable as a bottom navigation label?

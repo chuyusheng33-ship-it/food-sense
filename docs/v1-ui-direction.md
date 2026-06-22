@@ -128,6 +128,14 @@ The home screen should include only:
 
 Empty state can prompt the user to add the first profile item, but it must still allow starting with records.
 
+The home screen should not include a search-style row in V1.
+
+Reason:
+
+- `查食物` already covers the food-checking path.
+- A search-style row makes the first screen feel like a generic search tool.
+- Removing it gives `查食物 / 记饮食 / 记症状` more visual priority.
+
 ## 4. Color And State Direction
 
 The palette should be warm, restrained, readable, and not one-note.
@@ -289,7 +297,7 @@ Do not make severity look like a medical triage system.
 
 ### 5.1 Home Actions
 
-Use three large, clear action rows or buttons:
+Use three large, clear action cards:
 
 ```text
 查食物
@@ -306,10 +314,11 @@ Rules:
 
 Recommended first build:
 
-- Use stacked action rows on mobile.
-- Each row has one clear label and one small visual cue.
-- Match the reference's rounded white surfaces and soft shadow style, but keep Food Sense less image-heavy.
-- Avoid a dense 3-card grid unless the first screen feels too long.
+- Use a three-card grid on the home screen.
+- Each card has one clear label and one small Lucide-style visual cue.
+- Keep cards equal in size and hierarchy.
+- Keep the surrounding hero light so the action cards remain dominant.
+- Do not add a search bar above the action cards.
 
 ### 5.2 Bottom Navigation
 
@@ -475,9 +484,10 @@ Recommended order:
 
 1. `Food Sense` and date / today context.
 2. `今天要做什么？`
-3. Three action rows.
-4. Recent record preview.
-5. `本地保存 · 隐私与数据`.
+3. A quiet `基于目前可见信息` / non-diagnostic note.
+4. Three action cards.
+5. Recent record preview.
+6. `本地保存 · 隐私与数据`.
 
 Do not add trend charts, health scores, food education content, or daily tips in V1.
 

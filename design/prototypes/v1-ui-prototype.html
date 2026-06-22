@@ -319,73 +319,34 @@
         box-shadow: var(--card-shadow);
       }
 
-      .home-search-row {
-        display: grid;
-        grid-template-columns: 1fr 58px;
-        gap: 8px;
-        align-items: stretch;
-        margin-bottom: 20px;
-      }
-
-      .home-search {
-        min-height: 64px;
-        border-radius: 24px;
-        background: rgba(255, 255, 255, 0.92);
-        color: var(--muted);
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 0 12px;
-        border: 1px solid rgba(255, 255, 255, 0.74);
-        box-shadow: 0 14px 34px rgba(35, 35, 31, 0.08);
-        text-align: left;
-        font-size: 14px;
-        font-weight: 650;
-        white-space: nowrap;
-      }
-
-      .home-search i {
-        color: #7b7b71;
-        flex: 0 0 auto;
-      }
-
-      .home-filter {
-        min-height: 64px;
-        border-radius: 22px;
-        background: var(--primary);
-        color: white;
-        display: grid;
-        place-items: center;
-        box-shadow: none;
-      }
-
       .hero-card {
-        min-height: 148px;
-        padding: 28px 28px;
-        border-radius: 24px;
-        background: linear-gradient(135deg, #3a4429 0%, #303b24 100%);
-        color: white;
+        min-height: auto;
+        padding: 18px 18px;
+        border-radius: 22px;
+        background: var(--surface);
+        color: var(--text);
         overflow: hidden;
         position: relative;
-        margin-bottom: 20px;
-        box-shadow: none;
+        margin-bottom: 14px;
+        border: 1px solid var(--hairline);
+        box-shadow: var(--card-shadow);
       }
 
       .hero-card::after {
         content: "";
-        width: 176px;
-        height: 176px;
+        width: 84px;
+        height: 84px;
         border-radius: 50%;
-        border: 34px solid rgba(255, 255, 255, 0.09);
+        border: 18px solid rgba(89, 99, 33, 0.08);
         position: absolute;
-        right: -76px;
-        top: -34px;
+        right: -34px;
+        top: -28px;
       }
 
       .hero-card h2 {
-        max-width: 270px;
-        font-size: 30px;
-        line-height: 1.08;
+        max-width: 250px;
+        font-size: 25px;
+        line-height: 1.12;
         letter-spacing: 0;
         position: relative;
         font-weight: 850;
@@ -393,20 +354,54 @@
       }
 
       .hero-card p {
-        max-width: 282px;
-        margin-top: 16px;
-        color: rgba(255, 255, 255, 0.86);
-        font-size: 15px;
-        line-height: 1.5;
+        max-width: 292px;
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.45;
         position: relative;
         z-index: 1;
+      }
+
+      .home-brief {
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 10px;
+        align-items: center;
+        padding: 12px;
+        margin-bottom: 16px;
+        border-radius: 18px;
+        background: var(--mist-soft);
+        border: 1px solid rgba(92, 122, 128, 0.14);
+      }
+
+      .home-brief .mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 12px;
+        background: var(--surface);
+        color: #4e666b;
+      }
+
+      .home-brief strong {
+        display: block;
+        font-size: 13px;
+        line-height: 1.25;
+        margin-bottom: 2px;
+      }
+
+      .home-brief span {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.35;
       }
 
       .quick-actions {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 12px;
-        margin-bottom: 24px;
+        margin-bottom: 22px;
         overflow: visible;
         border: 0;
         border-radius: 0;
@@ -414,7 +409,7 @@
       }
 
       .quick-action {
-        min-height: 112px;
+        min-height: 118px;
         border-radius: 22px;
         background: var(--surface);
         display: grid;
@@ -425,7 +420,7 @@
         padding: 14px 8px;
         color: var(--text);
         border: 1px solid rgba(255, 255, 255, 0.72);
-        box-shadow: 0 14px 34px rgba(35, 35, 31, 0.07);
+        box-shadow: 0 10px 26px rgba(35, 35, 31, 0.06);
         position: relative;
       }
 
@@ -1086,19 +1081,17 @@
             </div>
           </div>
 
-          <div class="home-search-row">
-            <button class="home-search" data-go="check" aria-label="检查配料、菜单或商品说明">
-              <i data-lucide="search" size="27"></i>
-              <span>检查配料、菜单或商品说明</span>
-            </button>
-            <button class="home-filter" data-go="check" aria-label="打开查食物">
-              <i data-lucide="sliders-horizontal" size="29"></i>
-            </button>
-          </div>
-
           <div class="hero-card">
             <h2>今天要做什么？</h2>
-            <p>从查食物、记饮食、记症状开始，慢慢形成自己的食物观察。</p>
+            <p>从眼前这顿饭开始，记录、检查、回看身体反应。</p>
+          </div>
+
+          <div class="home-brief">
+            <span class="mark"><i data-lucide="shield-check" size="17"></i></span>
+            <span>
+              <strong>基于目前可见信息</strong>
+              <span>Food Sense 只帮你观察可能相关，不替你下诊断结论。</span>
+            </span>
           </div>
 
           <div class="quick-actions">
