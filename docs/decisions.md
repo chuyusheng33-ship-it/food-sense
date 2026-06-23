@@ -2,6 +2,28 @@
 
 This file records product decisions and the reasoning behind them.
 
+## 2026-06-23: Use placeholders for meal photos in the prototype
+
+Decision:
+
+- Remove the real meal photo from the prototype's meal-related cards.
+- Keep a neutral image placeholder in:
+  - `记饮食`
+  - `选择饮食记录`
+  - `记录 > 饮食记录`
+
+Reason:
+
+- The prototype should show that meal records can include images without making one specific food photo dominate the screen.
+- A neutral placeholder keeps the UI focused on flow, hierarchy, and recognized food content.
+- This does not remove V1 support for real user-added meal photos.
+
+Output:
+
+- `design/prototypes/v1-ui-prototype.html`
+- `docs/DESIGN.md`
+- `docs/v1-ui-prototype-notes.md`
+
 ## 2026-06-22: Remove home search and adopt lighter action-first home
 
 Decision:

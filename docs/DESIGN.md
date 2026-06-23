@@ -319,6 +319,14 @@ Food records can show:
 - Recognized or entered food list.
 - Matched profile item if any.
 
+In the clickable prototype, use a neutral image placeholder for meal photo areas instead of a real food photo.
+
+Reason:
+
+- The placeholder keeps the layout expectation that food records may include images.
+- It avoids letting one specific meal photo dominate the UI review.
+- The production app should still support real meal photos when users add them.
+
 ### 7.4 Profile
 
 `档案` is a personal reference area.

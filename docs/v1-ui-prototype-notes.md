@@ -74,6 +74,7 @@ Visual direction:
 - Home removes the earlier search-style entry. The three primary actions are now the clear first interaction path.
 - Home uses a lighter grouped hero and a small mist information note to keep Food Sense warmth without making the page feel like a marketing screen.
 - Home action icons use the latest Food Sense icon direction: `scan-search`, `notebook-pen`, and `heart-pulse`.
+- Meal photo areas use a neutral image placeholder in the prototype instead of a real food photo.
 - Context cards use white grouped surfaces with subtle semantic markers instead of large tinted gradients.
 - Soft olive primary accent.
 - Sage for food/profile context.
