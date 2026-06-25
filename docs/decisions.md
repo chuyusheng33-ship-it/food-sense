@@ -2,6 +2,39 @@
 
 This file records product decisions and the reasoning behind them.
 
+## 2026-06-25: Keep Apple foundation while restoring a small Food Sense identity signal
+
+Decision:
+
+- Continue with the Apple / iOS grouped-app foundation for V1.
+- Do not make the prototype more visually expressive before React development.
+- Keep Food Sense's own identity through:
+  - soft olive as the primary action and brand color.
+  - semantic sage, mist, amber, and rust states.
+  - food-observation iconography.
+  - cautious non-diagnostic language.
+- Update the home brand mark from a generic dark circular mark to the soft olive food-observation symbol.
+- Remove the abstract decorative ring from the home hero.
+
+Reason:
+
+- The current prototype is not too generic overall; it already has a clear Food Sense layer through language, actions, color meaning, and record/profile surfaces.
+- The biggest risk is not the prototype itself, but the future React build accidentally flattening the product back into a generic iOS utility.
+- The home mark should create quick product memory without turning V1 into a heavy brand exercise.
+- The home hero should stay quiet and useful. Decorative shapes are not needed for the first private-test build.
+
+Output:
+
+- `design/prototypes/v1-ui-prototype.html`
+- `docs/v1-ui-prototype-notes.md`
+
+Follow-up:
+
+- The product owner still needs to decide whether this UI direction is approved for the first React build.
+- If approved, create or finalize:
+  - `docs/ARCHITECTURE.md`
+  - `TODO.md`
+
 ## 2026-06-22: Remove home search and adopt lighter action-first home
 
 Decision:

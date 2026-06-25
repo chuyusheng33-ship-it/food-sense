@@ -200,25 +200,26 @@
       }
 
       .screen[data-screen="home"] .avatar {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background: #1d2419;
-        box-shadow: 0 12px 28px rgba(29, 36, 25, 0.12);
+        width: 52px;
+        height: 52px;
+        border-radius: 17px;
+        background: var(--primary);
+        box-shadow: 0 10px 24px rgba(63, 71, 24, 0.14);
       }
 
       .screen[data-screen="home"] .avatar::after {
-        width: 11px;
-        height: 11px;
-        border: 0;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.92);
-        left: 17px;
-        top: 17px;
+        width: 19px;
+        height: 19px;
+        border: 2px solid currentColor;
+        background: transparent;
+        left: 12px;
+        top: 15px;
       }
 
       .screen[data-screen="home"] .avatar::before {
-        content: none;
+        content: "";
+        right: 10px;
+        top: 16px;
       }
 
       h1,
@@ -333,14 +334,7 @@
       }
 
       .hero-card::after {
-        content: "";
-        width: 84px;
-        height: 84px;
-        border-radius: 50%;
-        border: 18px solid rgba(89, 99, 33, 0.08);
-        position: absolute;
-        right: -34px;
-        top: -28px;
+        content: none;
       }
 
       .hero-card h2 {
