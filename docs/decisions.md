@@ -2,6 +2,65 @@
 
 This file records product decisions and the reasoning behind them.
 
+## 2026-06-25: Sync Documents/AI prototype file to the live preview source
+
+Decision:
+
+- Treat the live preview URL as the source of truth for the clickable prototype:
+  - `http://127.0.0.1:4179/design/prototypes/v1-ui-prototype.html`
+- Sync this local file to match that preview source:
+  - `/Users/chuyu/Documents/AI/food sense project/food-sense/design/prototypes/v1-ui-prototype.html`
+- Keep the 2026-06-23 placeholder-photo decision as history, but the current HTML now follows the live preview version, including the representative meal reference image.
+
+Reason:
+
+- There were two local project copies:
+  - `/Users/chuyu/Desktop/food sense project/food-sense`
+  - `/Users/chuyu/Documents/AI/food sense project/food-sense`
+- The preview URL was being served from the Desktop copy.
+- The product owner asked for the Documents/AI prototype file to be synchronized with the URL, with the URL as the authority.
+- Documentation should describe the actual current prototype, not only an older local decision.
+
+Output:
+
+- `design/prototypes/v1-ui-prototype.html`
+- `docs/DESIGN.md`
+- `docs/v1-ui-prototype-notes.md`
+- `docs/decisions.md`
+
+## 2026-06-25: Keep Apple foundation while restoring a small Food Sense identity signal
+
+Decision:
+
+- Continue with the Apple / iOS grouped-app foundation for V1.
+- Do not make the prototype more visually expressive before React development.
+- Keep Food Sense's own identity through:
+  - soft olive as the primary action and brand color.
+  - semantic sage, mist, amber, and rust states.
+  - food-observation iconography.
+  - cautious non-diagnostic language.
+- Update the home brand mark from a generic dark circular mark to the soft olive food-observation symbol.
+- Remove the abstract decorative ring from the home hero.
+
+Reason:
+
+- The current prototype is not too generic overall; it already has a clear Food Sense layer through language, actions, color meaning, and record/profile surfaces.
+- The biggest risk is not the prototype itself, but the future React build accidentally flattening the product back into a generic iOS utility.
+- The home mark should create quick product memory without turning V1 into a heavy brand exercise.
+- The home hero should stay quiet and useful. Decorative shapes are not needed for the first private-test build.
+
+Output:
+
+- `design/prototypes/v1-ui-prototype.html`
+- `docs/v1-ui-prototype-notes.md`
+
+Follow-up:
+
+- The product owner still needs to decide whether this UI direction is approved for the first React build.
+- If approved, create or finalize:
+  - `docs/ARCHITECTURE.md`
+  - `TODO.md`
+
 ## 2026-06-23: Use placeholders for meal photos in the prototype
 
 Decision:

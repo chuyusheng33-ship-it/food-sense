@@ -319,13 +319,13 @@ Food records can show:
 - Recognized or entered food list.
 - Matched profile item if any.
 
-In the clickable prototype, use a neutral image placeholder for meal photo areas instead of a real food photo.
+The clickable prototype may use a representative meal image to show that food records can include photos.
 
-Reason:
+Rules:
 
-- The placeholder keeps the layout expectation that food records may include images.
-- It avoids letting one specific meal photo dominate the UI review.
-- The production app should still support real meal photos when users add them.
+- The production app should support real meal photos when users add them.
+- Meal photos should support the record, not dominate the screen.
+- If a reference image distracts from UI review, it can be swapped for a neutral placeholder, but the current prototype HTML follows the live preview version.
 
 ### 7.4 Profile
 

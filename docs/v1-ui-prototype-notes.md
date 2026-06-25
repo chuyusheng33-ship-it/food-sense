@@ -1,7 +1,7 @@
 # Food Sense V1 UI Prototype Notes
 
-Version: V0.4
-Date: 2026-06-22
+Version: V0.5
+Date: 2026-06-25
 
 Prototype file:
 
@@ -73,8 +73,10 @@ Visual direction:
 - Reduced shadows and a lighter home hero treatment.
 - Home removes the earlier search-style entry. The three primary actions are now the clear first interaction path.
 - Home uses a lighter grouped hero and a small mist information note to keep Food Sense warmth without making the page feel like a marketing screen.
+- Home brand mark now uses the soft olive food-observation symbol instead of a generic dark circular mark.
+- The home hero removes the abstract decorative ring so the page keeps iOS restraint without losing the Food Sense identity signal.
 - Home action icons use the latest Food Sense icon direction: `scan-search`, `notebook-pen`, and `heart-pulse`.
-- Meal photo areas use a neutral image placeholder in the prototype instead of a real food photo.
+- Meal photo areas show a representative reference image in the current live-preview version.
 - Context cards use white grouped surfaces with subtle semantic markers instead of large tinted gradients.
 - Soft olive primary accent.
 - Sage for food/profile context.
@@ -99,6 +101,7 @@ Before moving to formal development, review:
 4. Do the result cards feel calm enough but still noticeable?
 5. Is `档案` understandable as a bottom navigation label?
 6. Does the Apple-style foundation now feel like Food Sense rather than a generic utility app?
+7. Does the olive food-observation mark give enough product memory without feeling like a final logo project?
 
 ## Next Step After Approval
 

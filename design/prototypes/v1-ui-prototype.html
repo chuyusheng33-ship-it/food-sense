@@ -200,25 +200,26 @@
       }
 
       .screen[data-screen="home"] .avatar {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background: #1d2419;
-        box-shadow: 0 12px 28px rgba(29, 36, 25, 0.12);
+        width: 52px;
+        height: 52px;
+        border-radius: 17px;
+        background: var(--primary);
+        box-shadow: 0 10px 24px rgba(63, 71, 24, 0.14);
       }
 
       .screen[data-screen="home"] .avatar::after {
-        width: 11px;
-        height: 11px;
-        border: 0;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.92);
-        left: 17px;
-        top: 17px;
+        width: 19px;
+        height: 19px;
+        border: 2px solid currentColor;
+        background: transparent;
+        left: 12px;
+        top: 15px;
       }
 
       .screen[data-screen="home"] .avatar::before {
-        content: none;
+        content: "";
+        right: 10px;
+        top: 16px;
       }
 
       h1,
@@ -333,14 +334,7 @@
       }
 
       .hero-card::after {
-        content: "";
-        width: 84px;
-        height: 84px;
-        border-radius: 50%;
-        border: 18px solid rgba(89, 99, 33, 0.08);
-        position: absolute;
-        right: -34px;
-        top: -28px;
+        content: none;
       }
 
       .hero-card h2 {
@@ -877,30 +871,6 @@
         background: #ddd;
       }
 
-      .meal-photo-placeholder {
-        width: 100%;
-        aspect-ratio: 4 / 3;
-        display: grid;
-        place-items: center;
-        gap: 8px;
-        background:
-          linear-gradient(135deg, rgba(240, 244, 233, 0.94), rgba(238, 245, 245, 0.9));
-        color: var(--primary);
-        border-bottom: 1px solid var(--hairline);
-      }
-
-      .meal-photo-placeholder i {
-        width: 28px;
-        height: 28px;
-      }
-
-      .meal-photo-placeholder span {
-        display: block;
-        color: var(--muted);
-        font-size: 12px;
-        font-weight: 750;
-      }
-
       .meal-body {
         padding: 14px 15px 15px;
       }
@@ -1282,10 +1252,11 @@
           </button>
 
           <article class="record-card meal-card food-context">
-            <div class="meal-photo-placeholder" role="img" aria-label="饮食图片示意">
-              <i data-lucide="image" size="28"></i>
-              <span>饮食图片示意</span>
-            </div>
+            <img
+              class="meal-photo"
+              src="/design/ui-references/food-sense-meal-photo-reference.png"
+              alt="饮食照片示例"
+            />
             <div class="meal-body">
               <div class="meta">
                 <span class="record-time">照片记录</span>
@@ -1333,10 +1304,11 @@
           </div>
 
           <article class="record-card meal-card food-context">
-            <div class="meal-photo-placeholder" role="img" aria-label="过往饮食图片示意">
-              <i data-lucide="image" size="28"></i>
-              <span>饮食图片示意</span>
-            </div>
+            <img
+              class="meal-photo"
+              src="/design/ui-references/food-sense-meal-photo-reference.png"
+              alt="过往饮食照片"
+            />
             <div class="meal-body">
               <div class="meta">
                 <span class="record-time">昨天 12:30</span>
@@ -1539,15 +1511,12 @@
                 <span class="record-time">12:40</span>
                 <span class="pill sage">饮食</span>
               </div>
-              <div
-                class="meal-photo-placeholder"
-                role="img"
-                aria-label="饮食图片示意"
+              <img
+                class="meal-photo"
                 style="border-radius: 16px; margin-bottom: 12px"
-              >
-                <i data-lucide="image" size="28"></i>
-                <span>饮食图片示意</span>
-              </div>
+                src="/design/ui-references/food-sense-meal-photo-reference.png"
+                alt="饮食照片"
+              />
               <h3>牛肉饭、酸奶</h3>
               <div class="food-line">
                 <span class="food-pill">米饭</span>
